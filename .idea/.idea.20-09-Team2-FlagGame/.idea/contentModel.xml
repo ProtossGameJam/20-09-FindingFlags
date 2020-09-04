@@ -5,6 +5,7 @@
     <e p="C:\Users\realheim48\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_20-09-Team2-FlagGame.-2086857284.00" t="ExcludeRecursive" />
     <e p="D:\Repository\Projects\Game\20-09-Team2-FlagGame" t="IncludeRecursive">
       <e p="20-09-Team2-FlagGame.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -12,6 +13,67 @@
           <e p="ReadOnly" t="Include">
             <e p="ReadOnlyAttribute.cs" t="Include" />
             <e p="ReadOnlyAttributeDrawer.cs" t="Include" />
+          </e>
+          <e p="Rotary Heart" t="Include">
+            <e p="SerializableDictionaryLite" t="Include">
+              <e p="DrawKeyAsPropertyAttribute.cs" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="Constants.cs" t="Include" />
+                <e p="Definer.cs" t="Include" />
+                <e p="DictionaryPropertyDrawer.cs" t="Include" />
+                <e p="PreferencesWindow.cs" t="Include" />
+                <e p="SupportWindow.cs" t="Include" />
+              </e>
+              <e p="Example" t="Include">
+                <e p="DataBaseExample.cs" t="Include" />
+                <e p="NestedDB.cs" t="Include" />
+              </e>
+              <e p="IDAttribute.cs" t="Include" />
+              <e p="References" t="Include">
+                <e p="RequiredReferences.cs" t="Include" />
+              </e>
+              <e p="ReorderableList" t="Include">
+                <e p="ReorderableList.cs" t="Include" />
+              </e>
+              <e p="SerializableDictionaryBase.cs" t="Include" />
+            </e>
+            <e p="Shared" t="Include">
+              <e p="Editor" t="Include">
+                <e p="BaseSupportWindow.cs" t="Include" />
+                <e p="Definer.cs" t="Include" />
+                <e p="RotaryHeart.Editor.asmdef" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Sirenix" t="Include">
+            <e p="Assemblies" t="Include">
+              <e p="link.xml" t="Include" />
+              <e p="Sirenix.OdinInspector.Attributes.xml" t="Include" />
+              <e p="Sirenix.OdinInspector.Editor.xml" t="Include" />
+              <e p="Sirenix.Serialization.Config.xml" t="Include" />
+              <e p="Sirenix.Utilities.Editor.xml" t="Include" />
+              <e p="Sirenix.Utilities.xml" t="Include" />
+            </e>
+            <e p="Odin Inspector" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="AssemblyImportSettingsAutomation.cs" t="Include" />
+                  <e p="BuildAOTAutomation.cs" t="Include" />
+                  <e p="EnsureOdinInspectorDefine.cs" t="Include" />
+                  <e p="FixBrokenUnityObjectWrapperDrawer.cs" t="Include" />
+                  <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.asmdef" t="Include" />
+                  <e p="SyncListDrawer.cs" t="Include" />
+                  <e p="SyncVarAttributeDrawer.cs" t="Include" />
+                  <e p="Vector2IntMinMaxAttributeDrawer.cs" t="Include" />
+                  <e p="VectorIntDrawers.cs" t="Include" />
+                  <e p="VectorIntPropertyResolvers.cs" t="Include" />
+                </e>
+                <e p="SerializedNetworkBehaviour.cs" t="Include" />
+                <e p="Sirenix.OdinInspector.CompatibilityLayer.asmdef" t="Include" />
+                <e p="VectorIntFormatters.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Readme.txt" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">
@@ -23,8 +85,13 @@
             <e p="IMoveInput.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
+            <e p="PlayerCharacter.cs" t="Include" />
             <e p="PlayerInput.cs" t="Include" />
             <e p="PlayerMove.cs" t="Include" />
+            <e p="PlayerSpawner.cs" t="Include" />
+          </e>
+          <e p="Types" t="Include">
+            <e p="GameObjectDictionary.cs" t="Include" />
           </e>
           <e p="Util" t="Include">
             <e p="PlayerSortingOrder.cs" t="Include" />
@@ -65,6 +132,9 @@
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
+      <e p="RotaryHeart.csproj" t="IncludeRecursive" />
+      <e p="Sirenix.OdinInspector.CompatibilityLayer.csproj" t="IncludeRecursive" />
+      <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" t="IncludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
     </e>
   </component>
