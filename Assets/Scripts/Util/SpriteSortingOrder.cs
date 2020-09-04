@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Renderer))]
 public class SpriteSortingOrder : MonoBehaviour
 {
-    [SerializeField] private new Renderer renderer;
+    [ReadOnly] [SerializeField] private new Renderer renderer;
 
     [ReadOnly] [SerializeField] private int orderFix;
     [ReadOnly] [SerializeField] private int baseOrder;
