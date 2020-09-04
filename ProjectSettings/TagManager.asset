@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 542875299
+    locked: 0
+  - name: OrderSprite
+    uniqueID: 2013558643
+    locked: 0

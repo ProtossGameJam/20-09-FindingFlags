@@ -14,18 +14,14 @@ public class PlayerMove : MonoBehaviour
         moveInput = FindObjectOfType<PlayerInput>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        Move(rigidbody, moveInput.MoveVector, moveSpeed * Time.deltaTime);
+        Move(transform, moveInput.MoveVector, moveSpeed * Time.deltaTime);
     }
 
-    private void Move(Rigidbody2D rigidbody, Vector2 vec, float speed)
+    private void Move(Transform player, Vector2 vec, float speed)
     {
         // TODO: Player collider dug in to another collider
-        rigidbody.position += vec * speed;
-    }
-    private void Move(Transform transform, Vector3 vec, float speed)
-    {
-        transform.position += vec * speed;
+        rigidbody.MovePosition((Vector2)player.position + vec * speed);
     }
 }
