@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="42187800-deb6-45d6-b13e-a7bd717a8436" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/riderModule.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Util/PlayerSortingOrder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Util/PlayerSortingOrder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Test/ouen_jersey_man1_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Test/ouen_jersey_man1_red.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Test/ouen_jersey_man2_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Test/ouen_jersey_man2_blue.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Test/ouen_jersey_man3_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Test/ouen_jersey_man3_green.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Test/ouen_jersey_man4_purple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Test/ouen_jersey_man4_purple.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Test/ouen_jersey_man5_yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Test/ouen_jersey_man5_yellow.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Test/ouen_jersey_man6_pink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Test/ouen_jersey_man6_pink.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OrderTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OrderTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/InputHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/SpriteSortingOrder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/SpriteSortingOrder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/basketball.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/basketball.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/basketbasket.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/basketbasket.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/bench.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/bench.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/border.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/border.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/carline-white.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/carline-white.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/carline.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/carline.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/corner.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/corner.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/goal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/goal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/grass-down.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/grass-down.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/grass-up.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/grass-up.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/parkingline.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/parkingline.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/road.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/road.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/school.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/school.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/texture_cement.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/texture_cement.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/texture_road.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/texture_road.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/thrill.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/thrill.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/track.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/track.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/tree.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/tree.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/treeroot.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/treeroot.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background/wall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background/wall.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/PlayerSortingOrder.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/SpriteSortingOrder1.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/PlayerSortingOrder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/SpriteSortingOrder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1h2yG7HKHtcz5qHm1bOZrdo7UEh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\FlagGame.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\Repository\Projects\Game\20-09-Team2-FlagGame\Builds" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42187800-deb6-45d6-b13e-a7bd717a8436" name="Default Changelist" comment="" />
+      <created>1599223386579</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599223386579</updated>
+      <workItem from="1599223389747" duration="4109000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

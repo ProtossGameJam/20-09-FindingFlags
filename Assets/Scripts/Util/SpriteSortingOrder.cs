@@ -6,32 +6,32 @@ using UnityEngine;
 [RequireComponent(typeof(Renderer))]
 public class SpriteSortingOrder : MonoBehaviour
 {
-    [ReadOnly] [SerializeField] private new Renderer renderer;
+    [SerializeField] protected Renderer _renderer;
 
-    [ReadOnly] [SerializeField] private int orderFix;
-    [ReadOnly] [SerializeField] private int baseOrder;
-    [SerializeField] private int orderOffset;
+    [ReadOnly] [SerializeField] protected int orderFix;
+    [ReadOnly] [SerializeField] protected int baseOrder;
+    [SerializeField] protected int orderOffset;
 
-    private void Reset()
+    protected virtual void Reset()
     {
         orderFix = 100;
         baseOrder = 1000;
     }
 
-    private void Awake()
+    protected virtual void Awake()
     {
-        if (renderer == null) {
-            renderer = GetComponent<Renderer>();
+        if (_renderer == null) {
+            _renderer = GetComponent<Renderer>();
         }
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         SortingOrderFix();
     }
 
-    public void SortingOrderFix()
+    protected void SortingOrderFix()
     {
-        renderer.sortingOrder = (int) (baseOrder + transform.position.y * orderFix + orderOffset);
+        _renderer.sortingOrder = (int) (baseOrder - transform.position.y * orderFix + orderOffset);
     }
 }
