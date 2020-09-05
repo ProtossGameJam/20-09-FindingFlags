@@ -77,6 +77,9 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Flag" t="Include">
+            <e p="FlagManager.cs" t="Include" />
+          </e>
           <e p="Input" t="Include">
             <e p="InputHandler.cs" t="Include" />
             <e p="PlayerControls.cs" t="Include" />
@@ -84,11 +87,16 @@
           <e p="Interface" t="Include">
             <e p="IMoveInput.cs" t="Include" />
           </e>
+          <e p="LogicTest.cs" t="Include" />
           <e p="Player" t="Include">
-            <e p="PlayerCharacter.cs" t="Include" />
+            <e p="Character" t="Include">
+              <e p="CharacterManager.cs" t="Include" />
+              <e p="CharacterSpawner.cs" t="Include" />
+            </e>
+            <e p="MultiPlayerHandler.cs" t="Include" />
+            <e p="MultiPlayerStorage.cs" t="Include" />
             <e p="PlayerInput.cs" t="Include" />
             <e p="PlayerMove.cs" t="Include" />
-            <e p="PlayerSpawner.cs" t="Include" />
           </e>
           <e p="Types" t="Include">
             <e p="GameObjectDictionary.cs" t="Include" />

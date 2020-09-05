@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
+        rigidbody = GetComponent<Rigidbody2D>();
         moveInput = FindObjectOfType<PlayerInput>();
     }
 
@@ -21,7 +22,11 @@ public class PlayerMove : MonoBehaviour
 
     private void Move(Transform player, Vector2 vec, float speed)
     {
-        // TODO: Player collider dug in to another collider
         rigidbody.MovePosition((Vector2)player.position + vec * speed);
+    }
+
+    public void SetMoveSpeed(float speed)
+    {
+        moveSpeed = Mathf.Clamp(speed, 0.0f, float.PositiveInfinity);
     }
 }
