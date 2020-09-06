@@ -220,7 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 42592839}
   m_Layer: 0
-  m_Name: Point_003
+  m_Name: Point_BLUE
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -866,7 +866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 390006279}
   m_Layer: 0
-  m_Name: Point
+  m_Name: Point_RED
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1697,7 +1697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 580252744}
   m_Layer: 0
-  m_Name: Point_002
+  m_Name: Point_GREEN
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -5472,7 +5472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1950027221}
   m_Layer: 0
-  m_Name: Point_001
+  m_Name: Point_YELLOW
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
