@@ -30,6 +30,7 @@ public class TextBubble : MonoBehaviour
 
     public static TextBubble CreateBubble(Transform parent)
     {
+        // TODO: Disable on create
         var instance = Instantiate(AssetManager.Instance.ChatBubble, parent).GetComponent<TextBubble>();
         instance.SetSpawnPoint(parent.position);
         return instance;
@@ -41,6 +42,7 @@ public class TextBubble : MonoBehaviour
     /// <param name="text">Present text in bubble</param>
     private void Write(string text)
     {
+        // TODO: 말풍선 반대 방향으로도 출력하는 기능 구현
         bubbleText.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, textMaxHorizontalSize);
         
         bubbleText.SetText(text);
