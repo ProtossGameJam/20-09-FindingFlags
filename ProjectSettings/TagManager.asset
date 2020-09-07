@@ -47,3 +47,6 @@ TagManager:
   - name: OrderSprite
     uniqueID: 2013558643
     locked: 0
+  - name: TextBubble
+    uniqueID: 1377092951
+    locked: 0

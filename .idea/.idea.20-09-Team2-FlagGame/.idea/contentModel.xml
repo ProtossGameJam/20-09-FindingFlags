@@ -471,13 +471,16 @@
             <e p="GameObjectDictionary.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="TextBubble.cs" t="Include" />
             <e p="TextBubbleResizer.cs" t="Include" />
             <e p="TextContentFitter.cs" t="Include" />
           </e>
           <e p="Util" t="Include">
+            <e p="AssetManager.cs" t="Include" />
             <e p="EqualityUtility.cs" t="Include" />
             <e p="PlayerSortingOrder.cs" t="Include" />
             <e p="SpriteSortingOrder.cs" t="Include" />
+            <e p="TextWriter.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
