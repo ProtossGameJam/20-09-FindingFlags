@@ -1,14 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerTest : MonoBehaviour
 {
-    private TextBubble _textBubble;
-    
-    private void Start()
+    private void Update()
     {
-        _textBubble = TextBubble.CreateBubble(TextBubble.BubbleType.DEFAULT, transform);
-        _textBubble.Write("Test");
+        if (Keyboard.current[Key.F].wasPressedThisFrame) {
+            var colObj = Physics2D.OverlapCircle(transform.position, 1.0f);
+            colObj.GetComponent<DialogueManager>().Interact();
+        }
     }
 }
