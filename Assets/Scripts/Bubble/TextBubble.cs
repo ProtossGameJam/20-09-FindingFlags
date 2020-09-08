@@ -1,38 +1,21 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class TextBubble : MonoBehaviour
+public class TextBubble : Bubble
 {
-    [SerializeField] private SpriteRenderer bubbleSpriteRenderer;
     [SerializeField] private TextMeshPro bubbleText;
-
-    [SerializeField] private Transform pivotTransform;
     
     [HideInInspector] public WriteElement writeElement;
 
     [SerializeField] private float textMaxHorizontalSize;
-    [SerializeField] private float bubbleTailPosFix;
-    [SerializeField] private Vector2 bubblePadding; // 0.6 0.8
-
-    [SerializeField] private bool isReverse;
 
     public bool IsWriteOver => !writeElement.IsWritingText;
 
-    public bool BubbleEnabled
+    protected override void Awake()
     {
-        get => gameObject.activeSelf;
-        set => gameObject.SetActive(value);
-    }
-
-    private void Awake()
-    {
-        if (bubbleSpriteRenderer == null) bubbleSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        base.Awake();
+        
         if (bubbleText == null) bubbleText = GetComponentInChildren<TextMeshPro>();
-    }
-
-    private void Start()
-    {
-        BubbleEnabled = false;
     }
 
     /// <summary>
