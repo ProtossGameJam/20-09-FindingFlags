@@ -166,7 +166,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3530caeffe8c445d990e9a30103cab45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChatBubble: {fileID: 7187804276020447403, guid: 0fe0726e40481f94f809e74eabf35d38, type: 3}
+  bubbleDic:
+    reorderableList:
+      canAdd: 0
+      canRemove: 0
+      draggable: 0
+      expandable: 0
+      multipleSelection: 0
+      isExpanded: 0
+      label:
+        m_Text: 
+        m_Image: {fileID: 0}
+        m_Tooltip: 
+      headerHeight: 0
+      footerHeight: 0
+      slideEasing: 0
+      verticalSpacing: 0
+      showDefaultBackground: 0
+      elementDisplayType: 0
+      elementNameProperty: 
+      elementNameOverride: 
+      elementIcon: {fileID: 0}
+    reqReferences: {fileID: 0}
+    isExpanded: 0
+    _keyValues: 00000000
+    _keys: 00000000
+    _values:
+    - {fileID: 7187804276020447403, guid: 0fe0726e40481f94f809e74eabf35d38, type: 3}
 --- !u!1 &541963623
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,6 +202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 541963624}
+  - component: {fileID: 541963625}
   m_Layer: 0
   m_Name: TextBubble-Position
   m_TagString: Untagged
@@ -197,6 +224,18 @@ Transform:
   m_Father: {fileID: 1591692062}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &541963625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541963623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04e953e13ea56c48b6efaca230ac664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1591692060
 GameObject:
   m_ObjectHideFlags: 0

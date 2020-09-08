@@ -19,7 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42187800-deb6-45d6-b13e-a7bd717a8436" name="Default Changelist" comment="" />
+    <list default="true" id="42187800-deb6-45d6-b13e-a7bd717a8436" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DialogueTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DialogueTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TextBubble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TextBubble.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/AssetManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/AssetManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/AssetManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/AssetManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,6 +82,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/TextContentFitter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/TextBubbleResizer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Util/TextWriter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerTest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Util/AssetManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/TextBubble.cs" />
       </list>
@@ -133,6 +142,7 @@
       <workItem from="1599296784432" duration="18682000" />
       <workItem from="1599392286274" duration="8901000" />
       <workItem from="1599439212183" duration="7511000" />
+      <workItem from="1599551850643" duration="7327000" />
     </task>
     <servers />
   </component>
@@ -157,10 +167,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="706" y="367" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1599394224409">
+    <state x="706" y="367" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1599556079701">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="706" y="367" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1050/-1920.0.1920.1170@0.0.1920.1050" timestamp="1599394224409" />
+    <state x="706" y="367" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1050/-1920.0.1920.1170@0.0.1920.1050" timestamp="1599556079701" />
     <state x="658" y="240" key="RiderGenerateDialog" timestamp="1599397136264">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
