@@ -3,12 +3,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IMoveInput
 {
     //[SerializeField] GameObject cameraHolder;
     [SerializeField] float walkSpeed;
 
+    public Vector2 MoveVector { get; set; }
     Vector2 moveAmount;
 
     Rigidbody2D rb;
@@ -19,6 +21,11 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         pv = GetComponent<PhotonView>();
+
+        InputHandler.MovePerformActionRegister(MoveInput);
+        InputHandler.MoveCanceledActionRegister((ctx) => {
+            MoveVector = Vector2.zero;
+        });
     }
 
     private void Start()
@@ -41,8 +48,15 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        Vector2 moveDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-        moveAmount = moveDir * walkSpeed;
+        //Input 시스템이 Input System Package로 바뀐듯 하다. 그걸로 다시 바꿔줘야함.
+        //Vector2 moveDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        //Vector2 moveDir = new Vector2(InputSystem.GetDevice<Keyboard>()., Input.GetAxisRaw("Vertical")).normalized;
+        //moveAmount = moveDir * walkSpeed;
+    }
+    private void MoveInput(InputAction.CallbackContext ctx)
+    {
+        MoveVector = ctx.ReadValue<Vector2>().normalized;
+        moveAmount = MoveVector * walkSpeed;
     }
 
     private void FixedUpdate()
