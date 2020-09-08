@@ -20,8 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42187800-deb6-45d6-b13e-a7bd717a8436" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LogicTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LogicTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Test/TextBubble/ChatBubble.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Test/TextBubble/ChatBubble.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DialogueTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DialogueTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TextBubble.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TextBubble.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/AssetManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/AssetManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/TextWriter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/TextWriter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +42,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity Editor/2020.1.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/LayoutRebuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity Editor/2020.1.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/ContentSizeFitter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E8645A79-B079-4E0E-9A2B-5BBFF081B88A/56/34320336/DrivenTransformProperties.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LogicTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity Editor/2020.1.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/SetPropertyUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@4.2.5/Runtime/SpriteSkin.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E8645A79-B079-4E0E-9A2B-5BBFF081B88A/f5/67041100/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity Editor/2020.1.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/LayoutUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/PlayerSortingOrder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E8645A79-B079-4E0E-9A2B-5BBFF081B88A/3a/287f31b9/Color.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -63,6 +81,25 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MultiPlayerHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MultiPlayerStorage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Character/CharacterSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/EqualityUtility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ChildSizeFitter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ChildContentFitter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/TextContentFitter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/TextBubbleResizer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/TextWriter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/BubbleManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/WriteElement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/MonoSingleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/TextWriter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DialogueManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/TextBubble.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IInteractable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/AssetManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerTest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/TextBubble.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/TextWriter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
       </list>
     </option>
   </component>
@@ -118,6 +155,10 @@
       <workItem from="1599223389747" duration="4109000" />
       <workItem from="1599235758210" duration="3533000" />
       <workItem from="1599296784432" duration="18682000" />
+      <workItem from="1599392286274" duration="8901000" />
+      <workItem from="1599439212183" duration="7511000" />
+      <workItem from="1599551850643" duration="28659000" />
+      <workItem from="1599590690991" duration="1454000" />
     </task>
     <servers />
   </component>
@@ -142,13 +183,21 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="658" y="240" key="RiderGenerateDialog" timestamp="1599297240973">
+    <state x="706" y="367" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1599581571204">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="658" y="240" key="RiderGenerateDialog/0.0.1920.1050/-1920.0.1920.1170@0.0.1920.1050" timestamp="1599297240973" />
-    <state x="623" y="227" width="672" height="60" key="search.everywhere.popup" timestamp="1599299981914">
+    <state x="706" y="367" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1050/-1920.0.1920.1170@0.0.1920.1050" timestamp="1599581571204" />
+    <state x="658" y="240" key="RiderGenerateDialog" timestamp="1599397136264">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="60" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1170@0.0.1920.1050" timestamp="1599299981914" />
+    <state x="658" y="240" key="RiderGenerateDialog/0.0.1920.1050/-1920.0.1920.1170@0.0.1920.1050" timestamp="1599397136264" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1599566625491">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/-1920.0.1920.1170@0.0.1920.1050" timestamp="1599566625491" />
+    <state x="623" y="227" width="672" height="160" key="search.everywhere.popup" timestamp="1599582887423">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="160" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1170@0.0.1920.1050" timestamp="1599582887423" />
   </component>
 </project>
