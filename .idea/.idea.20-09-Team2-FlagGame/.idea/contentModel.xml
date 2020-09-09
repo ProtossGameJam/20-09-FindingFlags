@@ -239,6 +239,15 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Bubble" t="Include">
+            <e p="Bubble.cs" t="Include" />
+            <e p="QuizBubble.cs" t="Include" />
+            <e p="TextBubble.cs" t="Include" />
+          </e>
+          <e p="Dialogue" t="Include">
+            <e p="DialogueManager.cs" t="Include" />
+            <e p="DialogueObject.cs" t="Include" />
+          </e>
           <e p="Flag" t="Include">
             <e p="FlagManager.cs" t="Include" />
           </e>
@@ -247,6 +256,7 @@
             <e p="PlayerControls.cs" t="Include" />
           </e>
           <e p="Interface" t="Include">
+            <e p="IInteractable.cs" t="Include" />
             <e p="IMoveInput.cs" t="Include" />
           </e>
           <e p="LogicTest.cs" t="Include" />
@@ -277,6 +287,11 @@
             <e p="PlayerInput.cs" t="Include" />
             <e p="PlayerMove.cs" t="Include" />
           </e>
+          <e p="PlayerTest.cs" t="Include" />
+          <e p="Text" t="Include">
+            <e p="TextWriter.cs" t="Include" />
+            <e p="WriteElement.cs" t="Include" />
+          </e>
           <e p="Types" t="Include">
             <e p="GameObjectDictionary.cs" t="Include" />
           </e>
@@ -284,6 +299,9 @@
             <e p="UIPlayerNameInput.cs" t="Include" />
           </e>
           <e p="Util" t="Include">
+            <e p="AssetManager.cs" t="Include" />
+            <e p="EqualityUtility.cs" t="Include" />
+            <e p="MonoSingleton.cs" t="Include" />
             <e p="PlayerSortingOrder.cs" t="Include" />
             <e p="SpriteSortingOrder.cs" t="Include" />
           </e>
