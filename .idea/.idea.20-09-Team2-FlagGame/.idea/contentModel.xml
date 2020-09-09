@@ -436,12 +436,14 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Bubble" t="Include">
+            <e p="Bubble.cs" t="Include" />
+            <e p="QuizBubble.cs" t="Include" />
+            <e p="TextBubble.cs" t="Include" />
+          </e>
           <e p="Dialogue" t="Include">
             <e p="DialogueManager.cs" t="Include" />
             <e p="DialogueObject.cs" t="Include" />
-            <e p="TextBubble.cs" t="Include" />
-            <e p="TextWriter.cs" t="Include" />
-            <e p="WriteElement.cs" t="Include" />
           </e>
           <e p="Flag" t="Include">
             <e p="FlagManager.cs" t="Include" />
@@ -476,6 +478,10 @@
             <e p="PlayerMove.cs" t="Include" />
           </e>
           <e p="PlayerTest.cs" t="Include" />
+          <e p="Text" t="Include">
+            <e p="TextWriter.cs" t="Include" />
+            <e p="WriteElement.cs" t="Include" />
+          </e>
           <e p="Types" t="Include">
             <e p="GameObjectDictionary.cs" t="Include" />
           </e>

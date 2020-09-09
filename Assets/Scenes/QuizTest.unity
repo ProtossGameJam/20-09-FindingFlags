@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 1008507355}
   - component: {fileID: 1008507356}
   m_Layer: 0
-  m_Name: Dialogue NPC - Test
+  m_Name: Quiz NPC - Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -578,13 +578,17 @@ PrefabInstance:
       propertyPath: pivotTransform
       value: 
       objectReference: {fileID: 104529449}
-    - target: {fileID: 7187804275908084370, guid: 0fe0726e40481f94f809e74eabf35d38, type: 3}
-      propertyPath: m_FlipX
-      value: 0
+    - target: {fileID: 1926100192, guid: 0fe0726e40481f94f809e74eabf35d38, type: 3}
+      propertyPath: bubbleSpriteRenderer
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7187804276020447403, guid: 0fe0726e40481f94f809e74eabf35d38, type: 3}
       propertyPath: m_Name
       value: Bubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187804276020447403, guid: 0fe0726e40481f94f809e74eabf35d38, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7187804276020447404, guid: 0fe0726e40481f94f809e74eabf35d38, type: 3}
       propertyPath: m_LocalPosition.x
