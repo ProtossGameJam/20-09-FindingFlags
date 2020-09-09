@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42187800-deb6-45d6-b13e-a7bd717a8436" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LogicTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LogicTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PhotonPrefabs/PlayerController_BLUE.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PhotonPrefabs/PlayerController_BLUE.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +66,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MultiPlayerHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MultiPlayerStorage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Character/CharacterSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerDataStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerDataElement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPlayerNameInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerDataManager.cs" />
       </list>
     </option>
   </component>
@@ -118,6 +125,7 @@
       <workItem from="1599223389747" duration="4109000" />
       <workItem from="1599235758210" duration="3533000" />
       <workItem from="1599296784432" duration="18682000" />
+      <workItem from="1599694471237" duration="643000" />
     </task>
     <servers />
   </component>
