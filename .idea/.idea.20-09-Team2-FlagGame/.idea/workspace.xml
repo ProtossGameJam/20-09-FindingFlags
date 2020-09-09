@@ -22,7 +22,9 @@
     <list default="true" id="42187800-deb6-45d6-b13e-a7bd717a8436" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DialogueTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DialogueTest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bubble/Bubble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bubble/Bubble.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bubble/QuizBubble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bubble/QuizBubble.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bubble/TextBubble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bubble/TextBubble.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,8 +95,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/TextBubble.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/TextWriter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bubble/TextBubble.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bubble/Bubble.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bubble/TextBubble.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bubble/QuizBubble.cs" />
       </list>
     </option>
   </component>
@@ -154,7 +157,8 @@
       <workItem from="1599439212183" duration="7511000" />
       <workItem from="1599551850643" duration="28659000" />
       <workItem from="1599590690991" duration="1454000" />
-      <workItem from="1599592795507" duration="1110000" />
+      <workItem from="1599592795507" duration="1651000" />
+      <workItem from="1599654775141" duration="3390000" />
     </task>
     <servers />
   </component>
