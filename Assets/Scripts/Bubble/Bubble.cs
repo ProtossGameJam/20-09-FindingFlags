@@ -22,11 +22,6 @@ public class Bubble : MonoBehaviour
         if (bubbleSpriteRenderer == null) bubbleSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
-    protected virtual void Start()
-    {
-        BubbleEnabled = false;
-    }
-
     protected virtual void BubbleRectUpdate(Vector2 contentSize) { }
 
     protected static void SetFitSize(SpriteRenderer bubbleRenderer, Vector2 contentSize, Vector2 padding, bool isReversed)
