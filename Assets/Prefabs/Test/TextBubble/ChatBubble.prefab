@@ -127,9 +127,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2518c439d77c64592aa6273f522922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubbleSpriteRenderer: {fileID: 7187804275908084370}
-  bubbleText: {fileID: 7187804276420968452}
   pivotTransform: {fileID: 0}
+  bubbleSpriteRenderer: {fileID: 0}
+  bubblePadding: {x: 0.6, y: 0.8}
+  bubbleTailPosFix: -0.5
+  isReversed: 0
+  bubbleText: {fileID: 7187804276420968452}
   writeElement:
     textComponent: {fileID: 0}
     text: 
@@ -137,9 +140,6 @@ MonoBehaviour:
     charPerTime: 0
     typeTimer: 0
   textMaxHorizontalSize: 10
-  bubbleTailPosFix: -0.5
-  bubblePadding: {x: 0.6, y: 0.8}
-  isReverse: 0
 --- !u!1 &7187804276420968450
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42187800-deb6-45d6-b13e-a7bd717a8436" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DialogueTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DialogueTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bubble/Bubble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bubble/Bubble.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bubble/QuizBubble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bubble/QuizBubble.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bubble/TextBubble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bubble/TextBubble.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Test/TextBubble/ChatBubble.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Test/TextBubble/ChatBubble.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/QuizTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/QuizTest.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,10 +91,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerTest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/TextBubble.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/TextWriter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bubble/Bubble.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bubble/TextBubble.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bubble/QuizBubble.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bubble/Bubble.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
       </list>
     </option>
   </component>
