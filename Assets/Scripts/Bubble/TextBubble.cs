@@ -1,38 +1,21 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class TextBubble : MonoBehaviour
+public class TextBubble : Bubble
 {
-    [SerializeField] private SpriteRenderer bubbleSpriteRenderer;
     [SerializeField] private TextMeshPro bubbleText;
-
-    [SerializeField] private Transform pivotTransform;
     
     [HideInInspector] public WriteElement writeElement;
 
     [SerializeField] private float textMaxHorizontalSize;
-    [SerializeField] private float bubbleTailPosFix;
-    [SerializeField] private Vector2 bubblePadding; // 0.6 0.8
-
-    [SerializeField] private bool isReverse;
 
     public bool IsWriteOver => !writeElement.IsWritingText;
 
-    public bool BubbleEnabled
+    protected override void Awake()
     {
-        get => gameObject.activeSelf;
-        set => gameObject.SetActive(value);
-    }
-
-    private void Awake()
-    {
-        if (bubbleSpriteRenderer == null) bubbleSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        base.Awake();
+        
         if (bubbleText == null) bubbleText = GetComponentInChildren<TextMeshPro>();
-    }
-
-    private void Start()
-    {
-        BubbleEnabled = false;
     }
 
     /// <summary>
@@ -43,58 +26,38 @@ public class TextBubble : MonoBehaviour
     public void Write(string text, float typeTime)
     {
         BubbleEnabled = true;
-        BubbleRectUpdate(text);
+        
+        BubbleRectUpdate(TextRectUpdate(bubbleText, text, textMaxHorizontalSize));
+        
         writeElement = TextWriter.AddWriteInstance(bubbleText, text, typeTime, true);
     }
 
     /// <summary>
-    /// 버블의 크기와 위치를 텍스트에 맞게 재조정합니다.
+    /// 텍스트 Rect를 버블에 들어갈 Text의 크기에 맞게 재조정합니다.
     /// </summary>
-    /// <param name="text">버블에 들어갈 텍스트</param>
-    private void BubbleRectUpdate(string text)
+    /// <param name="textComponent">Text Component</param>
+    /// <param name="text">버블에 들어갈 Text</param>
+    /// <param name="maxHorizontalSize">Text가 가질 수 있는 Max X축 Rect 사이즈</param>
+    /// <returns>Text Rect Content 사이즈</returns>
+    private static Vector2 TextRectUpdate(TextMeshPro textComponent, string text, float maxHorizontalSize)
     {
-        bubbleText.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, textMaxHorizontalSize);
+        textComponent.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, maxHorizontalSize);
 
-        bubbleText.SetText(text);
-        bubbleText.ForceMeshUpdate(true);
-        bubbleText.SetText("");
+        textComponent.SetText(text);
+        textComponent.ForceMeshUpdate(true);
+        textComponent.SetText("");
 
-        bubbleSpriteRenderer.size = ResizeBubble(bubbleText.rectTransform, bubbleSpriteRenderer.transform, bubbleText.GetRenderedValues(false), bubblePadding, isReverse);
-        transform.localPosition = RepositionBubble(pivotTransform.localPosition, bubbleSpriteRenderer.size, bubbleTailPosFix, isReverse);
+        var tempSize = textComponent.GetRenderedValues(false);
+        textComponent.rectTransform.sizeDelta = tempSize;
+        return tempSize;
     }
 
     /// <summary>
-    /// 버블의 크기를 재조정합니다.
+    /// 버블의 스프라이트를 Content에 맞게 크기와 위치를 재조정합니다.
     /// </summary>
-    /// <param name="textRect">텍스트의 렉트 컴포넌트</param>
-    /// <param name="spriteTransform">버블 이미지의 Transform</param>
-    /// <param name="size">버블 안에 들어갈 텍스트의 Rect 크기</param>
-    /// <param name="padding">버블의 여백의 크기</param>
-    /// <param name="isReverse">버블의 좌우 반전 여부</param>
-    private static Vector2 ResizeBubble(RectTransform textRect, Transform spriteTransform, Vector2 size, Vector2 padding, bool isReverse)
+    protected override void BubbleRectUpdate(Vector2 contentSize)
     {
-        textRect.sizeDelta = size;
-        // 버블의 x축 Scale을 음수로 변경해 반대쪽으로 회전
-        if (isReverse) {
-            var localScale = spriteTransform.localScale;
-            localScale = new Vector3(-localScale.x, localScale.y, localScale.z);
-            spriteTransform.localScale = localScale;
-        }
-        
-        return size + padding;
-    }
-
-    /// <summary>
-    /// 버블의 위치를 Pivot으로 재조정 합니다.
-    /// </summary>
-    /// <param name="pivot">버블의 Pivot</param>
-    /// <param name="size">버블의 크기</param>
-    /// <param name="fixXPos">버블의 꼬리 위치 조정점</param>
-    /// <param name="isReverse">버블의 좌우 반전 여부</param>
-    /// <returns>Repositioned value</returns>
-    private static Vector2 RepositionBubble(Vector2 pivot, Vector2 size, float fixXPos, bool isReverse)
-    {
-        var xFixPos = isReverse ? -size.x / 2.0f - fixXPos : size.x / 2.0f + fixXPos;
-        return new Vector2(xFixPos + pivot.x, size.y / 2.0f + pivot.y);
+        SetFitSize(bubbleSpriteRenderer, contentSize, bubblePadding, isReversed);
+        SetCenterPos(transform, pivotTransform.localPosition, bubbleSpriteRenderer.size, bubbleTailPosFix, isReversed);
     }
 }

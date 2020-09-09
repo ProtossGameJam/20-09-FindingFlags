@@ -578,6 +578,10 @@ PrefabInstance:
       propertyPath: pivotTransform
       value: 
       objectReference: {fileID: 104529449}
+    - target: {fileID: 7187804275908084370, guid: 0fe0726e40481f94f809e74eabf35d38, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7187804276020447403, guid: 0fe0726e40481f94f809e74eabf35d38, type: 3}
       propertyPath: m_Name
       value: Bubble
