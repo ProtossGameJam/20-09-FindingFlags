@@ -15,7 +15,7 @@ public class CharacterSpawner : MonoBehaviour
         public GameObject character;
         public Transform point;
     }
-    
+
     [System.Serializable]
     public class CharacterDictionary : SerializableDictionaryBase<CharacterColor, SpawnInfo> { }
 
@@ -25,9 +25,16 @@ public class CharacterSpawner : MonoBehaviour
     {
         return Instantiate(characterDic[color].character, characterDic[color].point.position, Quaternion.identity).GetComponent<CharacterManager>();
     }
-    
+
     public CharacterManager SpawnCharacter(CharacterColor color, Vector3 position)
     {
         return Instantiate(characterDic[color].character, position, Quaternion.identity).GetComponent<CharacterManager>();
+    }
+
+    public SpawnInfo GetSpawnInfo(CharacterColor color)
+    {
+        if (!characterDic.ContainsKey(color))
+            return null;
+        return characterDic[color];
     }
 }
