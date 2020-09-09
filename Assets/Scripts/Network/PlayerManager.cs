@@ -8,6 +8,7 @@ using System.IO;
 public class PlayerManager : MonoBehaviour
 {
     PhotonView pv;
+    GameObject player;  //이 playerManager가 관리하는 플레이어.
 
     private void Awake()
     {
@@ -24,6 +25,32 @@ public class PlayerManager : MonoBehaviour
 
     void CreateController()
     {
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController"), Vector3.zero, Quaternion.identity);
+        CharacterSpawner cs = FindObjectOfType<CharacterSpawner>();
+        int temp = pv.ViewID / 1000;
+        switch(temp)
+        {
+            case 1:
+                player = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController_RED"),
+                    cs.GetSpawnInfo(CharacterColor.RED).point.position, Quaternion.identity);
+                break;
+            case 2:
+                player = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController_BLUE"),
+                                    cs.GetSpawnInfo(CharacterColor.BLUE).point.position, Quaternion.identity); 
+                break;
+            case 3:
+                player = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController_GREEN"),
+                                    cs.GetSpawnInfo(CharacterColor.GREEN).point.position, Quaternion.identity); 
+                break;
+            case 4:
+                player = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController_PURPLE"),
+                                    cs.GetSpawnInfo(CharacterColor.YELLOW).point.position, Quaternion.identity); 
+                break;
+            case 5:
+                Debug.Log("player 5 instanciated");
+                break;
+            case 6:
+                Debug.Log("player 6 instanciated");
+                break;
+        }
     }
 }
