@@ -8,6 +8,9 @@ namespace ESQNetwork
     {
         #region Private Serialized Variables
 
+        [Tooltip("Lobby의 UI 오브젝트를 관리하는 Manager 스크립트")]
+        [SerializeField] private LobbyUIManager lobbyUIManager;
+        
         /// <summary>
         /// The maximum number of players per room. When a room is full, it can't be joined by new players, and so new room will be created.
         /// </summary>
@@ -38,6 +41,8 @@ namespace ESQNetwork
         /// </summary>
         public void Connect()
         {
+            lobbyUIManager.OnConnectUI();
+            
             // We check if we are connected or not, we join if we are , else we initiate the connection to the server.
             if (PhotonNetwork.IsConnected) {
                 // WARNING: We need at this point to attempt joining a Random Room. If it fails, we'll get notified in OnJoinRandomFailed() and we'll create one.
@@ -56,6 +61,11 @@ namespace ESQNetwork
             PhotonNetwork.JoinRandomRoom();
         }
 
+        public override void OnDisconnected(DisconnectCause cause)
+        {
+            lobbyUIManager.OnDisconnectUI();
+        }
+
         public override void OnJoinedRoom()
         {
 
@@ -65,11 +75,6 @@ namespace ESQNetwork
         {
             // WARNING: We failed to join a random room, maybe none exists or they are all full. No worries, we create a new room.
             PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = _maxPlayersPerRoom });
-        }
-
-        public override void OnDisconnected(DisconnectCause cause)
-        {
-
         }
     }
 }
