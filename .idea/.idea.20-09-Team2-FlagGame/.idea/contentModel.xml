@@ -289,6 +289,10 @@
             <e p="PlayerMove.cs" t="Include" />
           </e>
           <e p="PlayerTest.cs" t="Include" />
+          <e p="Scene" t="Include">
+            <e p="LoadingSceneManager.cs" t="Include" />
+            <e p="SceneHandler.cs" t="Include" />
+          </e>
           <e p="Text" t="Include">
             <e p="TextWriter.cs" t="Include" />
             <e p="WriteElement.cs" t="Include" />

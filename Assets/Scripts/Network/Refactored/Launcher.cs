@@ -54,6 +54,8 @@ namespace ESQNetwork
                 PhotonNetwork.ConnectUsingSettings();
             }
         }
+        
+        #region Photon Callback Method
 
         public override void OnConnectedToMaster()
         {
@@ -68,7 +70,14 @@ namespace ESQNetwork
 
         public override void OnJoinedRoom()
         {
-
+            // WARNING: We only load if we are the first player, else we rely on `PhotonNetwork.AutomaticallySyncScene` to sync our instance scene.
+            if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
+            {
+                Debug.Log("We load the 'Room for 1' ");
+                
+                // WARNING: Load the Room Level.
+                PhotonNetwork.LoadLevel(SceneHandler.GetSceneName(SceneType.STAGE));
+            }
         }
 
         public override void OnJoinRoomFailed(short returnCode, string message)
@@ -76,5 +85,7 @@ namespace ESQNetwork
             // WARNING: We failed to join a random room, maybe none exists or they are all full. No worries, we create a new room.
             PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = _maxPlayersPerRoom });
         }
+        
+        #endregion
     }
 }

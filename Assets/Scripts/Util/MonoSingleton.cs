@@ -72,7 +72,6 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
         _instance = null;
     }
 
-
     /// <summary>
     ///     This function is called when the instance is used the first time
     ///     Put all the initializations you need here, as you would do in Awake
