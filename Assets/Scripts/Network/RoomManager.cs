@@ -13,6 +13,8 @@ using System.IO;
 //영상 참조 : https://youtu.be/6qRNBPPojMA
 public class RoomManager : MonoBehaviourPunCallbacks
 {
+    // RoomManager를 Singleton으로 변경 예정
+    // Room을 Stage로 개념을 변경하여 StageManager라고 Renaming 할 수 있음
     public static RoomManager Instance;
 
     private void Awake()
@@ -43,6 +45,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         if(scene.buildIndex == 1) //만약 인게임 씬에 있다면
         {
+            // 그냥 PlayerManager를 씬에 만들어 놓는것이 안되는 이유?
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerManager"), Vector3.zero, Quaternion.identity); //Resources/PhotonPrefabs 에 있는 PlayerManager 스폰.
         }
     }
