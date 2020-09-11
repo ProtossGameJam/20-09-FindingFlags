@@ -25,6 +25,7 @@ public class PlayerManager : MonoBehaviour
 
     void CreateController()
     {
+        // Player에 int로 index를 부여해 PlayerCreate 하도록 변경 할 
         CharacterSpawner cs = FindObjectOfType<CharacterSpawner>();
         int temp = pv.ViewID / 1000;
         switch(temp)
