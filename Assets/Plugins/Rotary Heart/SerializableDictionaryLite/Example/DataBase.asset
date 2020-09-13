@@ -3,9 +3,8 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1451,14 +1450,9 @@ MonoBehaviour:
       elementIcon: {fileID: 0}
     reqReferences: {fileID: 0}
     isExpanded: 0
-    _keyValues: ffffff7f
-    _keys: ffffff7f
-    _values:
-    - id: 
-      test: 0
-      test2: 
-      quat: {x: 0, y: 0, z: 0, w: 0}
-      childTest: []
+    _keyValues: 
+    _keys: 
+    _values: []
   _intGameobject:
     reorderableList:
       canAdd: 1

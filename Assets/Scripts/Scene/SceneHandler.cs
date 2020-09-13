@@ -14,6 +14,11 @@ public class SceneHandler : MonoSingleton<SceneHandler>
 
     [SerializeField] private SceneDictionary sceneDic;
 
+    protected override void Initialize()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     #region Scene Load Method
 
     public static void LoadScene(string scene)
