@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\realheim48\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\realheim48\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_20-09-Team2-FlagGame.-2086857284.00" t="ExcludeRecursive" />
-    <e p="D:\Repository\Projects\Game\20-09-Team2-FlagGame" t="IncludeRecursive">
+    <e p="C:\Users\realheim48\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_20-09-Team2-FlagGame.-428422092.00" t="ExcludeRecursive" />
+    <e p="C:\Users\realheim48\Projects\20-09-Team2-FlagGame" t="IncludeRecursive">
       <e p="20-09-Team2-FlagGame.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="CharacterVariant.cs" t="Include" />
         <e p="Photon" t="Include">
           <e p="PhotonChat" t="Include">
             <e p="Code" t="Include">
@@ -111,7 +112,7 @@
               </e>
             </e>
             <e p="link.xml" t="Include" />
-            <e p="Readme.txt" t="Include" />
+            <e p="readme.txt" t="Include" />
             <e p="UtilityScripts" t="Include">
               <e p="Culling" t="Include">
                 <e p="CullArea.cs" t="Include" />
@@ -206,36 +207,6 @@
                 <e p="RotaryHeart.Editor.asmdef" t="Include" />
               </e>
             </e>
-          </e>
-          <e p="Sirenix" t="Include">
-            <e p="Assemblies" t="Include">
-              <e p="link.xml" t="Include" />
-              <e p="Sirenix.OdinInspector.Attributes.xml" t="Include" />
-              <e p="Sirenix.OdinInspector.Editor.xml" t="Include" />
-              <e p="Sirenix.Serialization.Config.xml" t="Include" />
-              <e p="Sirenix.Utilities.Editor.xml" t="Include" />
-              <e p="Sirenix.Utilities.xml" t="Include" />
-            </e>
-            <e p="Odin Inspector" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="Editor" t="Include">
-                  <e p="AssemblyImportSettingsAutomation.cs" t="Include" />
-                  <e p="BuildAOTAutomation.cs" t="Include" />
-                  <e p="EnsureOdinInspectorDefine.cs" t="Include" />
-                  <e p="FixBrokenUnityObjectWrapperDrawer.cs" t="Include" />
-                  <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.asmdef" t="Include" />
-                  <e p="SyncListDrawer.cs" t="Include" />
-                  <e p="SyncVarAttributeDrawer.cs" t="Include" />
-                  <e p="Vector2IntMinMaxAttributeDrawer.cs" t="Include" />
-                  <e p="VectorIntDrawers.cs" t="Include" />
-                  <e p="VectorIntPropertyResolvers.cs" t="Include" />
-                </e>
-                <e p="SerializedNetworkBehaviour.cs" t="Include" />
-                <e p="Sirenix.OdinInspector.CompatibilityLayer.asmdef" t="Include" />
-                <e p="VectorIntFormatters.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Readme.txt" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">
@@ -355,8 +326,6 @@
       <e p="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj" t="IncludeRecursive" />
       <e p="PhotonWebSocket.csproj" t="IncludeRecursive" />
       <e p="RotaryHeart.csproj" t="IncludeRecursive" />
-      <e p="Sirenix.OdinInspector.CompatibilityLayer.csproj" t="IncludeRecursive" />
-      <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" t="IncludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
     </e>
   </component>
