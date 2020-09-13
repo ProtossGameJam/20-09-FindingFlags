@@ -10,6 +10,8 @@ public class Launcher : MonoBehaviourPunCallbacks
 {
     public static Launcher Instance;
 
+    // 아래의 UI들을 UILobbyManager로 담당하도록 이동
+
     [SerializeField] TMP_InputField roomNameInputField; //방 이름 입력란
     [SerializeField] TMP_Text errorText; //에러났을때 UI
     [SerializeField] TMP_Text roomNameText; //방 이름

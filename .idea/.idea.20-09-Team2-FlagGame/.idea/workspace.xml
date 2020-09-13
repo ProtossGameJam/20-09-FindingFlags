@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -21,10 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="42187800-deb6-45d6-b13e-a7bd717a8436" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PhotonPrefabs/PlayerController_BLUE.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PhotonPrefabs/PlayerController_BLUE.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Network/NetworkLobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Network/NetworkLobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Refactored/Launcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Refactored/Launcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Refactored/StageControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Refactored/StageControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/MonoSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/MonoSingleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +42,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity Editor/2020.1.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/LayoutRebuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity Editor/2020.1.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/ContentSizeFitter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene/SceneHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E8645A79-B079-4E0E-9A2B-5BBFF081B88A/56/34320336/DrivenTransformProperties.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bubble/Bubble.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LogicTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity Editor/2020.1.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/SetPropertyUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@4.2.5/Runtime/SpriteSkin.cs" root0="SKIP_HIGHLIGHTING" />
@@ -46,7 +51,6 @@
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity Editor/2020.1.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/LayoutUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/PlayerSortingOrder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E8645A79-B079-4E0E-9A2B-5BBFF081B88A/3a/287f31b9/Color.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -77,8 +81,23 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Character/CharacterSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerDataStorage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerDataElement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPlayerNameInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerDataManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Data/PlayerDataObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPlayerNameInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILobbyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UINameInputField.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Refactored/RoomControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/LobbyUIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/Sceneandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/LoadingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/LoadingSceneManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Refactored/StageControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/MonoSingleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Refactored/Launcher.cs" />
       </list>
     </option>
   </component>
@@ -135,6 +154,8 @@
       <workItem from="1599235758210" duration="3533000" />
       <workItem from="1599296784432" duration="18682000" />
       <workItem from="1599694471237" duration="643000" />
+      <workItem from="1599696260503" duration="5210000" />
+      <workItem from="1599739379788" duration="5623000" />
     </task>
     <servers />
   </component>
@@ -159,21 +180,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="706" y="367" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1599581571204">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1214" y="409" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1599740145415">
+      <screen x="-1920" y="0" width="1920" height="1170" />
     </state>
+    <state x="-1214" y="409" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1050/-1920.0.1920.1170@-1920.0.1920.1170" timestamp="1599740145415" />
     <state x="706" y="367" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1050/-1920.0.1920.1170@0.0.1920.1050" timestamp="1599581571204" />
-    <state x="658" y="240" key="RiderGenerateDialog" timestamp="1599397136264">
+    <state x="875" y="248" key="RiderGenerateDialog" timestamp="1599700530958">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="658" y="240" key="RiderGenerateDialog/0.0.1920.1050/-1920.0.1920.1170@0.0.1920.1050" timestamp="1599397136264" />
+    <state x="875" y="248" key="RiderGenerateDialog/0.0.1920.1050/-1920.0.1920.1170@0.0.1920.1050" timestamp="1599700530958" />
     <state x="616" y="243" key="run.anything.popup" timestamp="1599566625491">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/-1920.0.1920.1170@0.0.1920.1050" timestamp="1599566625491" />
-    <state x="623" y="227" width="672" height="160" key="search.everywhere.popup" timestamp="1599582887423">
+    <state x="623" y="227" width="672" height="160" key="search.everywhere.popup" timestamp="1599699626365">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="160" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1170@0.0.1920.1050" timestamp="1599582887423" />
+    <state x="623" y="227" width="672" height="160" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1170@0.0.1920.1050" timestamp="1599699626365" />
   </component>
 </project>

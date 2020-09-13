@@ -269,6 +269,7 @@
             <e p="PlayerManager.cs" t="Include" />
             <e p="Refactored" t="Include">
               <e p="Launcher.cs" t="Include" />
+              <e p="StageControl.cs" t="Include" />
             </e>
             <e p="RoomListItem.cs" t="Include" />
             <e p="RoomManager.cs" t="Include" />
@@ -279,8 +280,8 @@
               <e p="CharacterSpawner.cs" t="Include" />
             </e>
             <e p="Data" t="Include">
-              <e p="PlayerDataElement.cs" t="Include" />
               <e p="PlayerDataManager.cs" t="Include" />
+              <e p="PlayerDataObject.cs" t="Include" />
             </e>
             <e p="MultiPlayerHandler.cs" t="Include" />
             <e p="MultiPlayerStorage.cs" t="Include" />
@@ -288,6 +289,10 @@
             <e p="PlayerMove.cs" t="Include" />
           </e>
           <e p="PlayerTest.cs" t="Include" />
+          <e p="Scene" t="Include">
+            <e p="LoadingSceneManager.cs" t="Include" />
+            <e p="SceneHandler.cs" t="Include" />
+          </e>
           <e p="Text" t="Include">
             <e p="TextWriter.cs" t="Include" />
             <e p="WriteElement.cs" t="Include" />
@@ -296,7 +301,8 @@
             <e p="GameObjectDictionary.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
-            <e p="UIPlayerNameInput.cs" t="Include" />
+            <e p="LobbyUIManager.cs" t="Include" />
+            <e p="UINameInputField.cs" t="Include" />
           </e>
           <e p="Util" t="Include">
             <e p="AssetManager.cs" t="Include" />

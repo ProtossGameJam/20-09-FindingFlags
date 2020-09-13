@@ -8,6 +8,9 @@ namespace ESQNetwork
     {
         #region Private Serialized Variables
 
+        [Tooltip("Lobby의 UI 오브젝트를 관리하는 Manager 스크립트")]
+        [SerializeField] private LobbyUIManager lobbyUIManager;
+        
         /// <summary>
         /// The maximum number of players per room. When a room is full, it can't be joined by new players, and so new room will be created.
         /// </summary>
@@ -38,6 +41,8 @@ namespace ESQNetwork
         /// </summary>
         public void Connect()
         {
+            lobbyUIManager.OnConnectUI();
+            
             // We check if we are connected or not, we join if we are , else we initiate the connection to the server.
             if (PhotonNetwork.IsConnected) {
                 // WARNING: We need at this point to attempt joining a Random Room. If it fails, we'll get notified in OnJoinRandomFailed() and we'll create one.
@@ -49,6 +54,8 @@ namespace ESQNetwork
                 PhotonNetwork.ConnectUsingSettings();
             }
         }
+        
+        #region Photon Callback Method
 
         public override void OnConnectedToMaster()
         {
@@ -56,9 +63,21 @@ namespace ESQNetwork
             PhotonNetwork.JoinRandomRoom();
         }
 
+        public override void OnDisconnected(DisconnectCause cause)
+        {
+            lobbyUIManager.OnDisconnectUI();
+        }
+
         public override void OnJoinedRoom()
         {
-
+            // WARNING: We only load if we are the first player, else we rely on `PhotonNetwork.AutomaticallySyncScene` to sync our instance scene.
+            if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
+            {
+                Debug.Log("We load the 'Room for 1' ");
+                
+                // WARNING: Load the Room Level.
+                PhotonNetwork.LoadLevel(SceneHandler.GetSceneName(SceneType.STAGE));
+            }
         }
 
         public override void OnJoinRoomFailed(short returnCode, string message)
@@ -66,10 +85,7 @@ namespace ESQNetwork
             // WARNING: We failed to join a random room, maybe none exists or they are all full. No worries, we create a new room.
             PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = _maxPlayersPerRoom });
         }
-
-        public override void OnDisconnected(DisconnectCause cause)
-        {
-
-        }
+        
+        #endregion
     }
 }
