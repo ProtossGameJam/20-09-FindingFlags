@@ -1,9 +1,14 @@
 fileFormatVersion: 2
 guid: 35a721eae1cdbe647a086ad29a339fef
 folderAsset: yes
+<<<<<<< HEAD
 timeCreated: 1587999991
 licenseType: Store
 DefaultImporter:
+=======
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> art-intro
   userData: 
   assetBundleName: 
   assetBundleVariant: 
