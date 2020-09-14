@@ -30,3 +30,13 @@ MonoBehaviour:
 
         two line?'
       eventCode: '#q'
+  - group: 1
+    sentence:
+    - index: 0
+      content: Incorrect
+      eventCode: 
+  - group: 2
+    sentence:
+    - index: 0
+      content: Correct
+      eventCode: 

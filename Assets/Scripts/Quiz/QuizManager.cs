@@ -45,13 +45,18 @@ public class QuizManager : MonoBehaviour
         obj_currentDm = from;
     }
 
+    #region QUIZ
+
+
     /* Purpose: 퀴즈의 정답을 맞췄을때 호출하는 함수.
      * Variable: 
      * Notice: 
      */
     private void Quiz_Correct()
     {
-        Debug.Log("정답!");
+        UI_OffQuizUI();
+        obj_currentDm.SetNewDialogue(2); //SmokyOnion : 정답 시 실행할 다이얼로그 번호를 정하는 방법이 제시되어야 한다.
+        obj_currentDm.CoolDownTime = 30f;
     }
 
     /* Purpose: 퀴즈의 오답을 선택했을때 호출하는 함수.
@@ -60,7 +65,9 @@ public class QuizManager : MonoBehaviour
      */
     private void Quiz_Incorrect()
     {
-        Debug.Log("오답!");
+        UI_OffQuizUI();
+        obj_currentDm.SetNewDialogue(1);
+        obj_currentDm.CoolDownTime = 5f;
     }
 
 
@@ -70,8 +77,12 @@ public class QuizManager : MonoBehaviour
      */
     private void Quiz_Quit()
     {
-        obj_pivot.SetActive(false);
+        UI_OffQuizUI();
+        obj_currentDm.CoolDownTime = 5f;
     }
+
+
+    #endregion
 
 
     #region UI
@@ -98,6 +109,15 @@ public class QuizManager : MonoBehaviour
             case 4: 
                 Quiz_Quit(); break;
         }
+    }
+
+    /* Purpose: 퀴즈 UI 끄는 함수.
+     * Variable:
+     * Notice:
+     */
+    public void UI_OffQuizUI()
+    {
+        obj_pivot.SetActive(false);
     }
 
     #endregion
