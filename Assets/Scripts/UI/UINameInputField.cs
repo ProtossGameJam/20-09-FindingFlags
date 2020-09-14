@@ -58,7 +58,7 @@ public class UINameInputField : MonoBehaviour
     public void CheckNameIsEmpty(string name)
     {
         if (string.IsNullOrWhiteSpace(name)) {
-            UIDebugText.Logging("No name has typed in field. Use default name or previous name.");
+            print("[WARNING] No name has typed in field. Use default name or previous name.");
             name = prevName;
         }
         SetPlayerName(name);

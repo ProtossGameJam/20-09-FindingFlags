@@ -414,6 +414,7 @@ GameObject:
   - component: {fileID: 4940760106377504655}
   - component: {fileID: 666674838537219821}
   - component: {fileID: 666674838537219820}
+  - component: {fileID: -9220505418218953041}
   m_Layer: 5
   m_Name: Room Object
   m_TagString: Untagged
@@ -495,6 +496,35 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-9220505418218953041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666674838537219810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4940760106377504655}
+          m_TargetAssemblyTypeName: UIRoom, Assembly-CSharp
+          m_MethodName: EnterRoom
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &666674838588491090
 GameObject:
   m_ObjectHideFlags: 0

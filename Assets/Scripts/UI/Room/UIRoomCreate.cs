@@ -5,18 +5,29 @@ using UnityEngine;
 
 public class UIRoomCreate : MonoBehaviour
 {
-    [SerializeField] private TMP_InputField roomNameInputField;
-
+    [ReadOnly] [SerializeField] private string roomName;
+    
+    public void SetRoomName(string name)
+    {
+        roomName = name;
+    }
+    
+    /// <summary>
+    /// Check if Room's name is Empty
+    /// </summary>
+    /// <param name="name">used by room's name</param>
+    public void CheckNameIsEmpty(string name)
+    {
+        if (string.IsNullOrWhiteSpace(name)) {
+            print("[DEBUG] No name has typed in field. Use default name or previous name.");
+            name = Constants.DEFAULT_ROOM_NAME;
+        }
+        SetRoomName(name);
+    }
+    
     public void CreateRoom()
     {
-        var roomName = roomNameInputField.text;
-        if (string.IsNullOrWhiteSpace(roomName))
-        {
-            roomName = Constants.DEFAULT_ROOM_NAME;
-            UIDebugText.Logging("Room name is empty. Use default name");
-        }
-
         // Call: OnCreateRoom, OnJoinedRoom
-        LobbyManager.Instance.CreateRoom(roomName);
+        LobbyManager.CreateRoom(roomName);
     }
 }

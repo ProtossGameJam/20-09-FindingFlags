@@ -1,28 +1,37 @@
 ﻿using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine;
+using UnityEngine.Events;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
-    public void StartGame()
-    {
-        
-    }
+    [SerializeField] private UnityEvent<Player> playerEnterCallback;
+    [SerializeField] private UnityEvent<Player> playerLeftCallback;
     
     public void LeaveRoom()
     {
         // Call: OnLeftRoom
         PhotonNetwork.LeaveRoom();
-        UIDebugText.Logging("LeaveRoom()");
+        print("[DEBUG] LeaveRoom()");
     }
     
     public override void OnLeftRoom()
     {
-        SceneHandler.LoadScene(SceneType.LOBBY);
+        print("[DEBUG] Method : OnLeftRoom()");
+        PhotonNetwork.JoinLobby();
+        SceneLoader.LoadScene(SceneType.LOBBY);
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        
+        print("[DEBUG] OnPlayerEnteredRoom()");
+        playerEnterCallback.Invoke(newPlayer);
+    }
+
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        print("[DEBUG] OnPlayerLeftRoom()");
+        playerLeftCallback.Invoke(otherPlayer);
     }
 
     // Called when Master Client left room

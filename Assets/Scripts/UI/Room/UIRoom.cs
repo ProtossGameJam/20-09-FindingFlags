@@ -1,10 +1,11 @@
-﻿using Photon.Realtime;
+﻿using Photon.Pun;
+using Photon.Realtime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 [System.Serializable]
-public class UIRoom : MonoBehaviour, IPointerClickHandler
+public class UIRoom : MonoBehaviour
 {
     [SerializeField] private TMP_Text roomName;
 
@@ -25,9 +26,9 @@ public class UIRoom : MonoBehaviour, IPointerClickHandler
         return this;
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void EnterRoom()
     {
-        print("[DEBUG] Class : UIRoom / Method : OnPointerClick()");
-        LobbyManager.Instance.JoinRoom(_roomData);
+        print("[DEBUG] Class : UIRoom / Method : EnterRoom()");
+        LobbyManager.JoinRoom(_roomData.Name);
     }
 }
