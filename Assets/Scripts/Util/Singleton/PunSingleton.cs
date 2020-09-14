@@ -42,7 +42,7 @@ public abstract class PunSingleton<T> : MonoBehaviourPunCallbacks where T : PunS
 
     // If no other monobehaviour request the instance in an awake function
     // executing before this one, no need to search the object.
-    private void Awake()
+    protected virtual void Awake()
     {
         if (_instance == null) {
             _instance = this as T;
@@ -54,6 +54,11 @@ public abstract class PunSingleton<T> : MonoBehaviourPunCallbacks where T : PunS
         }
 
         _instance.Initialize();
+    }
+
+    protected virtual void OnDestroy()
+    {
+        DestroyImmediate(gameObject);
     }
 
     /// Make sure the instance isn't referenced anymore when the user quit, just in case.

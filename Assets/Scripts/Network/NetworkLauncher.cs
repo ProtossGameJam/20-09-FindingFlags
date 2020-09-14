@@ -15,7 +15,9 @@ public class NetworkLauncher : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        PhotonNetwork.ConnectUsingSettings();
+        if (!PhotonNetwork.IsConnected) {
+            PhotonNetwork.ConnectUsingSettings();
+        }
     }
 
     // Photon이 Master 서버에 연결될 시

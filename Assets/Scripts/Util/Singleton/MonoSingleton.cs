@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 /// <summary>
 ///     Mono singleton Class. Extend this class to make singleton component.
@@ -41,7 +42,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
 
     // If no other monobehaviour request the instance in an awake function
     // executing before this one, no need to search the object.
-    private void Awake()
+    protected virtual void Awake()
     {
         if (_instance == null) {
             _instance = this as T;

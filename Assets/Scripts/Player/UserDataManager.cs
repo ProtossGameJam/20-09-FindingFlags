@@ -4,8 +4,10 @@ public class UserDataManager : MonoSingleton<UserDataManager>
 {
     [SerializeField] private PlayerDataObject playerData;
 
-    protected override void Initialize()
+    protected override void Awake()
     {
+        base.Awake();
+
         DontDestroyOnLoad(gameObject);
     }
 

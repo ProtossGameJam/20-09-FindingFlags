@@ -8,13 +8,6 @@ public class RoomManager : MonoBehaviourPunCallbacks
     [SerializeField] private UnityEvent<Player> playerEnterCallback;
     [SerializeField] private UnityEvent<Player> playerLeftCallback;
     
-    public void LeaveRoom()
-    {
-        // Call: OnLeftRoom
-        PhotonNetwork.LeaveRoom();
-        print("[DEBUG] LeaveRoom()");
-    }
-    
     public override void OnLeftRoom()
     {
         print("[DEBUG] Method : OnLeftRoom()");
@@ -37,6 +30,14 @@ public class RoomManager : MonoBehaviourPunCallbacks
     // Called when Master Client left room
     public override void OnMasterClientSwitched(Player newMasterClient)
     {
-        
+        // EMPTY
+        print("[DEBUG] OnMasterClientSwitched()");
+    }
+    
+    public void LeaveRoom()
+    {
+        // Call: OnLeftRoom
+        print("[DEBUG] LeaveRoom()");
+        PhotonNetwork.LeaveRoom();
     }
 }

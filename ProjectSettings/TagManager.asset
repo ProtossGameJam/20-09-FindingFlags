@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1894036411
+    locked: 0
+  - name: OrderSprite
+    uniqueID: 2576425267
+    locked: 0
+  - name: DialogueBubble
+    uniqueID: 489519985
+    locked: 0
+  - name: UI
+    uniqueID: 2055094301
+    locked: 0

@@ -13,8 +13,10 @@ public class SceneData : MonoSingleton<SceneData>
 
     [SerializeField] private SceneDictionary sceneDic;
     
-    protected override void Initialize()
+    protected override void Awake()
     {
+        base.Awake();
+        
         DontDestroyOnLoad(gameObject);
     }
 

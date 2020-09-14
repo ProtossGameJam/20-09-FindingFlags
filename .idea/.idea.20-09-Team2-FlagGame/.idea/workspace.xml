@@ -11,6 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugPlayerText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugRoomList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/InitializeEvent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -24,18 +25,30 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/UIRoomCreate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugPlayerText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugRoomList.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkLauncher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Util/InitializeEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoomCreate.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoomList.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIMenuHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkLauncher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugText.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/UserDataManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/Singleton/PunSingleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/Singleton/MonoSingleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/SortingOrderBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/SpriteSortingOrder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/PlayerSortingOrder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerReverse.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" />
       </list>
     </option>
   </component>
@@ -87,7 +100,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600042667063</updated>
-      <workItem from="1600042692253" duration="12399000" />
+      <workItem from="1600042692253" duration="21694000" />
     </task>
     <servers />
   </component>

@@ -525,7 +525,15 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="CharacterVariant.cs" t="Include" />
           <e p="Constants.cs" t="Include" />
+          <e p="Input" t="Include">
+            <e p="InputHandler.cs" t="Include" />
+            <e p="PlayerControls.cs" t="Include" />
+          </e>
+          <e p="Interface" t="Include">
+            <e p="IMoveInput.cs" t="Include" />
+          </e>
           <e p="Network" t="Include">
             <e p="LobbyManager.cs" t="Include" />
             <e p="NetworkLauncher.cs" t="Include" />
@@ -535,6 +543,13 @@
             </e>
           </e>
           <e p="Player" t="Include">
+            <e p="Component" t="Include">
+              <e p="PlayerInput.cs" t="Include" />
+              <e p="PlayerManager.cs" t="Include" />
+              <e p="PlayerMove.cs" t="Include" />
+              <e p="PlayerReverse.cs" t="Include" />
+            </e>
+            <e p="PlayerSpawner.cs" t="Include" />
             <e p="UserDataManager.cs" t="Include" />
           </e>
           <e p="Scene" t="Include">
@@ -549,7 +564,6 @@
             <e p="Debug" t="Include">
               <e p="UIDebugPlayerText.cs" t="Include" />
               <e p="UIDebugRoomList.cs" t="Include" />
-              <e p="UIDebugText.cs" t="Include" />
             </e>
             <e p="Menu" t="Include">
               <e p="UIMenu.cs" t="Include" />
@@ -564,6 +578,7 @@
           </e>
           <e p="Util" t="Include">
             <e p="InitializeEvent.cs" t="Include" />
+            <e p="PlayerSortingOrder.cs" t="Include" />
             <e p="ReadOnly" t="Include">
               <e p="ReadOnlyAttribute.cs" t="Include" />
               <e p="ReadOnlyAttributeDrawer.cs" t="Include" />
@@ -572,6 +587,8 @@
               <e p="MonoSingleton.cs" t="Include" />
               <e p="PunSingleton.cs" t="Include" />
             </e>
+            <e p="SortingOrderBase.cs" t="Include" />
+            <e p="SpriteSortingOrder.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
