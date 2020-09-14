@@ -437,7 +437,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: IntroScene
+          m_StringArgument: NetworkLobby
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1001 &1928444020
@@ -517,7 +517,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4656070444042998444, guid: 0d09c03d4a9226443a936caaf33e8b5e, type: 3}
       propertyPath: m_Name
-      value: Scene Handler
+      value: Scene Data
       objectReference: {fileID: 0}
     - target: {fileID: 4656070444042998445, guid: 0d09c03d4a9226443a936caaf33e8b5e, type: 3}
       propertyPath: m_LocalPosition.x

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Photon.Realtime;
 using UnityEngine;
@@ -6,38 +7,27 @@ using UnityEngine;
 public class UIRoomList : MonoBehaviour
 {
     [SerializeField] private GameObject uiPrefab;
-
     [SerializeField] private Transform uiContentParent;
-    [ReadOnly] [SerializeField] private List<GameObject> uiRoomList;
 
-    [SerializeField] private bool hideRemovedRoom;
+    private UIRoom[] _roomObjs;
 
-    public void SettingRoom(IEnumerable<RoomInfo> roomList)
+    public void SettingRoomUI(RoomDictionary dicObj)
     {
-        DebugPrintRoomInfo(roomList);
-        CleaningRoom();
-        
-        print("[DEBUG] Method : SettingRoom()");
-        foreach (var room in roomList.Where(room => !room.RemovedFromList && !hideRemovedRoom)) {
-            var obj = Instantiate(uiPrefab, uiContentParent);
-            obj.GetComponent<UIRoom>().Setup(room);
-            uiRoomList.Add(obj);
+        print("[DEBUG] Execute : SettingRoomUI()");
+        CleanRoomUI();
+        _roomObjs = new UIRoom[dicObj.Count];
+        var index = 0;
+        foreach (var room in dicObj.Values) {
+            _roomObjs[index++] = Instantiate(uiPrefab, uiContentParent).GetComponent<UIRoom>().Setup(room);
         }
     }
 
-    private void CleaningRoom()
+    private void CleanRoomUI()
     {
-        print("[DEBUG] Method : CleaningRoom()");
-        foreach (var room in uiRoomList) {
-            DestroyImmediate(room.gameObject);
-        }
-        uiRoomList.Clear();
-    }
-
-    private void DebugPrintRoomInfo(IEnumerable<RoomInfo> roomList)
-    {
-        foreach (var room in roomList) {
-            print($"[DEBUG] Room Info / Name : {room.Name}, Full : {room.MaxPlayers}, Current : {room.PlayerCount}");
+        print("[DEBUG] Execute : CleanRoomUI()");
+        if (_roomObjs == null) return;
+        for (var i = 0; i < _roomObjs.Length; i++) {
+            DestroyImmediate(_roomObjs[i].gameObject);
         }
     }
 }

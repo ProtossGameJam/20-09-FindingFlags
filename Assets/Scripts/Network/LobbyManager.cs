@@ -9,7 +9,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     // Lobby Scene에 들어왔을 시
     public override void OnJoinedLobby()
     {
-        print("[DEBUG] Method : OnJoinedLobby()");
+        print("[DEBUG] Callback : OnJoinedLobby()");
         uiLobbyHandler.MenuOpen("Lobby");
 
         PhotonNetwork.NickName = UserDataManager.GetNickname(true);
@@ -18,33 +18,36 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public override void OnCreatedRoom()
     {
         // EMPTY
-        print("[DEBUG] Method : OnCreatedRoom()");
+        print("[DEBUG] Callback : OnCreatedRoom()");
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
-        print("[DEBUG] Method : OnCreateRoomFailed()");
+        print("[DEBUG] Callback : OnCreateRoomFailed()");
     }
 
     public override void OnJoinedRoom()
     {
-        print("[DEBUG] Method : OnJoinedRoom()");
-        PhotonNetwork.LeaveLobby();
+        print("[DEBUG] Callback : OnJoinedRoom()");
+        if (PhotonNetwork.InLobby) {
+            PhotonNetwork.LeaveLobby();
+        }
         if (PhotonNetwork.IsMasterClient) {
+            print("[DEBUG] Callback : LoadLevel()");
             PhotonNetwork.LoadLevel(SceneData.GetSceneName(SceneType.STAGE));
         }
     }
     
     public static void CreateRoom(string name, byte maxUser = Constants.DEFAULT_PLAYER_COUNT)
     {
-        print("[DEBUG] Method : CreateRoom()");
+        print("[DEBUG] Execute : CreateRoom()");
         // Call: OnCreateRoom, OnJoinedRoom
         PhotonNetwork.CreateRoom(name, new RoomOptions { MaxPlayers = maxUser });
     }
     
     public static void JoinRoom(string name)
     {
-        print("[DEBUG] Class : UIRoom / Method : EnterRoom()");
+        print("[DEBUG] Execute : JoinRoom()");
         PhotonNetwork.JoinRoom(name);
     }
 }

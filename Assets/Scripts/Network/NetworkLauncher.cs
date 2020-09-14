@@ -9,6 +9,9 @@ public class NetworkLauncher : MonoBehaviourPunCallbacks
     
     private void Awake()
     {
+        // DEBUG
+        Debug.developerConsoleVisible = true;
+        
         PhotonNetwork.GameVersion = GameVersion;
         PhotonNetwork.AutomaticallySyncScene = true;
     }
@@ -16,6 +19,7 @@ public class NetworkLauncher : MonoBehaviourPunCallbacks
     private void Start()
     {
         if (!PhotonNetwork.IsConnected) {
+            print("[DEBUG] Execute : ConnectUsingSettings()");
             PhotonNetwork.ConnectUsingSettings();
         }
     }
@@ -23,7 +27,10 @@ public class NetworkLauncher : MonoBehaviourPunCallbacks
     // Photon이 Master 서버에 연결될 시
     public override void OnConnectedToMaster()
     {
-        print("[DEBUG] Method : OnConnectedToMaster()");
-        PhotonNetwork.JoinLobby();
+        print("[DEBUG] Callback : OnConnectedToMaster()");
+        if (!PhotonNetwork.InLobby) {
+            print("[DEBUG] Execute : JoinLobby()");
+            PhotonNetwork.JoinLobby();
+        }
     }
 }
