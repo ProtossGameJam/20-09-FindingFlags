@@ -1,8 +1,9 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using Photon.Pun;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMove : MonoBehaviourPun
 {
     [SerializeField] private Rigidbody2D playerRigidbody;
 
@@ -21,7 +22,9 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move(transform, moveInput.MoveVector, moveSpeed * Time.deltaTime);
+        if (photonView.IsMine) {
+            Move(transform, moveInput.MoveVector, moveSpeed * Time.deltaTime);
+        }
     }
 
     private void Move(Transform player, Vector2 vec, float speed)

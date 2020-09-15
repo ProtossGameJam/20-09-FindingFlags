@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="836ac9f6-23ac-4770-a5a6-5a8e298a1e81" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Scene Handler.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Scene Handler.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/InitializeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/InitializeScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NetworkLobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NetworkLobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkLauncher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkLauncher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomListUpdator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomListUpdator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoomList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoomList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Photon/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Photon/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameStage_001.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameStage_001.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerMove.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +20,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CameraAssigner.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -61,9 +55,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugRoomList.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/CameraAssigner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerMove.cs" />
       </list>
     </option>
   </component>
@@ -118,6 +113,7 @@
       <workItem from="1600042692253" duration="21694000" />
       <workItem from="1600087306067" duration="6196000" />
       <workItem from="1600130197194" duration="13447000" />
+      <workItem from="1600173409633" duration="3900000" />
     </task>
     <servers />
   </component>

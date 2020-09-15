@@ -1,7 +1,8 @@
 ﻿using System;
+using Photon.Pun;
 using UnityEngine;
 
-public class PlayerAnimation : MonoBehaviour
+public class PlayerAnimation : MonoBehaviourPun
 {
     [SerializeField] private Animator animator;
 
@@ -25,6 +26,8 @@ public class PlayerAnimation : MonoBehaviour
 
     private void WalkAnimation()
     {
-        animator.SetFloat(velocityParameterName, moveInput.MoveVector.magnitude);
+        if (photonView.IsMine) {
+            animator.SetFloat(velocityParameterName, moveInput.MoveVector.magnitude);
+        }
     }
 }
