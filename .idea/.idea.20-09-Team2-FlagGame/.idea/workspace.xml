@@ -24,6 +24,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CameraAssigner.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -32,7 +34,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UINameInputField.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/UIRoomCreate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugPlayerText.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugRoomList.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Util/InitializeEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneHandler.cs" />
@@ -53,11 +54,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Util/PlayerSortingOrder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerReverse.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkLauncher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomListUpdator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoomList.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugRoomList.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/CameraAssigner.cs" />
       </list>
     </option>
   </component>
@@ -111,6 +117,7 @@
       <updated>1600042667063</updated>
       <workItem from="1600042692253" duration="21694000" />
       <workItem from="1600087306067" duration="6196000" />
+      <workItem from="1600130197194" duration="13447000" />
     </task>
     <servers />
   </component>
@@ -123,6 +130,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="685" y="220" key="RiderGenerateDialog" timestamp="1600131440583">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="685" y="220" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600131440583" />
     <state x="-1459" y="316" key="SettingsEditor" timestamp="1600098744383">
       <screen x="-1920" y="133" width="1920" height="1160" />
     </state>

@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerList: []
   debugPlayerText: {fileID: 2605872446335711536, guid: 8c387c556c6777347bd20eee3b40999b, type: 3}
+  deleteInterval: 5
 --- !u!114 &912174766953692975
 MonoBehaviour:
   m_ObjectHideFlags: 0
