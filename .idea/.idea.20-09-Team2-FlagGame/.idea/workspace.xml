@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cec8c990-d90e-4d9c-8491-1ce2cddb93e4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/indexLayout.xml" afterDir="false" />
+    <list default="true" id="836ac9f6-23ac-4770-a5a6-5a8e298a1e81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Launcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Launcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Scene Handler.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Scene Handler.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/InitializeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/InitializeScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NetworkLobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NetworkLobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkLauncher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkLauncher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomListUpdator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomListUpdator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoomList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoomList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,14 +22,52 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CameraAssigner.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Launcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Room/RoomCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UINameInputField.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/UIRoomCreate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugPlayerText.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoom.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/InitializeEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoomCreate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIMenuHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugText.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/UserDataManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/Singleton/PunSingleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/Singleton/MonoSingleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/SortingOrderBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/SpriteSortingOrder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/PlayerSortingOrder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerReverse.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkLauncher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomListUpdator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoomList.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugRoomList.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/CameraAssigner.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1hRTohvLu1RHvm2LXXwvPsf8nlF" />
+  <component name="ProjectId" id="1hTkqT1CsY3cMn54oOn2QJhPBMk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,6 +76,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys_rider" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -69,12 +110,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cec8c990-d90e-4d9c-8491-1ce2cddb93e4" name="Default Changelist" comment="" />
-      <created>1599973084795</created>
+      <changelist id="836ac9f6-23ac-4770-a5a6-5a8e298a1e81" name="Default Changelist" comment="" />
+      <created>1600042667063</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1599973084795</updated>
-      <workItem from="1599973103691" duration="14641000" />
+      <updated>1600042667063</updated>
+      <workItem from="1600042692253" duration="21694000" />
+      <workItem from="1600087306067" duration="6196000" />
+      <workItem from="1600130197194" duration="13447000" />
     </task>
     <servers />
   </component>
@@ -85,5 +128,16 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="685" y="220" key="RiderGenerateDialog" timestamp="1600131440583">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="685" y="220" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600131440583" />
+    <state x="-1459" y="316" key="SettingsEditor" timestamp="1600098744383">
+      <screen x="-1920" y="133" width="1920" height="1160" />
+    </state>
+    <state x="-1459" y="316" key="SettingsEditor/0.0.1920.1040/-1920.133.1920.1160@-1920.133.1920.1160" timestamp="1600098744383" />
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600045986747" />
   </component>
 </project>
