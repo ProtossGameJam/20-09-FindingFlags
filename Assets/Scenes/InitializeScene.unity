@@ -204,7 +204,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Progressor: {fileID: 1538928672}
-  SceneActivationDelay: 4
+  SceneActivationDelay: 5
   SceneBuildIndex: 2
   SceneName: 
   SelfDestructAfterSceneLoaded: 0
@@ -404,9 +404,9 @@ MonoBehaviour:
   ProgressTargets:
   - {fileID: 2128491788}
   AnimateValue: 1
-  AnimationDuration: 0.06
+  AnimationDuration: 0.75
   AnimationEase: 1
-  AnimationIgnoresUnityTimescale: 1
+  AnimationIgnoresUnityTimescale: 0
   OnEnableResetValue: 1
   OnDisableResetValue: 0
   CustomResetValue: 0
