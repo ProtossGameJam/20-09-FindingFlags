@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using Photon.Pun;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager : MonoBehaviourPun
 {
     
 }

@@ -17,16 +17,21 @@ public class PlayerMove : MonoBehaviourPun
             playerRigidbody = GetComponent<Rigidbody2D>();
         }
         
-        moveInput = FindObjectOfType<PlayerInput>();
+        moveInput = GetComponent<PlayerInput>();
     }
 
     private void FixedUpdate()
     {
         if (photonView.IsMine) {
-            Move(transform, moveInput.MoveVector, moveSpeed * Time.deltaTime);
+            VelocityMove(moveInput.MoveVector, moveSpeed);
+            //Move(transform, moveInput.MoveVector, moveSpeed * Time.deltaTime);
         }
     }
-
+    
+    private void VelocityMove(Vector2 vec, float speed)
+    {
+        playerRigidbody.velocity = vec * speed;
+    }
     private void Move(Transform player, Vector2 vec, float speed)
     {
         playerRigidbody.MovePosition((Vector2)player.position + vec * speed);

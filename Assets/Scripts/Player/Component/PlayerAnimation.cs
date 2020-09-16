@@ -16,18 +16,18 @@ public class PlayerAnimation : MonoBehaviourPun
             animator = GetComponent<Animator>();
         }
         
-        moveInput = FindObjectOfType<PlayerInput>();
+        moveInput = GetComponentInParent<PlayerInput>();
     }
 
     private void Update()
     {
-        WalkAnimation();
+        if (photonView.IsMine) {
+            WalkAnimation();
+        }
     }
 
     private void WalkAnimation()
     {
-        if (photonView.IsMine) {
-            animator.SetFloat(velocityParameterName, moveInput.MoveVector.magnitude);
-        }
+        animator.SetFloat(velocityParameterName, moveInput.MoveVector.magnitude);
     }
 }

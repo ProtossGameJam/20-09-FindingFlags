@@ -34,7 +34,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         }
         if (PhotonNetwork.IsMasterClient) {
             print("[DEBUG] Callback : LoadLevel()");
-            PhotonNetwork.LoadLevel(SceneData.GetSceneName(SceneType.STAGE));
+            PhotonNetwork.LoadLevel(3);
         }
     }
     

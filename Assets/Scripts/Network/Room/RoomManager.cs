@@ -2,6 +2,7 @@
 using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
@@ -12,7 +13,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         print("[DEBUG] Method : OnLeftRoom()");
         PhotonNetwork.JoinLobby();
-        SceneLoader.LoadScene(SceneType.LOBBY);
+        SceneManager.LoadScene(2);
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)

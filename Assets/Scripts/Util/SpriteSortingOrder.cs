@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Renderer))]
 public class SpriteSortingOrder : SortingOrderBase
 {
     [SerializeField] protected Renderer sortingRenderer;

@@ -1,29 +1,20 @@
 ﻿using Photon.Pun;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class PlayerInput : MonoBehaviour, IMoveInput
+public class PlayerInput : MonoBehaviourPun, IMoveInput
 {
-    [SerializeField] private PhotonView pView;
+    private Vector2 _moveVec;
     
-    public Vector2 MoveVector { get; set; }
-
-    private void Awake()
+    public Vector2 MoveVector
     {
-        if (pView == null) {
-            pView = GetComponent<PhotonView>();
-        }
-        
-        InputHandler.MovePerformActionRegister(MoveInput);
-        InputHandler.MoveCanceledActionRegister((ctx) => {
-            MoveVector = Vector2.zero;
-        });
+        get => _moveVec.normalized;
+        set => _moveVec = value;
     }
 
-    private void MoveInput(InputAction.CallbackContext ctx)
+    private void Update()
     {
-        if (pView.IsMine) {
-            MoveVector = ctx.ReadValue<Vector2>().normalized;
+        if (photonView.IsMine) {
+            _moveVec.Set(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         }
     }
 }

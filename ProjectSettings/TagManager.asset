@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -42,14 +43,14 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Background
-    uniqueID: 1894036411
+    uniqueID: 210861861
     locked: 0
-  - name: OrderSprite
-    uniqueID: 2576425267
+  - name: SortingObject
+    uniqueID: 1744862923
     locked: 0
-  - name: DialogueBubble
-    uniqueID: 489519985
+  - name: BubbleUI
+    uniqueID: 1878095141
     locked: 0
-  - name: UI
-    uniqueID: 2055094301
+  - name: CanvasUI
+    uniqueID: 1855831589
     locked: 0
