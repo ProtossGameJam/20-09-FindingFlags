@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Serialization;
 
-[CreateAssetMenu(fileName = "PlayerData", menuName = "Create PlayerData", order = 0)]
+[CreateAssetMenu(fileName = "PlayerData", menuName = "Custom Type/Create PlayerData", order = 0)]
 public class PlayerDataObject : ScriptableObject
 {
     [SerializeField] private string playerName;

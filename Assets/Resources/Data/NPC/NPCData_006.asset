@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5057f65f247f47beba98686b8210eea0, type: 3}
+  m_Name: NPCData_006
+  m_EditorClassIdentifier: 
+  name: 
+  setting:
+    skinType: 0
+    hairType: 0
+    backHairType: 0
+    clothType: 0
+    eyeType: 0

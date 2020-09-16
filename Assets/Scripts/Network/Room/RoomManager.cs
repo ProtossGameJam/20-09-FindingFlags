@@ -15,7 +15,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinLobby();
         SceneManager.LoadScene(2);
     }
-
+    
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         print("[DEBUG] OnPlayerEnteredRoom()");
