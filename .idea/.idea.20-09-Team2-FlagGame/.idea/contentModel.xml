@@ -1589,6 +1589,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Camera" t="Include">
+            <e p="CameraAssigner.cs" t="Include" />
             <e p="MainDepthCameraHandler.cs" t="Include" />
           </e>
           <e p="Constants.cs" t="Include" />
@@ -1640,6 +1641,10 @@
               <e p="UIDebugPlayerText.cs" t="Include" />
               <e p="UIDebugRoomList.cs" t="Include" />
             </e>
+            <e p="Flag" t="Include">
+              <e p="UIFlag.cs" t="Include" />
+              <e p="UIFlagDisplay.cs" t="Include" />
+            </e>
             <e p="Menu" t="Include">
               <e p="UIMenu.cs" t="Include" />
               <e p="UIMenuHandler.cs" t="Include" />
@@ -1652,7 +1657,7 @@
             <e p="UINameInputField.cs" t="Include" />
           </e>
           <e p="Util" t="Include">
-            <e p="CameraAssigner.cs" t="Include" />
+            <e p="NPCRenderer.cs" t="Include" />
             <e p="PlayerSortingOrder.cs" t="Include" />
             <e p="ReadOnly" t="Include">
               <e p="ReadOnlyAttribute.cs" t="Include" />

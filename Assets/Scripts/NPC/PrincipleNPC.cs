@@ -1,17 +1,10 @@
-﻿public class PrincipleNPC : NPCBase, IInteractable
+﻿using System;
+
+public class PrincipleNPC : NPCBase, IInteractable
 {
-    public override void SetData(NPCDataObject data)
-    {
-        base.SetData(data);
-    }
+    public void Interact(params object[] param) { throw new NotImplementedException(); }
 
-    public void FlagCheck()
-    {
-        
-    }
+    public override void SetData(NPCDataObject data) { base.SetData(data); }
 
-    public void Interact(params object[] param)
-    {
-        throw new System.NotImplementedException();
-    }
+    public void FlagCheck() { }
 }

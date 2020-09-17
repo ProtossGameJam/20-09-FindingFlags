@@ -1,10 +1,9 @@
-﻿using Photon.Pun;
+﻿using System;
 using Photon.Realtime;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-[System.Serializable]
+[Serializable]
 public class UIRoom : MonoBehaviour
 {
     [SerializeField] private TMP_Text roomName;
@@ -14,10 +13,9 @@ public class UIRoom : MonoBehaviour
 
     private RoomInfo _roomData;
 
-    public UIRoom Setup(RoomInfo info)
-    {
+    public UIRoom Setup(RoomInfo info) {
         _roomData = info;
-        
+
         roomName.text = info.Name;
 
         roomCurrentCount.text = info.PlayerCount.ToString();
@@ -26,8 +24,7 @@ public class UIRoom : MonoBehaviour
         return this;
     }
 
-    public void EnterRoom()
-    {
+    public void EnterRoom() {
         print("[DEBUG] Class : UIRoom / Method : EnterRoom()");
         LobbyManager.JoinRoom(_roomData.Name);
     }

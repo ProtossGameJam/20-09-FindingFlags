@@ -15,8 +15,7 @@ public abstract class PunSingleton<T> : MonoBehaviourPunCallbacks where T : PunS
 {
     private static T _instance;
 
-    public static T Instance
-    {
+    public static T Instance {
         get {
             // Instance requiered for the first time, we look for it
             if (_instance == null) {
@@ -42,8 +41,7 @@ public abstract class PunSingleton<T> : MonoBehaviourPunCallbacks where T : PunS
 
     // If no other monobehaviour request the instance in an awake function
     // executing before this one, no need to search the object.
-    protected virtual void Awake()
-    {
+    protected virtual void Awake() {
         if (_instance == null) {
             _instance = this as T;
         }
@@ -56,16 +54,10 @@ public abstract class PunSingleton<T> : MonoBehaviourPunCallbacks where T : PunS
         _instance.Initialize();
     }
 
-    protected virtual void OnDestroy()
-    {
-        DestroyImmediate(gameObject);
-    }
+    protected virtual void OnDestroy() { DestroyImmediate(gameObject); }
 
     /// Make sure the instance isn't referenced anymore when the user quit, just in case.
-    private void OnApplicationQuit()
-    {
-        _instance = null;
-    }
+    private void OnApplicationQuit() { _instance = null; }
 
     /// <summary>
     ///     This function is called when the instance is used the first time

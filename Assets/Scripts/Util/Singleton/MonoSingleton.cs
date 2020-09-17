@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 ///     Mono singleton Class. Extend this class to make singleton component.
@@ -15,8 +14,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
 {
     private static T _instance;
 
-    public static T Instance
-    {
+    public static T Instance {
         get {
             // Instance requiered for the first time, we look for it
             if (_instance == null) {
@@ -42,8 +40,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
 
     // If no other monobehaviour request the instance in an awake function
     // executing before this one, no need to search the object.
-    protected virtual void Awake()
-    {
+    protected virtual void Awake() {
         if (_instance == null) {
             _instance = this as T;
         }
@@ -57,10 +54,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
     }
 
     /// Make sure the instance isn't referenced anymore when the user quit, just in case.
-    private void OnApplicationQuit()
-    {
-        _instance = null;
-    }
+    private void OnApplicationQuit() { _instance = null; }
 
     /// <summary>
     ///     This function is called when the instance is used the first time

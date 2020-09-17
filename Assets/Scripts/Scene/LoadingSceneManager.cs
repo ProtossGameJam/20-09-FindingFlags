@@ -5,14 +5,10 @@ using UnityEngine.SceneManagement;
 public class LoadingSceneManager : MonoBehaviour
 {
     public static string NextSceneName;
-    
-    private void Start()
-    {
-        StartCoroutine(LoadScene());
-    }
 
-    private static IEnumerator LoadScene()
-    {
+    private void Start() { StartCoroutine(LoadScene()); }
+
+    private static IEnumerator LoadScene() {
         yield return null;
 
         var op = SceneManager.LoadSceneAsync(NextSceneName);

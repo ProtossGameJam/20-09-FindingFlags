@@ -8,35 +8,30 @@ public class RoomManager : MonoBehaviourPunCallbacks
 {
     [SerializeField] private UnityEvent<Player> playerEnterCallback;
     [SerializeField] private UnityEvent<Player> playerLeftCallback;
-    
-    public override void OnLeftRoom()
-    {
+
+    public override void OnLeftRoom() {
         print("[DEBUG] Method : OnLeftRoom()");
         PhotonNetwork.JoinLobby();
         SceneManager.LoadScene(2);
     }
-    
-    public override void OnPlayerEnteredRoom(Player newPlayer)
-    {
+
+    public override void OnPlayerEnteredRoom(Player newPlayer) {
         print("[DEBUG] OnPlayerEnteredRoom()");
         playerEnterCallback.Invoke(newPlayer);
     }
 
-    public override void OnPlayerLeftRoom(Player otherPlayer)
-    {
+    public override void OnPlayerLeftRoom(Player otherPlayer) {
         print("[DEBUG] OnPlayerLeftRoom()");
         playerLeftCallback.Invoke(otherPlayer);
     }
 
     // Called when Master Client left room
-    public override void OnMasterClientSwitched(Player newMasterClient)
-    {
+    public override void OnMasterClientSwitched(Player newMasterClient) {
         // EMPTY
         print("[DEBUG] OnMasterClientSwitched()");
     }
-    
-    public void LeaveRoom()
-    {
+
+    public void LeaveRoom() {
         // Call: OnLeftRoom
         print("[DEBUG] LeaveRoom()");
         PhotonNetwork.LeaveRoom();

@@ -1540,6 +1540,7 @@ MonoBehaviour:
   screenSize: {x: 0, y: 0, z: 0}
   originalPosition: {x: 0, y: 0, z: 0}
   sensitivity: 12
+  limitMovement: {x: 0.6, y: 0.3}
 --- !u!1 &610442061
 GameObject:
   m_ObjectHideFlags: 0
