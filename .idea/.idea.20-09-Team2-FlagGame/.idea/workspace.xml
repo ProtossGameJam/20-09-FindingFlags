@@ -48,6 +48,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Type/NPCDataObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NPC/QuizNPCSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/MainDepthCameraHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" />
       </list>
     </option>
   </component>
@@ -104,6 +106,8 @@
       <workItem from="1600251513939" duration="3879000" />
       <workItem from="1600256168824" duration="4053000" />
       <workItem from="1600260350839" duration="400000" />
+      <workItem from="1600322541755" duration="1119000" />
+      <workItem from="1600324029422" duration="316000" />
     </task>
     <servers />
   </component>

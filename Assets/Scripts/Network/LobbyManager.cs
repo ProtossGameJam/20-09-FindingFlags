@@ -50,4 +50,13 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         print("[DEBUG] Execute : JoinRoom()");
         PhotonNetwork.JoinRoom(name);
     }
+    
+    public void ExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
 }

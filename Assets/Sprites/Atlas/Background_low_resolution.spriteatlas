@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Background_low_resolution
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 2decc9ddc774dbc46b1d6650b36c62a2, type: 3}
+    - {fileID: 2800000, guid: 93745872ffe8b6448ac95143b0dfc7d1, type: 3}
+    - {fileID: 2800000, guid: bcb368904e419ad438a83493f42f7b59, type: 3}
+    - {fileID: 2800000, guid: 3b6e75fa018476d4cb8906f56054b301, type: 3}
+    - {fileID: 2800000, guid: c32d5c6679e89e842ba6e2f166090326, type: 3}
+    - {fileID: 2800000, guid: dec0c03a4cfd09d47b67e547491c4228, type: 3}
+    - {fileID: 2800000, guid: 326f6c1a23bb8724f987d2abb6111d5b, type: 3}
+    - {fileID: 2800000, guid: 1973651d15a671045b6f7fdf9daea92b, type: 3}
+    - {fileID: 2800000, guid: f858df9bd15e1c74595b26283a9f451e, type: 3}
+    - {fileID: 2800000, guid: 88c4ccf18663114438f86ec533dbd1a7, type: 3}
+    - {fileID: 2800000, guid: a17a756681e2ba6498b25f0d189e2178, type: 3}
+    - {fileID: 2800000, guid: c6aff6cebf0d13540a14001d23f5bb30, type: 3}
+    - {fileID: 2800000, guid: aa378ff925193974dafd8dc05a9f429e, type: 3}
+    - {fileID: 2800000, guid: bdba82fc8748ce048b99047342b39240, type: 3}
+    - {fileID: 2800000, guid: 90f8b3b49f2fcdd4bb75b58ea7bdb893, type: 3}
+    - {fileID: 2800000, guid: e58d8f8defe742f4491e126fb4c50307, type: 3}
+    - {fileID: 2800000, guid: 0a6afc5254f28c040a90c632f8e99741, type: 3}
+    - {fileID: 2800000, guid: daa0ad44aee5cb845ae9b0ce4627c92f, type: 3}
+    - {fileID: 2800000, guid: 0450e9c99a326d345836706cc43411e5, type: 3}
+    - {fileID: 2800000, guid: c32deb2d798dbc8438b329c8d778b93a, type: 3}
+    - {fileID: 2800000, guid: bc5277dce3ea73d4eaf96f6f0288b04d, type: 3}
+    - {fileID: 2800000, guid: bf911ea7578f2e64991c1fbc95dec37d, type: 3}
+    - {fileID: 2800000, guid: a92ae9ec91887db4a903f25899262d9f, type: 3}
+    totalSpriteSurfaceArea: 2436199
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: bcb368904e419ad438a83493f42f7b59, type: 3}
+  - {fileID: 21300000, guid: 88c4ccf18663114438f86ec533dbd1a7, type: 3}
+  - {fileID: 21300000, guid: 0a6afc5254f28c040a90c632f8e99741, type: 3}
+  - {fileID: 21300000, guid: 93745872ffe8b6448ac95143b0dfc7d1, type: 3}
+  - {fileID: 21300000, guid: daa0ad44aee5cb845ae9b0ce4627c92f, type: 3}
+  - {fileID: 21300000, guid: 90f8b3b49f2fcdd4bb75b58ea7bdb893, type: 3}
+  - {fileID: 21300000, guid: a17a756681e2ba6498b25f0d189e2178, type: 3}
+  - {fileID: 21300000, guid: c32d5c6679e89e842ba6e2f166090326, type: 3}
+  - {fileID: 21300000, guid: bf911ea7578f2e64991c1fbc95dec37d, type: 3}
+  - {fileID: 21300000, guid: 0450e9c99a326d345836706cc43411e5, type: 3}
+  - {fileID: 21300000, guid: aa378ff925193974dafd8dc05a9f429e, type: 3}
+  - {fileID: 21300000, guid: 326f6c1a23bb8724f987d2abb6111d5b, type: 3}
+  - {fileID: 21300000, guid: dec0c03a4cfd09d47b67e547491c4228, type: 3}
+  - {fileID: 21300000, guid: 3b6e75fa018476d4cb8906f56054b301, type: 3}
+  - {fileID: 21300000, guid: f858df9bd15e1c74595b26283a9f451e, type: 3}
+  - {fileID: 21300000, guid: bc5277dce3ea73d4eaf96f6f0288b04d, type: 3}
+  - {fileID: 21300000, guid: a92ae9ec91887db4a903f25899262d9f, type: 3}
+  - {fileID: 21300000, guid: bdba82fc8748ce048b99047342b39240, type: 3}
+  - {fileID: 21300000, guid: 1973651d15a671045b6f7fdf9daea92b, type: 3}
+  - {fileID: 21300000, guid: c32deb2d798dbc8438b329c8d778b93a, type: 3}
+  - {fileID: 21300000, guid: e58d8f8defe742f4491e126fb4c50307, type: 3}
+  - {fileID: 21300000, guid: 2decc9ddc774dbc46b1d6650b36c62a2, type: 3}
+  - {fileID: 21300000, guid: c6aff6cebf0d13540a14001d23f5bb30, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - bench_low_resolution
+  - goal_low_resolution
+  - texture_road_low_resolution
+  - basketbasket_low_resolution
+  - thrill_low_resolution
+  - school_low_resolution
+  - grass-down_low_resolution
+  - border_low_resolution
+  - vertical-wall_low_resolution
+  - track_low_resolution
+  - parkingline_low_resolution
+  - carline-white_low_resolution
+  - yellowflower_low_resolution
+  - border-for-wall_low_resolution
+  - corner_low_resolution
+  - treeroot_low_resolution
+  - wall_low_resolution
+  - road_low_resolution
+  - carline_low_resolution
+  - tree_low_resolution
+  - texture_cement_low_resolution
+  - basketball_low_resolution
+  - grass-up_low_resolution
+  m_Tag: Background_low_resolution
+  m_IsVariant: 0
