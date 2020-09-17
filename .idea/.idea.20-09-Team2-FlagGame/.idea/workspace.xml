@@ -37,13 +37,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NPC/NPCBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NPC/PrincipleNPC.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/NPCSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Type/PlayerDataObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCSetting.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Type/NPCDataObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NPC/QuizNPCSpawner.cs" />
@@ -55,6 +58,13 @@
         <option value="$PROJECT_DIR$/Assets/FlagManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Flag/NetworkFlagStatus.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Flag/FlagManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCPrinciple.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IInteractable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPC.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/PrincipleNPC.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/DefaultNPC.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCSpawner.cs" />
       </list>
     </option>
   </component>
@@ -114,6 +124,7 @@
       <workItem from="1600322541755" duration="1119000" />
       <workItem from="1600324029422" duration="316000" />
       <workItem from="1600325740939" duration="1822000" />
+      <workItem from="1600329164406" duration="1540000" />
     </task>
     <servers />
   </component>

@@ -198,7 +198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6381974409861020164}
   - component: {fileID: 1090850530909350639}
-  - component: {fileID: 3875178110288707909}
+  - component: {fileID: 7786676418671622145}
   - component: {fileID: 1506922127}
   m_Layer: 9
   m_Name: NPC
@@ -245,7 +245,7 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &3875178110288707909
+--- !u!114 &7786676418671622145
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6381974409861020171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a9680b9cb5f4795b6c741bb392b7882, type: 3}
+  m_Script: {fileID: 11500000, guid: ef7e06bf10b74ae1b2d34f94714ed288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   npcData: {fileID: 0}

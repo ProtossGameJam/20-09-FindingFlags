@@ -1599,8 +1599,8 @@
             <e p="CharacterVariant.cs" t="Include" />
           </e>
           <e p="Interface" t="Include">
+            <e p="IInteractable.cs" t="Include" />
             <e p="IMoveInput.cs" t="Include" />
-            <e p="INPCEssential.cs" t="Include" />
           </e>
           <e p="Network" t="Include">
             <e p="LobbyManager.cs" t="Include" />
@@ -1612,9 +1612,10 @@
             </e>
           </e>
           <e p="NPC" t="Include">
-            <e p="NPCManager.cs" t="Include" />
-            <e p="PrincipleNPCManager.cs" t="Include" />
-            <e p="QuizNPCSpawner.cs" t="Include" />
+            <e p="DefaultNPC.cs" t="Include" />
+            <e p="NPCBase.cs" t="Include" />
+            <e p="NPCSpawner.cs" t="Include" />
+            <e p="PrincipleNpc.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="Component" t="Include">

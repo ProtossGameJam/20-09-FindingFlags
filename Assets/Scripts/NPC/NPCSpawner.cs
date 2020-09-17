@@ -1,7 +1,7 @@
 ﻿using Photon.Pun;
 using UnityEngine;
 
-public class QuizNPCSpawner : MonoSingleton<QuizNPCSpawner>, IPunObservable
+public class NPCSpawner : MonoSingleton<NPCSpawner>, IPunObservable
 {
     [SerializeField] private int npcCount;
 
@@ -32,7 +32,7 @@ public class QuizNPCSpawner : MonoSingleton<QuizNPCSpawner>, IPunObservable
     private void SpawnNPC(int index)
     {
         PhotonNetwork.InstantiateRoomObject($"{npcPrefabPath}/NPC", spawnPoint[index].position, Quaternion.identity)
-            .GetComponent<NPCManager>().SetData(npcData[index % npcData.Length]);
+            .GetComponent<NPCBase>().SetData(npcData[index % npcData.Length]);
     }
 
     private void ShuffleNPCArray(int complexity)
