@@ -32,7 +32,7 @@ public class QuizNPCSpawner : MonoSingleton<QuizNPCSpawner>, IPunObservable
     private void SpawnNPC(int index)
     {
         PhotonNetwork.InstantiateRoomObject($"{npcPrefabPath}/NPC", spawnPoint[index].position, Quaternion.identity)
-            .GetComponent<NPCManager>().SetNPC(npcData[index % npcData.Length]);
+            .GetComponent<NPCManager>().SetData(npcData[index % npcData.Length]);
     }
 
     private void ShuffleNPCArray(int complexity)

@@ -1592,11 +1592,15 @@
             <e p="MainDepthCameraHandler.cs" t="Include" />
           </e>
           <e p="Constants.cs" t="Include" />
+          <e p="Flag" t="Include">
+            <e p="FlagManager.cs" t="Include" />
+          </e>
           <e p="Graphic" t="Include">
             <e p="CharacterVariant.cs" t="Include" />
           </e>
           <e p="Interface" t="Include">
             <e p="IMoveInput.cs" t="Include" />
+            <e p="INPCEssential.cs" t="Include" />
           </e>
           <e p="Network" t="Include">
             <e p="LobbyManager.cs" t="Include" />
@@ -1609,6 +1613,7 @@
           </e>
           <e p="NPC" t="Include">
             <e p="NPCManager.cs" t="Include" />
+            <e p="PrincipleNPCManager.cs" t="Include" />
             <e p="QuizNPCSpawner.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
