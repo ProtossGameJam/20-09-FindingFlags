@@ -1,6 +1,11 @@
-﻿public class DefaultNPC : NPCBase, IInteractable
+﻿using System;
+
+public class DefaultNPC : NPCBase
 {
-    public void Interact(params object[] param) { }
+    protected override void Awake() {
+        base.Awake();
+        npcType = NPCType.Default;
+    }
 
     public override void SetData(NPCDataObject data) {
         base.SetData(data);
@@ -9,5 +14,9 @@
 
     private void SetSprite(NPCDataObject.NPCSetting setting) {
         // TODO: 인덱스로 NPC 외형 변경하는 스크립트 구현
+    }
+
+    public override void Interact(params object[] param) {
+        interactModule.ActiveModuleObject();
     }
 }

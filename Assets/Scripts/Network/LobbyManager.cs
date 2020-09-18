@@ -1,4 +1,5 @@
-﻿using Photon.Pun;
+﻿using System;
+using Photon.Pun;
 using Photon.Realtime;
 using UnityEditor;
 using UnityEngine;
@@ -7,11 +8,8 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 {
     [SerializeField] private UIMenuHandler uiLobbyHandler;
 
-    // Lobby Scene에 들어왔을 시
-    public override void OnJoinedLobby() {
-        print("[DEBUG] Callback : OnJoinedLobby()");
+    private void Start() {
         uiLobbyHandler.MenuOpen("Lobby");
-
         PhotonNetwork.NickName = UserDataManager.GetNickname(true);
     }
 

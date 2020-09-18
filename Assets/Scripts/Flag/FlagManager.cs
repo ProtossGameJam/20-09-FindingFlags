@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Photon.Pun;
 using RotaryHeart.Lib.SerializableDictionary;
 using UnityEngine;
@@ -23,13 +24,20 @@ public class FlagManager : MonoBehaviourPun, IPunObservable
     [SerializeField] private UIFlagDisplay uiFlagDisplay;
     
     [ReadOnly] [SerializeField] private List<FlagColor> currentFlag;
+    [ReadOnly] [SerializeField] private List<FlagColor> targetFlag;
     [SerializeField]            private int             flagStoreSize;
 
     [SerializeField] private FlagDictionary flagColorDic;
 
     private void Awake() { currentFlag = new List<FlagColor>(flagStoreSize); }
+    
+    private void Start() { SetFlagTarget(); }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) { }
+
+    private void SetFlagTarget() {
+        RandomFlagPick(flagStoreSize);
+    }
 
     public void GetFlag(FlagColor color, int count = 1) {
         if (currentFlag.Contains(color)) return;
@@ -43,5 +51,12 @@ public class FlagManager : MonoBehaviourPun, IPunObservable
     [PunRPC]
     public void GetFlagAnnounce(string nick, FlagColor color, int count) {
         print($"[DEBUG] RPC : GetFlagAnnounce() - Nickname : {nick}, Color : {color.ToString()}, Count : {count}개");
+    }
+
+    private void RandomFlagPick(int count) {
+        var tempColorArr = ShufleUtillity.GetShuffledArray<FlagColor>(Enum.GetValues(typeof(FlagColor)));
+        for (var i = 0; i < count; i++) {
+            targetFlag.Add(tempColorArr[i]);
+        }
     }
 }

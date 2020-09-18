@@ -1,10 +1,17 @@
-﻿using System;
-
-public class PrincipleNPC : NPCBase, IInteractable
+﻿public class PrincipleNPC : NPCBase
 {
-    public void Interact(params object[] param) { throw new NotImplementedException(); }
-
-    public override void SetData(NPCDataObject data) { base.SetData(data); }
+    protected override void Awake() {
+        base.Awake();
+        npcType = NPCType.Principle;
+    }
+    
+    public override void SetData(NPCDataObject data) {
+        base.SetData(data);
+    }
 
     public void FlagCheck() { }
+    
+    public override void Interact(params object[] param) {
+        interactModule.ActiveModuleObject();
+    }
 }

@@ -1,5 +1,7 @@
 ﻿public class Constants
 {
+    public const string GAME_NETWORK_VERSION = "dev";
+    
     public const string DEFAULT_PLAYER_NAME = "TEMPUSER";
     public const string DEFAULT_ROOM_NAME   = "게임방";
 

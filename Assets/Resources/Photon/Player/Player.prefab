@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 1090850530909350639}
   - component: {fileID: 6381974409861020167}
   - component: {fileID: 7326430369974020828}
+  - component: {fileID: 6617648954836729106}
   - component: {fileID: 6381974409861020165}
   - component: {fileID: 6381974409861020160}
   m_Layer: 8
@@ -319,6 +320,23 @@ MonoBehaviour:
   playerRigidbody: {fileID: 6381974409861020165}
   moveSpeed: 8
   networkPosFixDistance: 10
+--- !u!114 &6617648954836729106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381974409861020171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969e740b1b10439ea73bd00b0d78a0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkRadius: 2
+  npcLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isInteracting: 0
 --- !u!50 &6381974409861020165
 Rigidbody2D:
   serializedVersion: 4
@@ -353,8 +371,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12, y: 0.77}
-  m_Size: {x: 0.77, y: 1.42}
+  m_Offset: {x: 0.11, y: 1.48}
+  m_Size: {x: 1.5, y: 2.6}
   m_Direction: 0
 --- !u!1 &6381974410094399112
 GameObject:
@@ -367,7 +385,7 @@ GameObject:
   - component: {fileID: 6381974410094399113}
   - component: {fileID: 6381974410094399114}
   m_Layer: 8
-  m_Name: Collider
+  m_Name: Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -400,7 +418,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04, y: 0.1}
+  m_Offset: {x: 0.08, y: 0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -411,7 +429,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 0.05}
+  m_Size: {x: 0.96, y: 0.05}
   m_EdgeRadius: 0
 --- !u!1001 &6381974410697888335
 PrefabInstance:

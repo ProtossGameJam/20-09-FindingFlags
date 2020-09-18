@@ -1599,6 +1599,9 @@
           <e p="Graphic" t="Include">
             <e p="CharacterVariant.cs" t="Include" />
           </e>
+          <e p="Input" t="Include">
+            <e p="InputManager.cs" t="Include" />
+          </e>
           <e p="Interface" t="Include">
             <e p="IInteractable.cs" t="Include" />
             <e p="IMoveInput.cs" t="Include" />
@@ -1614,22 +1617,25 @@
           </e>
           <e p="NPC" t="Include">
             <e p="DefaultNPC.cs" t="Include" />
+            <e p="InteractModule.cs" t="Include" />
             <e p="NPCBase.cs" t="Include" />
             <e p="NPCSpawner.cs" t="Include" />
             <e p="PrincipleNpc.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="Component" t="Include">
+              <e p="InteractManager.cs" t="Include" />
               <e p="PlayerAnimation.cs" t="Include" />
               <e p="PlayerInput.cs" t="Include" />
-              <e p="PlayerManager.cs" t="Include" />
               <e p="PlayerNetworkMove.cs" t="Include" />
               <e p="PlayerReverse.cs" t="Include" />
+              <e p="PlayerSortingOrder.cs" t="Include" />
             </e>
             <e p="PlayerSpawner.cs" t="Include" />
             <e p="UserDataManager.cs" t="Include" />
           </e>
           <e p="Scene" t="Include">
+            <e p="InitializeSceneManager.cs" t="Include" />
             <e p="LoadingSceneManager.cs" t="Include" />
           </e>
           <e p="Type" t="Include">
@@ -1657,12 +1663,12 @@
             <e p="UINameInputField.cs" t="Include" />
           </e>
           <e p="Util" t="Include">
-            <e p="NPCRenderer.cs" t="Include" />
-            <e p="PlayerSortingOrder.cs" t="Include" />
+            <e p="CharacterRenderer.cs" t="Include" />
             <e p="ReadOnly" t="Include">
               <e p="ReadOnlyAttribute.cs" t="Include" />
               <e p="ReadOnlyAttributeDrawer.cs" t="Include" />
             </e>
+            <e p="ShufleUtillity.cs" t="Include" />
             <e p="Singleton" t="Include">
               <e p="MonoSingleton.cs" t="Include" />
               <e p="PunSingleton.cs" t="Include" />
