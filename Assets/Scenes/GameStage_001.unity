@@ -362,6 +362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiFlagDisplay: {fileID: 2090436847}
   currentFlag: 
+  targetFlag: 
   flagStoreSize: 3
   flagColorDic:
     reorderableList:
@@ -2199,11 +2200,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2190840885160791860, guid: 61762bb699800bb4d884237b17f4ed80, type: 3}
       propertyPath: viewIdField
-      value: 1
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3839169580504195485, guid: 61762bb699800bb4d884237b17f4ed80, type: 3}
       propertyPath: viewIdField
-      value: 2
+      value: 501
       objectReference: {fileID: 0}
     - target: {fileID: 5320236617110822864, guid: 61762bb699800bb4d884237b17f4ed80, type: 3}
       propertyPath: m_Name
