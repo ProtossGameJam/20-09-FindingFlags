@@ -1,7 +1,11 @@
-﻿using UnityEngine;
+﻿using Photon.Pun;
+using TMPro;
+using UnityEngine;
 
 public class UIRoomCreate : MonoBehaviour
 {
+    [SerializeField] private TMP_InputField inputField;
+    
     [ReadOnly] [SerializeField] private string roomName;
 
     public void SetRoomName(string name) { roomName = name; }
@@ -13,10 +17,9 @@ public class UIRoomCreate : MonoBehaviour
     public void CheckNameIsEmpty(string name) {
         if (string.IsNullOrWhiteSpace(name)) {
             print("[DEBUG] No name has typed in field. Use default name or previous name.");
-            name = Constants.DEFAULT_ROOM_NAME;
+            SetRoomName(Constants.DEFAULT_ROOM_NAME);
+            inputField.text = Constants.DEFAULT_ROOM_NAME;
         }
-
-        SetRoomName(name);
     }
 
     public void CreateRoom() {

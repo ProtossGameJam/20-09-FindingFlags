@@ -1609,18 +1609,17 @@
           <e p="Network" t="Include">
             <e p="LobbyManager.cs" t="Include" />
             <e p="NetworkLauncher.cs" t="Include" />
-            <e p="NetworkManager.cs" t="Include" />
             <e p="Room" t="Include">
-              <e p="RoomListUpdator.cs" t="Include" />
-              <e p="RoomManager.cs" t="Include" />
+              <e p="RoomListUpdater.cs" t="Include" />
             </e>
+            <e p="StageManager.cs" t="Include" />
           </e>
           <e p="NPC" t="Include">
             <e p="DefaultNPC.cs" t="Include" />
             <e p="InteractModule.cs" t="Include" />
+            <e p="MasterNPC.cs" t="Include" />
             <e p="NPCBase.cs" t="Include" />
             <e p="NPCSpawner.cs" t="Include" />
-            <e p="PrincipleNpc.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="Component" t="Include">

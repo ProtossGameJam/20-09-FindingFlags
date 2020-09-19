@@ -1,59 +1,44 @@
-﻿using Photon.Pun;
+﻿using System;
+using System.Collections.Generic;
+using Photon.Pun;
+using RotaryHeart.Lib.SerializableDictionary;
 using UnityEngine;
+// ReSharper disable InconsistentNaming
+// ReSharper disable ParameterHidesMember
 
 public class NPCSpawner : MonoSingleton<NPCSpawner>, IPunObservable
 {
     [SerializeField] private int npcCount;
 
     [SerializeField] private string npcPrefabPath;
+    [SerializeField] private string npcPrefabPrefix;
 
-    [SerializeField] private NPCDataObject[] npcData;
-
+    [SerializeField] private string[]    NPCNames;
     [SerializeField] private Transform[] spawnPoint;
 
-    private void Start() {
-        if (!PhotonNetwork.LocalPlayer.IsMasterClient) return;
-
+    protected override void Awake() {
+        base.Awake();
+        
         if (npcCount > spawnPoint.Length) {
             Debug.LogError("[ERROR] NPC Count is higher then NPC Spawn Point. Reduced to Spawn Point Count.");
             npcCount = spawnPoint.Length;
         }
 
-        ShuffleNPCSpawnPosition(2);
-        ShuffleNPCArray(2);
+        NPCNames = ShufleUtillity.GetShuffledArray(NPCNames, 2);
+        spawnPoint = ShufleUtillity.GetShuffledArray(spawnPoint, 2);
+    }
 
+    private void Start() {
+        if (!PhotonNetwork.LocalPlayer.IsMasterClient) return;
+        
         print("[DEBUG] Execute : SpawnNPC()");
-        for (var i = 0; i < npcCount; i++) SpawnNPC(i);
+        for (var i = 0; i < npcCount; i++) SpawnNPC(i % npcCount);
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) { }
 
     private void SpawnNPC(int index) {
-        PhotonNetwork.InstantiateRoomObject($"{npcPrefabPath}/NPC", spawnPoint[index].position, Quaternion.identity)
-                     .GetComponent<NPCBase>().SetData(npcData[index % npcData.Length]);
-    }
-
-    private void ShuffleNPCArray(int complexity) {
-        print("[DEBUG] Execute : ShuffleNPCArray()");
-        var tempNpcCount = npcData.Length;
-        while (complexity-- > 0)
-            for (var i = 0; i < tempNpcCount; i++) {
-                var randNum = Random.Range(0, tempNpcCount);
-                var tempObj = npcData[randNum];
-                npcData[randNum] = npcData[i];
-                npcData[i] = tempObj;
-            }
-    }
-
-    private void ShuffleNPCSpawnPosition(int complexity) {
-        print("[DEBUG] Execute : ShuffleNPCArray()");
-        var spawnCount = spawnPoint.Length;
-        while (complexity-- > 0)
-            for (var i = 0; i < spawnCount; i++) {
-                var randNum = Random.Range(0, spawnCount);
-                var tempPoint = spawnPoint[randNum];
-                spawnPoint[randNum] = spawnPoint[i];
-                spawnPoint[i] = tempPoint;
-            }
+        print($"[DEBUG] Execute : SpawnNPC() - {npcPrefabPath + npcPrefabPrefix + "_" + NPCNames[index]}");
+        PhotonNetwork.InstantiateRoomObject(npcPrefabPath + npcPrefabPrefix + "_" + NPCNames[index], spawnPoint[index].position, Quaternion.identity);
     }
 }

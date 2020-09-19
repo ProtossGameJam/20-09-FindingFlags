@@ -4,19 +4,19 @@ using Random = UnityEngine.Random;
 
 public class ShufleUtillity
 {
-    public static T[] GetShuffledArray<T>(Array array, int complexity = 1) {
-        var tempArray = (T[]) array;
+    public static T[] GetShuffledArray<T>(T[] array, int complexity = 1) {
         for (var i = 0; i < complexity; i++) {
-            for (var j = 0; j < tempArray.Length; j++) {
+            for (var j = 0; j < array.Length; j++) {
                 var randomIndex = Random.Range(0, array.Length);
-                var tempObj = tempArray[randomIndex];
-                tempArray[randomIndex] = tempArray[j];
-                tempArray[j] = tempObj;
+                var tempObj = array[randomIndex];
+                array[randomIndex] = array[j];
+                array[j] = tempObj;
             }
         }
-        return tempArray;
+
+        return array;
     }
-    
+
     public static List<T> GetShuffledList<T>(List<T> list, int complexity = 1) {
         for (var i = 0; i < complexity; i++) {
             for (var j = 0; j < list.Count; j++) {
@@ -26,6 +26,7 @@ public class ShufleUtillity
                 list[j] = tempObj;
             }
         }
+
         return list;
     }
 }

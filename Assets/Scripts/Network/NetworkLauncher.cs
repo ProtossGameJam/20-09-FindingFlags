@@ -1,15 +1,19 @@
 ﻿using Photon.Pun;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 public class NetworkLauncher : MonoBehaviourPunCallbacks
 {
+    [SerializeField] private int sendRate          = 60;
+    [SerializeField] private int serializationRate = 30;
+    
     [SerializeField] private UnityEvent onConnectedEvent;
     [SerializeField] private UnityEvent onJoinLobbyEvent;
-    
+
     private void Awake() {
         PhotonNetwork.GameVersion = Constants.GAME_NETWORK_VERSION;
+        PhotonNetwork.SendRate = sendRate;
+        PhotonNetwork.SerializationRate = serializationRate;
         PhotonNetwork.AutomaticallySyncScene = true;
     }
 

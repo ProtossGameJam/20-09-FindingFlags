@@ -2662,6 +2662,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rootMenuObject: {fileID: 1013170843}
+  enableEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1013170849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3683,7 +3686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1508502208
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3757,6 +3760,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rootMenuObject: {fileID: 1508502207}
+  enableEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1598966645
 GameObject:
   m_ObjectHideFlags: 0
@@ -4367,6 +4373,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rootMenuObject: {fileID: 1656912759}
+  enableEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 829510599}
+        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1656912765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4379,6 +4400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd14f7c3af14287bd1eadf5fda1a863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputField: {fileID: 829510599}
   roomName: 
 --- !u!1 &1668668240
 GameObject:

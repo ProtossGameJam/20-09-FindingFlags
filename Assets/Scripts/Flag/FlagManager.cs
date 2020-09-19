@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Photon.Pun;
-using RotaryHeart.Lib.SerializableDictionary;
 using UnityEngine;
 
 public enum FlagColor
@@ -9,54 +9,61 @@ public enum FlagColor
     RED, ORANGE, YELLOW, GREEN, BLUE, NAVY, PURPLE, WHITE, BLACK
 }
 
-[System.Serializable]
-public class FlagColorSetting
+[Serializable]
+public class Flag
 {
-    public Color  flagColor;
-    public Color  edgeColor;
+    public FlagColor color;
+    public bool      isTaken;
+    
+    public Flag(FlagColor color) {
+        this.color = color;
+        isTaken = false;
+    }
+
+    public static implicit operator Flag(FlagColor flag) => new Flag(flag);
 }
 
 public class FlagManager : MonoBehaviourPun, IPunObservable
 {
-    [System.Serializable]
-    public class FlagDictionary : SerializableDictionaryBase<FlagColor, FlagColorSetting> { }
-
     [SerializeField] private UIFlagDisplay uiFlagDisplay;
-    
-    [ReadOnly] [SerializeField] private List<FlagColor> currentFlag;
-    [ReadOnly] [SerializeField] private List<FlagColor> targetFlag;
-    [SerializeField]            private int             flagStoreSize;
 
-    [SerializeField] private FlagDictionary flagColorDic;
+    [ReadOnly] [SerializeField] private List<Flag> flagList;
+    [SerializeField]            private int        flagStoreSize;
 
-    private void Awake() { currentFlag = new List<FlagColor>(flagStoreSize); }
-    
-    private void Start() { SetFlagTarget(); }
+    private void Awake() {
+        flagList = new List<Flag>(flagStoreSize);
+    }
 
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) { }
-
-    private void SetFlagTarget() {
+    private void Start() {
         RandomFlagPick(flagStoreSize);
     }
 
-    public void GetFlag(FlagColor color, int count = 1) {
-        if (currentFlag.Contains(color)) return;
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) { }
 
-        if (currentFlag.Count != currentFlag.Capacity) {
-            currentFlag.Add(color);
-            photonView.RPC("GetFlagAnnounce", RpcTarget.Others, PhotonNetwork.NickName, color, count);
+    private void RandomFlagPick(int count) {
+        var tempColorArr = ShufleUtillity.GetShuffledArray((FlagColor[])Enum.GetValues(typeof(FlagColor)));
+        Array.Resize(ref tempColorArr, count);
+        
+        for (var i = 0; i < count; i++) {
+            flagList.Add(tempColorArr[i]);
+        }
+        uiFlagDisplay.FlagUIInitialize(tempColorArr);
+    }
+
+    public void GetFlag(FlagColor color) {
+        var tempFlag = flagList.Find(flag => flag.color == color);
+        if (tempFlag != null) {
+            tempFlag.isTaken = true;
+            uiFlagDisplay.ShowFlagUI(color);
+            photonView.RPC("GetFlagAnnounce", RpcTarget.Others, PhotonNetwork.NickName, color);
+        }
+        if (flagList.Count == flagList.Capacity) {
+            // 전부 모음
         }
     }
 
     [PunRPC]
-    public void GetFlagAnnounce(string nick, FlagColor color, int count) {
-        print($"[DEBUG] RPC : GetFlagAnnounce() - Nickname : {nick}, Color : {color.ToString()}, Count : {count}개");
-    }
-
-    private void RandomFlagPick(int count) {
-        var tempColorArr = ShufleUtillity.GetShuffledArray<FlagColor>(Enum.GetValues(typeof(FlagColor)));
-        for (var i = 0; i < count; i++) {
-            targetFlag.Add(tempColorArr[i]);
-        }
+    public void GetFlagAnnounce(string nick, FlagColor color) {
+        print($"[DEBUG] RPC : GetFlagAnnounce() - Nickname : {nick}, Color : {color.ToString()}");
     }
 }

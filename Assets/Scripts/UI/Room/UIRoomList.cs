@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using Photon.Realtime;
+using UnityEngine;
 
 public class UIRoomList : MonoBehaviour
 {
@@ -7,18 +9,14 @@ public class UIRoomList : MonoBehaviour
 
     private UIRoom[] _roomObjs;
 
-    public void SettingRoomUI(RoomDictionary dicObj) {
+    public void SettingRoomUI(List<RoomInfo> roomList) {
         print("[DEBUG] Execute : SettingRoomUI()");
-        CleanRoomUI();
-        _roomObjs = new UIRoom[dicObj.Count];
-        var index = 0;
-        foreach (var room in dicObj.Values)
-            _roomObjs[index++] = Instantiate(uiPrefab, uiContentParent).GetComponent<UIRoom>().Setup(room);
-    }
-
-    private void CleanRoomUI() {
-        print("[DEBUG] Execute : CleanRoomUI()");
-        if (_roomObjs == null) return;
-        for (var i = 0; i < _roomObjs.Length; i++) DestroyImmediate(_roomObjs[i].gameObject);
+        if (_roomObjs != null) {
+            foreach (var room in _roomObjs) DestroyImmediate(room.gameObject);
+        }
+        _roomObjs = new UIRoom[roomList.Count];
+        for (var i = 0; i < roomList.Count; i++) {
+            _roomObjs[i] = Instantiate(uiPrefab, uiContentParent).GetComponent<UIRoom>().Setup(roomList[i]);
+        }
     }
 }

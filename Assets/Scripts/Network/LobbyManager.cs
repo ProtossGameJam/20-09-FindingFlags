@@ -1,5 +1,4 @@
-﻿using System;
-using Photon.Pun;
+﻿using Photon.Pun;
 using Photon.Realtime;
 using UnityEditor;
 using UnityEngine;
@@ -13,8 +12,15 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         PhotonNetwork.NickName = UserDataManager.GetNickname(true);
     }
 
+    // Photon이 Master 서버에 연결될 시
+    public override void OnConnectedToMaster() {
+        print("[DEBUG] Callback : OnConnectedToMaster()");
+        if (!PhotonNetwork.InLobby) {
+            PhotonNetwork.JoinLobby();
+        }
+    }
+
     public override void OnCreatedRoom() {
-        // EMPTY
         print("[DEBUG] Callback : OnCreatedRoom()");
     }
 
@@ -34,7 +40,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public static void CreateRoom(string name, byte maxUser = Constants.DEFAULT_PLAYER_COUNT) {
         print("[DEBUG] Execute : CreateRoom()");
         // Call: OnCreateRoom, OnJoinedRoom
-        PhotonNetwork.CreateRoom(name, new RoomOptions {MaxPlayers = maxUser});
+        PhotonNetwork.CreateRoom(name, new RoomOptions { MaxPlayers = maxUser });
     }
 
     public static void JoinRoom(string name) {

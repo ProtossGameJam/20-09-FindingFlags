@@ -28,8 +28,6 @@ public class CharacterVariant : MonoBehaviour
             hairRenderer.sprite = hairSprites[hairIndex];
         }
 
-        if (faceRenderer) {
-            faceRenderer.sprite = faceSprites[faceIndex];
-        }
+        if (faceRenderer) faceRenderer.sprite = faceSprites[faceIndex];
     }
 }

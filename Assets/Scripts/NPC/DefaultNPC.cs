@@ -1,6 +1,4 @@
-﻿using System;
-
-public class DefaultNPC : NPCBase
+﻿public class DefaultNPC : NPCBase
 {
     protected override void Awake() {
         base.Awake();
@@ -16,7 +14,5 @@ public class DefaultNPC : NPCBase
         // TODO: 인덱스로 NPC 외형 변경하는 스크립트 구현
     }
 
-    public override void Interact(params object[] param) {
-        interactModule.ActiveModuleObject();
-    }
+    public override void Interact(params object[] param) { interactModule.ActiveModuleObject(); }
 }
