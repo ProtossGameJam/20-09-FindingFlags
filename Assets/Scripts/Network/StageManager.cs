@@ -23,7 +23,6 @@ public class StageManager : MonoBehaviourPunCallbacks
 
     public override void OnLeftRoom() {
         print("[DEBUG] Callback : OnLeftRoom()");
-        PhotonNetwork.JoinLobby();
         SceneManager.LoadScene(2);
     }
 

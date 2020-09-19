@@ -5,35 +5,23 @@ using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class RoomDictionary : Dictionary<string, RoomInfo>
-{ }
-
-public class RoomListUpdator : MonoBehaviourPunCallbacks
+public class RoomListUpdater : MonoBehaviourPunCallbacks
 {
-    [SerializeField] private UnityEvent<RoomDictionary> roomUpdateCallback;
+    [SerializeField] private UnityEvent<List<RoomInfo>> roomUpdateCallback;
 
-    private RoomDictionary roomDic;
-
-    private void Awake() { roomDic = new RoomDictionary(); }
-
-    public override void OnRoomListUpdate(List<RoomInfo> roomList) //방 리스트가 업데이트 될 때
-    {
+    public override void OnRoomListUpdate(List<RoomInfo> roomList) {
         print("[DEBUG] Callback : OnRoomListUpdate()");
         roomUpdateCallback.Invoke(RoomDictionaryUpdate(roomList));
     }
 
-    private RoomDictionary RoomDictionaryUpdate(List<RoomInfo> roomList) {
+    private List<RoomInfo> RoomDictionaryUpdate(List<RoomInfo> roomList) {
         print("[DEBUG] Execute : RoomDictionaryUpdate()");
-        roomDic.Clear();
-
+        var tempList = new List<RoomInfo>();
         print($"[DEBUG] Room Count : {roomList.Count}");
-        foreach (var room in roomList.Where(room => room.IsVisible && !room.RemovedFromList)) {
-            DebugPrintRoomInfo(room); // DEBUG
-            roomDic.Add(room.Name, room);
+        foreach (var room in roomList.Where(room => room.MaxPlayers != 0)) {
+            print($"[DEBUG] Room Info : {room.ToStringFull()}"); // DEBUG
+            tempList.Add(room);
         }
-
-        return roomDic;
+        return tempList;
     }
-
-    private static void DebugPrintRoomInfo(RoomInfo info) { print($"[DEBUG] Room Info : {info.ToStringFull()}"); }
 }
