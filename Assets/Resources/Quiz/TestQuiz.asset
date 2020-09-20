@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c692989a53c9c243a98d912a46b956f, type: 3}
+  m_Name: TestQuiz
+  m_EditorClassIdentifier: 
+  QuizList:
+  - itemID: 0
+    question: "\uB178\uB791\uB098\uBE44 \uD770\uB098\uBE44 \uCDA4\uC744 \uCD94\uBA70
+      \uC624\uB108\uB77C~"
+    choice1: "\uBD04\uBC14\uB78C\uC5D0 \uAF43\uC78E\uB3C4"
+    choice2: "\uCC38\uC0C8\uB3C4 \uC9F9\uC9F9\uC9F9"
+    choice3: "\uB098\uBE44\uC57C \uB098\uBE44\uC57C"
+    correct: '#s1'

@@ -563,6 +563,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7828847429044813821, guid: 0d09c03d4a9226443a936caaf33e8b5e, type: 3}
+      propertyPath: sceneDic._values.Array.data[2]
+      value: GameStage_Quiz
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4656070444042998434, guid: 0d09c03d4a9226443a936caaf33e8b5e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0d09c03d4a9226443a936caaf33e8b5e, type: 3}

@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/NetworkLobby.unity
     guid: ef549f625afe6a34ea6cad7b4a6975e8
   - enabled: 1
+    path: Assets/Scenes/GameStage_Quiz.unity
+    guid: 2da1dd6c119da01499dd2056f87772f2
+  - enabled: 1
     path: Assets/Scenes/GameStage_001.unity
     guid: 160adf390263de348ae67b14e59dacbc
   m_configObjects:

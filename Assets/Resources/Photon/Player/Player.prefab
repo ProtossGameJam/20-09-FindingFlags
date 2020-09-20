@@ -339,6 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pView: {fileID: 0}
+  nearNPC: {fileID: 0}
 --- !u!114 &6381974409861020166
 MonoBehaviour:
   m_ObjectHideFlags: 0
