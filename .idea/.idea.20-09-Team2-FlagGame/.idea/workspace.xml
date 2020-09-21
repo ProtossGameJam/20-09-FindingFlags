@@ -33,27 +33,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/28/44ff3471/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/24/45c6bfc9/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/05/1477f7c5/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Quiz/QuizManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NPC/PrincipleNPC.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/MasterNPC.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Flag/UIFlag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Util/ShufleUtillity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Flag/FlagManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StageManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/StageManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Util/CharacterRenderer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Flag/UIFlagDisplay.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoomCreate.cs" />
@@ -62,6 +57,26 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/StageManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomListUpdater.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraAssigner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DIalogueData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizViewer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/EventTimerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/EventTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Type/NPCDataObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/DefaultNPC.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/MasterNPC.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/InteractModule.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/InteractManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/UIQuizBubble.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueViewer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizManager.cs" />
       </list>
     </option>
   </component>
@@ -120,6 +135,7 @@
       <workItem from="1600454962208" duration="658000" />
       <workItem from="1600513788514" duration="21305000" />
       <workItem from="1600545397586" duration="6902000" />
+      <workItem from="1600649551848" duration="16920000" />
     </task>
     <servers />
   </component>
@@ -144,10 +160,11 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="706" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1600516855234">
+    <state x="706" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1600649791061">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="706" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1040/-1920.133.1920.1160@0.0.1920.1040" timestamp="1600516855234" />
+    <state x="706" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1040@0.0.1920.1040" timestamp="1600649791061" />
     <state x="685" y="220" key="RiderGenerateDialog" timestamp="1600515736193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

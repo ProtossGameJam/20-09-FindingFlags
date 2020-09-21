@@ -5,7 +5,7 @@ public enum NPCType
     Default, Master, Teacher, Child
 }
 
-public abstract class NPCBase : MonoBehaviour, IInteractable
+public abstract class NPCBase : MonoBehaviour
 {
     [SerializeField] protected NPCType npcType;
 
@@ -15,8 +15,6 @@ public abstract class NPCBase : MonoBehaviour, IInteractable
     protected virtual void Awake() {
         if (interactModule == null) interactModule = GetComponent<InteractModule>();
     }
-
-    public abstract void Interact(params object[] param);
 
     public virtual void SetData(NPCDataObject data) { npcData = data; }
 }

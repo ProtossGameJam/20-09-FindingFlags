@@ -1,4 +1,5 @@
-﻿using Photon.Pun;
+﻿using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 // ReSharper disable InconsistentNaming
@@ -20,13 +21,15 @@ public class InteractManager : MonoBehaviourPun
 
     private void CheckNPCAvailable() {
         var castNpc = Physics2D.OverlapCircle(transform.position + Vector3.up, checkRadius, npcLayer);
-        if (castNpc) StartInteract(castNpc.transform.GetComponent<NPCBase>());
+        if (castNpc) StartInteract(castNpc.transform.GetComponents<InteractModule>());
     }
 
-    private void StartInteract(IInteractable npc) {
+    private void StartInteract(IEnumerable<InteractModule> modules) {
         if (!isInteracting) {
-            isInteracting = true;
-            npc.Interact();
+            //isInteracting = true;
+            foreach (var module in modules) {
+                module.Interact();
+            }
         }
     }
 

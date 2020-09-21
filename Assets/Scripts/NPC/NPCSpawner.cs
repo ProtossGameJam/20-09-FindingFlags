@@ -15,6 +15,7 @@ public class NPCSpawner : MonoSingleton<NPCSpawner>, IPunObservable
 
     [SerializeField] private string[]    NPCNames;
     [SerializeField] private Transform[] spawnPoint;
+    [SerializeField] private DialogueData[] dialogues;
 
     protected override void Awake() {
         base.Awake();
@@ -26,6 +27,7 @@ public class NPCSpawner : MonoSingleton<NPCSpawner>, IPunObservable
 
         NPCNames = ShufleUtillity.GetShuffledArray(NPCNames, 2);
         spawnPoint = ShufleUtillity.GetShuffledArray(spawnPoint, 2);
+        dialogues = ShufleUtillity.GetShuffledArray(dialogues, 2);
     }
 
     private void Start() {
@@ -39,6 +41,7 @@ public class NPCSpawner : MonoSingleton<NPCSpawner>, IPunObservable
 
     private void SpawnNPC(int index) {
         print($"[DEBUG] Execute : SpawnNPC() - {npcPrefabPath + npcPrefabPrefix + "_" + NPCNames[index]}");
-        PhotonNetwork.InstantiateRoomObject(npcPrefabPath + npcPrefabPrefix + "_" + NPCNames[index], spawnPoint[index].position, Quaternion.identity);
+        var npcObj = PhotonNetwork.InstantiateRoomObject(npcPrefabPath + npcPrefabPrefix + "_" + NPCNames[index], spawnPoint[index].position, Quaternion.identity);
+        npcObj.GetComponent<DialogueViewer>().SetDialogue(dialogues[index % dialogues.Length]);
     }
 }
