@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca2face883d4a778aecb01ad8716fa1, type: 3}
+  m_Name: QuizData 16
+  m_EditorClassIdentifier: 
+  code: 15
+  desc: "\uC7AC\uB8CC\uB294 \uB77C\uBA74 \uBA74, \uBD84\uBC1C \uC2A4\uD504, \uD30C\uAC00
+    \uC788\uC5B4."
+  answer:
+  - "\uBD88\uC740 \uC704\uD5D8\uD574"
+  - "\uBB3C, \uC2A4\uD504, \uBA74 \uD30C"
+  - "\uBB3C, \uBA74, \uC2A4\uD504, \uD30C"
+  correct: 0

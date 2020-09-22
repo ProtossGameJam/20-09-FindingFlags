@@ -1,26 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Photon.Pun;
 using UnityEngine;
 
 public enum FlagColor
 {
-    RED, ORANGE, YELLOW, GREEN, BLUE, NAVY, PURPLE, WHITE, BLACK
+    RED,
+    ORANGE,
+    YELLOW,
+    GREEN,
+    BLUE,
+    NAVY,
+    PURPLE,
+    WHITE,
+    BLACK
 }
 
 [Serializable]
 public class Flag
 {
     public FlagColor color;
-    public bool      isTaken;
-    
+    public bool isTaken;
+
     public Flag(FlagColor color) {
         this.color = color;
         isTaken = false;
     }
 
-    public static implicit operator Flag(FlagColor flag) => new Flag(flag);
+    public static implicit operator Flag(FlagColor flag) {
+        return new Flag(flag);
+    }
 }
 
 public class FlagManager : MonoBehaviourPun, IPunObservable
@@ -28,7 +37,7 @@ public class FlagManager : MonoBehaviourPun, IPunObservable
     [SerializeField] private UIFlagDisplay uiFlagDisplay;
 
     [ReadOnly] [SerializeField] private List<Flag> flagList;
-    [SerializeField]            private int        flagStoreSize;
+    [SerializeField] private int flagStoreSize;
 
     private void Awake() {
         flagList = new List<Flag>(flagStoreSize);
@@ -41,12 +50,10 @@ public class FlagManager : MonoBehaviourPun, IPunObservable
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) { }
 
     private void RandomFlagPick(int count) {
-        var tempColorArr = ShufleUtillity.GetShuffledArray((FlagColor[])Enum.GetValues(typeof(FlagColor)));
+        var tempColorArr = ShufleUtillity.GetShuffledArray((FlagColor[]) Enum.GetValues(typeof(FlagColor)));
         Array.Resize(ref tempColorArr, count);
-        
-        for (var i = 0; i < count; i++) {
-            flagList.Add(tempColorArr[i]);
-        }
+
+        for (var i = 0; i < count; i++) flagList.Add(tempColorArr[i]);
         uiFlagDisplay.FlagUIInitialize(tempColorArr);
     }
 
@@ -55,8 +62,9 @@ public class FlagManager : MonoBehaviourPun, IPunObservable
         if (tempFlag != null) {
             tempFlag.isTaken = true;
             uiFlagDisplay.ShowFlagUI(color);
-            photonView.RPC("GetFlagAnnounce", RpcTarget.Others, PhotonNetwork.NickName, color);
+            //photonView.RPC("GetFlagAnnounce", RpcTarget.Others, PhotonNetwork.NickName, color);
         }
+
         if (flagList.Count == flagList.Capacity) {
             // 전부 모음
         }

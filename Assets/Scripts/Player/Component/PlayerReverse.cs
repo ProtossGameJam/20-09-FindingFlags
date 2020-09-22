@@ -14,7 +14,9 @@ public class PlayerReverse : MonoBehaviour
         moveInput = FindObjectOfType<PlayerInput>();
     }
 
-    private void Update() { FlipPlayer(moveInput.MoveVector.x); }
+    private void Update() {
+        FlipPlayer(moveInput.MoveVector.x);
+    }
 
     public void FlipPlayer(float vecXValue) {
         if (vecXValue > 0.0f) {

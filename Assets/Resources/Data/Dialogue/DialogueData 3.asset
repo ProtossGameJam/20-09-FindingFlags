@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0358d1c43fb94417a44c1ecd820f18bb, type: 3}
+  m_Name: DialogueData 3
+  m_EditorClassIdentifier: 
+  id: 2
+  sentence:
+  - index: 0
+    content: "\"\uCE5C\uAD6C\uC57C!! \uAE09\uD574!! \uC774 \uCABD\uC9C0\uB0B4\uC6A9\uC5D0
+      \uB9DE\uCDB0\uC11C \uBB3C\uAC74\uC744 \uCC3E\uC544\uC640\uC57C\uD558\uB294\uB370
+      \uBB54 \uC18C\uB9AC\uC778\uC9C0 \uBAA8\uB974\uACA0\uC5B4!\n\uC870\uAE08\uB9CC
+      \uB3C4\uC640 \uC904\uB798?\""
+    eventCode: 
+  - index: 1
+    content: "\"\uCABD\uC9C0\uB0B4\uC6A9\uC740 \uB2E4\uC74C\uACFC \uAC19\uB2E4.\n(10*10*4*0.5*0.5+(365/5))*2\uD638\uC2E4\uC5D0
+      \uC2E0\uBC1C\uC774 \uC788\uB2E4. \uC2E0\uBC1C\uC744 \uCC3E\uC544\uB77C\""
+    eventCode: '#quiz-002'
+  - index: 2
+    content: "\"\uACE0\uB9C8\uC6CC! \uAC00\uC11C \uCC3E\uC544\uBCFC\uAC8C!\n\u2026\n\uBB50\uC57C!
+      \uC5C6\uC796\uC544! \uAC70\uC9D3\uB9D0\uC7C1\uC774!\""
+    eventCode: '#s-1,#exit'
+  - index: 3
+    content: "\"\uC640! \uACE0\uB9C8\uC6CC! \uAC00\uC11C \uCC3E\uC544\uBCFC\uAC8C!\n\u2026\n\uC788\uB124!
+      \uACE0\uB9C8\uC6CC! \uC790 \uC5EC\uAE30 \uC120\uBB3C\uC774\uC57C! \uAE43\uBC1C!
+      \uB108\uB124 \uBC18 \uB2E4\uC74C \uACBD\uAE30 \uB9DE\uC9C0? \uD798\uB0B4!\""
+    eventCode: '#s-2,#exit'
+  - index: 4
+    content: "\uBAB0\uB77C? \uBBF8\uC548, \uB0B4\uAC00 \uC2DC\uAC04\uC744 \uBE8F\uC5C8\uB124\u2026
+      \uC5B4\uCA54 \uC218 \uC5C6\uC9C0! \uC774\uC57C\uAE30 \uB4E3\uC5B4\uC918\uC11C
+      \uACE0\uB9C8\uC6CC!"
+    eventCode: '#s-3,#exit'

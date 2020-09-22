@@ -1,4 +1,5 @@
 ﻿public interface IInteractable
 {
-    void Interact(params object[] param);
+    bool IsInteractable { get; set; }
+    void Interact();
 }

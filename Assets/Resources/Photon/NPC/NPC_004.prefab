@@ -1799,6 +1799,7 @@ MonoBehaviour:
   npcType: 0
   npcData: {fileID: 0}
   interactModule: {fileID: 0}
+  ownFlag: 0
 --- !u!61 &1008134580243025117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1861,11 +1862,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBubble: {fileID: 0}
   coolDownObject: {fileID: 0}
+  dialogue: {fileID: 0}
   sentenceData: []
   curIndex: 0
   curEventCode: 
   timer: {fileID: 1109141415445446803}
-  isAnsweredDialogue: 0
+  cooldownTime: 0
 --- !u!114 &1109141415445446803
 MonoBehaviour:
   m_ObjectHideFlags: 0

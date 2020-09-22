@@ -6,9 +6,9 @@ using UnityEngine;
 [Serializable]
 public class SpawnPoint
 {
-    public int       index;
+    public int index;
     public Transform point;
-    public bool      isSpawned;
+    public bool isSpawned;
 }
 
 public class PlayerSpawner : MonoBehaviourPunCallbacks

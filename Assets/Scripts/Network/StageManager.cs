@@ -1,5 +1,4 @@
-﻿using System;
-using Photon.Pun;
+﻿using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,13 +8,13 @@ public class StageManager : MonoBehaviourPunCallbacks
 {
     [SerializeField] private UnityEvent<Player> playerEnterCallback;
     [SerializeField] private UnityEvent<Player> playerLeftCallback;
-    
-    [SerializeField] private UnityEvent         stageStartEvent;
-    [SerializeField] private UnityEvent         stageCancelEvent;
+
+    [SerializeField] private UnityEvent stageReadyEvent;
+    [SerializeField] private UnityEvent stageCancelEvent;
 
     [ReadOnly] [SerializeField] private int playerMaxNum;
-    
-    [ReadOnly] [SerializeField] private bool isAllowStart = false;
+
+    [ReadOnly] [SerializeField] private bool isAllowStart;
 
     private void Awake() {
         playerMaxNum = PhotonNetwork.CurrentRoom.MaxPlayers;
@@ -32,8 +31,8 @@ public class StageManager : MonoBehaviourPunCallbacks
             if (!isAllowStart) {
                 isAllowStart = true;
                 if (PhotonNetwork.IsMasterClient) {
-                    print($"[DEBUG] Callback : OnPlayerEnteredRoom() - Room is Full. Game Start~!");
-                    stageStartEvent.Invoke();
+                    print("[DEBUG] Callback : OnPlayerEnteredRoom() - Room is Full. Game Start~!");
+                    stageReadyEvent.Invoke();
                 }
             }
         }
@@ -48,7 +47,7 @@ public class StageManager : MonoBehaviourPunCallbacks
             if (isAllowStart) {
                 isAllowStart = false;
                 if (PhotonNetwork.IsMasterClient) {
-                    print($"[DEBUG] Callback : OnPlayerLeftRoom() - Player is Left. Cancel stage.");
+                    print("[DEBUG] Callback : OnPlayerLeftRoom() - Player is Left. Cancel stage.");
                     stageCancelEvent.Invoke();
                 }
             }

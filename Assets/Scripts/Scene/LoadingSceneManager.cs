@@ -6,7 +6,9 @@ public class LoadingSceneManager : MonoBehaviour
 {
     public static string NextSceneName;
 
-    private void Start() { StartCoroutine(LoadScene()); }
+    private void Start() {
+        StartCoroutine(LoadScene());
+    }
 
     private static IEnumerator LoadScene() {
         yield return null;

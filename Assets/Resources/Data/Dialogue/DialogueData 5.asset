@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0358d1c43fb94417a44c1ecd820f18bb, type: 3}
+  m_Name: DialogueData 5
+  m_EditorClassIdentifier: 
+  id: 4
+  sentence:
+  - index: 0
+    content: "\uC544 \uC138\uC0C1 \uCC38 \uB108\uBB34 \uB354\uB7EC\uC6CC \uC624\uB298\uB9CC\uC740
+      \uC77C\uD558\uAE30 \uC2EB\uB2E4\u2026"
+    eventCode: 
+  - index: 1
+    content: "\uD6CC\uCA4D\u2026 \uBB50\uD558\uB294 \uC911\uC774\uB0D0\uACE0? \uC774\uC820
+      \uC560\uB4E4\uD55C\uD14C\uB3C4 \uAE00\uB7EC\uBA39\uC740 \uC0AC\uB78C\uC73C\uB85C
+      \uBCF4\uC774\uB294\uAC74\uAC00\u2026"
+    eventCode: 
+  - index: 2
+    content: "\uD559\uAD50 \uAE30\uBB3C \uC2E4\uD0DC\uC870\uC0AC\uB97C \uD558\uACE0
+      \uC788\uAC70\uB4E0\u2026 \uC5B4\uC81C \uC22B\uC790\uB97C \uC798\uBABB\uC138\uC5B4\uC11C
+      \uD63C\uB0AC\uC5B4\u2026"
+    eventCode: '#quiz-004'
+  - index: 3
+    content: "\u2026 \uACE0\uB9C8\uC6CC \u2026"
+    eventCode: '#s-1,#exit'
+  - index: 4
+    content: "\uC640! \uACE0\uB9C8\uC6CC! \uCE5C\uAD6C\uAC00 \uC54C\uB824\uC900\uB300\uB85C
+      \uBCF4\uACE0\uC11C\uB97C \uC801\uC5C8\uB354\uB2C8 \uC784\uAE08\uC774 \uC62C\uB790\uC5B4!
+      \uB9CC\uC138! \uBCF4\uC0C1\uC73C\uB85C \uAE43\uBC1C\uC744 \uC904\uAC8C!"
+    eventCode: '#s-2,#exit'
+  - index: 5
+    content: "\uC6B0\uB9AC\uD559\uAD50\uC5D0 \uB18D\uAD6C\uC7A5\uC774\uB098 \uCD95\uAD6C\uC7A5\uC774
+      \uB354 \uC788\uC5C8\uB2C8\u2026?"
+    eventCode: '#s-3,#exit'
+  - index: 6
+    content: 
+    eventCode: 
+  - index: 7
+    content: 
+    eventCode: 
+  - index: 8
+    content: 
+    eventCode: 
+  - index: 9
+    content: 
+    eventCode: 

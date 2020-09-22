@@ -9,5 +9,8 @@ public class PlayerInput : MonoBehaviourPun, IMoveInput
         if (photonView.IsMine) _moveVec.Set(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
 
-    public Vector2 MoveVector { get => _moveVec.normalized; set => _moveVec = value; }
+    public Vector2 MoveVector {
+        get => _moveVec.normalized;
+        set => _moveVec = value;
+    }
 }

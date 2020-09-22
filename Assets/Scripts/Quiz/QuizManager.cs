@@ -5,54 +5,75 @@ public class QuizManager : MonoSingleton<QuizManager>
 {
     [SerializeField] private UIQuizBubble uiBubble;
 
+    [SerializeField] private FlagManager flagManager;
+
     [SerializeField] private List<QuizData> quizData;
 
     private DialogueViewer callDialogueViewer;
-    private QuizData curQuizData;
+    [ReadOnly] [SerializeField] private int quizCorrect;
     private bool inProgress;
+
+    protected override void Awake() {
+        base.Awake();
+        if (flagManager == null) flagManager = FindObjectOfType<FlagManager>();
+    }
 
     private void ResetQuizManager() {
         inProgress = false;
-        curQuizData = null;
-        callDialogueViewer.ResetDialogue();
+        quizCorrect = -1;
         callDialogueViewer = null;
     }
-    
+
     /// <summary>
-    /// 새로운 퀴즈를 준비하고 시작하는 함수. DialogueManager 에서 Code를 감지하고 실행하게 됨.
+    ///     새로운 퀴즈를 준비하고 시작하는 함수. DialogueManager 에서 Code를 감지하고 실행하게 됨.
     /// </summary>
     /// <param name="dialogue">호출한 Dialogue 오브젝트</param>
     /// <param name="pos">Quiz Bubble UI position</param>
     /// <param name="id">Quiz ID</param>
-    public void StartQuiz(DialogueViewer dialogue, string code) {
+    public void StartQuiz(DialogueViewer dialogue, int code) {
         Debug.Log("[DEBUG] Execute : StartQuiz()");
-        if (inProgress) return;
-        inProgress = true;
+        if (!inProgress) {
+            inProgress = true;
 
-        callDialogueViewer = dialogue;
-        
-        curQuizData = quizData.Find(quiz => string.Equals(quiz.code, code));
-        uiBubble.SetQuizUI(curQuizData);
-        uiBubble.ActiveBubble(true);
+            callDialogueViewer = dialogue;
+
+            var tempQuiz = quizData.Find(quiz => quiz.code == code);
+            quizCorrect = tempQuiz.correct;
+            uiBubble.SetQuizUI(tempQuiz);
+            
+            dialogue.ActiveBubble(false);
+            uiBubble.ActiveBubble(true);
+        }
     }
 
     public void CancelQuiz() {
-        callDialogueViewer.timer.StartTimer(5.0f);
-        ResetQuizManager();
+        callDialogueViewer.cooldownTime = 5.0f;
+        
         uiBubble.ActiveBubble(false);
+        
+        callDialogueViewer.SetIndex(0);
+        callDialogueViewer.EndDialogue();
+        
+        ResetQuizManager();
     }
 
     public void SelectAnswer(int index) {
-        if (curQuizData.correct == index) {
-            callDialogueViewer.isAnsweredDialogue = true;
+        if (quizCorrect == index) { // 정답
+            callDialogueViewer.cooldownTime = -1.0f;
+            Debug.Log(
+                $"[DEBUG] Execute : SelectAnswer() - Get Flag Color : {callDialogueViewer.transform.GetComponent<DefaultNPC>().ownFlag}");
+            flagManager.GetFlag(callDialogueViewer.transform.GetComponent<DefaultNPC>().ownFlag);
             // TODO: 정답이므로 깃발 증정
         }
-        else {
-            callDialogueViewer.isAnsweredDialogue = false;
-            callDialogueViewer.timer.StartTimer(30.0f);
+        else { // 오답
+            callDialogueViewer.cooldownTime = 30.0f;
         }
-        callDialogueViewer.PrintEventSentence($"#s{index + 1}");
-        ResetQuizManager();
+
         uiBubble.ActiveBubble(false);
+        
+        callDialogueViewer.SetIndex($"s-{index + 1}");
+        callDialogueViewer.PlayDialogue();
+        
+        ResetQuizManager();
     }
 }

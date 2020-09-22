@@ -22,9 +22,9 @@ public class PlayerNetworkMove : MonoBehaviourPunCallbacks, IPunObservable
         if (photonView.IsMine) return;
 
         var position = transform.position;
-        position = (position - networkPosition).sqrMagnitude >= Mathf.Pow(networkPosFixDistance, 2.0f) ?
-                       networkPosition :
-                       Vector3.Lerp(position, networkPosition, Time.deltaTime * networkPosFixDistance);
+        position = (position - networkPosition).sqrMagnitude >= Mathf.Pow(networkPosFixDistance, 2.0f)
+            ? networkPosition
+            : Vector3.Lerp(position, networkPosition, Time.deltaTime * networkPosFixDistance);
         transform.position = position;
     }
 

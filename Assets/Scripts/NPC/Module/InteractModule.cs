@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InteractModule : MonoBehaviour, IInteractable
 {
-    public virtual void Interact(params object[] param) {
-        
-    }
+    public bool IsInteractable { get; set; }
+    
+    public virtual void Interact() { }
 }

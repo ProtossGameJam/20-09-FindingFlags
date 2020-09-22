@@ -1588,22 +1588,44 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Bubble" t="Include">
-            <e p="Bubble.cs" t="Include" />
-            <e p="QuizBubble.cs" t="Include" />
-            <e p="TextBubble.cs" t="Include" />
-          </e>
           <e p="Camera" t="Include">
             <e p="CameraAssigner.cs" t="Include" />
             <e p="MainDepthCameraHandler.cs" t="Include" />
           </e>
           <e p="Constants.cs" t="Include" />
           <e p="Dialogue" t="Include">
+            <e p="Bubble" t="Include">
+              <e p="Bubble.cs" t="Include" />
+              <e p="TextBubble.cs" t="Include" />
+            </e>
             <e p="DIalogueData.cs" t="Include" />
             <e p="DialogueViewer.cs" t="Include" />
+            <e p="Text" t="Include">
+              <e p="TextWriter.cs" t="Include" />
+              <e p="WriteElement.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Event" t="Include">
+            <e p="EventManager.cs" t="Include" />
+            <e p="Time" t="Include">
+              <e p="EventTimer.cs" t="Include" />
+              <e p="EventTimerManager.cs" t="Include" />
+            </e>
           </e>
           <e p="Flag" t="Include">
             <e p="FlagManager.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="UIFlag.cs" t="Include" />
+              <e p="UIFlagDisplay.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Game" t="Include">
+            <e p="Stage" t="Include">
+              <e p="StageRoutine.cs" t="Include" />
+              <e p="UI" t="Include">
+                <e p="UIStageRoutine.cs" t="Include" />
+              </e>
+            </e>
           </e>
           <e p="Graphic" t="Include">
             <e p="CharacterVariant.cs" t="Include" />
@@ -1620,6 +1642,11 @@
             <e p="NetworkLauncher.cs" t="Include" />
             <e p="Room" t="Include">
               <e p="RoomListUpdater.cs" t="Include" />
+              <e p="UI" t="Include">
+                <e p="UIRoom.cs" t="Include" />
+                <e p="UIRoomCreate.cs" t="Include" />
+                <e p="UIRoomList.cs" t="Include" />
+              </e>
             </e>
             <e p="StageManager.cs" t="Include" />
           </e>
@@ -1630,9 +1657,10 @@
               <e p="InteractModule.cs" t="Include" />
             </e>
             <e p="NPCBase.cs" t="Include" />
+            <e p="NPCDataObject.cs" t="Include" />
+            <e p="NPCManager.cs" t="Include" />
             <e p="NPCSpawner.cs" t="Include" />
           </e>
-          <e p="NPCData.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="Component" t="Include">
               <e p="InteractManager.cs" t="Include" />
@@ -1640,49 +1668,30 @@
               <e p="PlayerInput.cs" t="Include" />
               <e p="PlayerNetworkMove.cs" t="Include" />
               <e p="PlayerReverse.cs" t="Include" />
-              <e p="PlayerSortingOrder.cs" t="Include" />
             </e>
+            <e p="PlayerDataObject.cs" t="Include" />
             <e p="PlayerSpawner.cs" t="Include" />
             <e p="UserDataManager.cs" t="Include" />
           </e>
           <e p="Quiz" t="Include">
             <e p="QuizData.cs" t="Include" />
             <e p="QuizManager.cs" t="Include" />
-            <e p="UIQuizBubble.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="UIQuizBubble.cs" t="Include" />
+            </e>
           </e>
           <e p="Scene" t="Include">
             <e p="InitializeSceneManager.cs" t="Include" />
             <e p="LoadingSceneManager.cs" t="Include" />
-          </e>
-          <e p="Text" t="Include">
-            <e p="TextWriter.cs" t="Include" />
-            <e p="WriteElement.cs" t="Include" />
-          </e>
-          <e p="Time" t="Include">
-            <e p="EventTimer.cs" t="Include" />
-            <e p="EventTimerManager.cs" t="Include" />
-          </e>
-          <e p="Type" t="Include">
-            <e p="NPCDataObject.cs" t="Include" />
-            <e p="PlayerDataObject.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="Debug" t="Include">
               <e p="UIDebugPlayerText.cs" t="Include" />
               <e p="UIDebugRoomList.cs" t="Include" />
             </e>
-            <e p="Flag" t="Include">
-              <e p="UIFlag.cs" t="Include" />
-              <e p="UIFlagDisplay.cs" t="Include" />
-            </e>
             <e p="Menu" t="Include">
               <e p="UIMenu.cs" t="Include" />
               <e p="UIMenuHandler.cs" t="Include" />
-            </e>
-            <e p="Room" t="Include">
-              <e p="UIRoom.cs" t="Include" />
-              <e p="UIRoomCreate.cs" t="Include" />
-              <e p="UIRoomList.cs" t="Include" />
             </e>
             <e p="UINameInputField.cs" t="Include" />
           </e>
@@ -1697,8 +1706,11 @@
               <e p="MonoSingleton.cs" t="Include" />
               <e p="PunSingleton.cs" t="Include" />
             </e>
-            <e p="SortingOrderBase.cs" t="Include" />
-            <e p="SpriteSortingOrder.cs" t="Include" />
+            <e p="SortingOrder" t="Include">
+              <e p="PlayerSortingOrder.cs" t="Include" />
+              <e p="SortingOrderBase.cs" t="Include" />
+              <e p="SpriteSortingOrder.cs" t="Include" />
+            </e>
             <e p="UnityEventCallbacks.cs" t="Include" />
           </e>
         </e>

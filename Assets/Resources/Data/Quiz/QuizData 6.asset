@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca2face883d4a778aecb01ad8716fa1, type: 3}
+  m_Name: QuizData 6
+  m_EditorClassIdentifier: 
+  code: 5
+  desc: "\uBB38\uC81C! 1+1 \uC740 \uBB58\uAE4C?"
+  answer:
+  - "\uADC0\uC694\uBBF8"
+  - "\uCC3D\uBB38"
+  - 2
+  correct: 2

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0358d1c43fb94417a44c1ecd820f18bb, type: 3}
+  m_Name: DialogueData 6
+  m_EditorClassIdentifier: 
+  id: 5
+  sentence:
+  - index: 0
+    content: "\uD034\uC988! \uD034\uC988 \uC218\uD559\uD034\uC988 \uC1FC\uC1FC\uC1FC!
+      \uB098\uB791 \uB180\uC790!"
+    eventCode: 
+  - index: 1
+    content: "\uC5C4\uCCAD\uC26C\uC6B4 \uD034\uC988\uC57C! \uC774\uAC70\uBAA8\uB974\uBA74
+      \uBA4D\uCCAD\uD558\uB2E8 \uC774\uC57C\uAE30\uC9C0!"
+    eventCode: '#quiz-005'
+  - index: 2
+    content: "\uC73C\u2026 \uADC0\uC5EC\uC6B4\uCC99 \uC5ED\uACB9\uB2E4. \uC800\uB9AC\uAC00\u2026"
+    eventCode: '#s-1,#exit'
+  - index: 3
+    content: "\uC640\u2026 1+1\uB3C4 \uBAB0\uB77C? \uC218\uD559\uC744 \uC544\uC9C1
+      \uC548\uBC30\uC6E0\uAD6C\uB098! \uBA4D\uCCAD\uD574!"
+    eventCode: '#s-2,#exit'
+  - index: 4
+    content: "\uC74C\uC74C! \uADF8\uB807\uC9C0! 1+1\uC740 2\uC778\uAC70\uC57C! \uC124\uB9C8
+      \uB204\uAC00 \uCC3D\uBB38\uC774\uB098 \uADC0\uC694\uBBF8\uB77C\uACE0 \uD558\uACA0\uC5B4?
+      \uC790 \uC5EC\uAE30 \uC120\uBB3C!"
+    eventCode: '#s-3,#exit'

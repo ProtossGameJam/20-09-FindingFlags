@@ -22,6 +22,7 @@ public class RoomListUpdater : MonoBehaviourPunCallbacks
             print($"[DEBUG] Room Info : {room.ToStringFull()}"); // DEBUG
             tempList.Add(room);
         }
+
         return tempList;
     }
 }

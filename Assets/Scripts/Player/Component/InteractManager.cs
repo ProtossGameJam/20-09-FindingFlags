@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class InteractManager : MonoBehaviourPun
 {
-    [SerializeField] private float     checkRadius;
+    [SerializeField] private float checkRadius;
     [SerializeField] private LayerMask npcLayer;
 
     [ReadOnly] [SerializeField] private bool isInteracting;
@@ -17,7 +17,9 @@ public class InteractManager : MonoBehaviourPun
         if (photonView.IsMine) TryInteractNPC(KeyCode.F);
     }
 
-    private void TryInteractNPC(KeyCode key) { InputManager.InputAction(key, CheckNPCAvailable); }
+    private void TryInteractNPC(KeyCode key) {
+        InputManager.InputAction(key, CheckNPCAvailable);
+    }
 
     private void CheckNPCAvailable() {
         var castNpc = Physics2D.OverlapCircle(transform.position + Vector3.up, checkRadius, npcLayer);
@@ -33,5 +35,7 @@ public class InteractManager : MonoBehaviourPun
         }
     }
 
-    public void EndInteract() { isInteracting = false; }
+    public void EndInteract() {
+        isInteracting = false;
+    }
 }

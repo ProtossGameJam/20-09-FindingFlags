@@ -5,7 +5,9 @@
         npcType = NPCType.Master;
     }
 
-    public override void SetData(NPCDataObject data) { base.SetData(data); }
+    public override void SetData(NPCDataObject data) {
+        base.SetData(data);
+    }
 
     public void FlagCheck() { }
 }

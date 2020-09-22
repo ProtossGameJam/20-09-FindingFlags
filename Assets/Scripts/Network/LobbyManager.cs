@@ -40,7 +40,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public static void CreateRoom(string name, byte maxUser = Constants.DEFAULT_PLAYER_COUNT) {
         print("[DEBUG] Execute : CreateRoom()");
         // Call: OnCreateRoom, OnJoinedRoom
-        PhotonNetwork.CreateRoom(name, new RoomOptions { MaxPlayers = maxUser });
+        PhotonNetwork.CreateRoom(name, new RoomOptions {MaxPlayers = maxUser});
     }
 
     public static void JoinRoom(string name) {

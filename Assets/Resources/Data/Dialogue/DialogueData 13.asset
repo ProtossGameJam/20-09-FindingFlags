@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0358d1c43fb94417a44c1ecd820f18bb, type: 3}
+  m_Name: DialogueData 13
+  m_EditorClassIdentifier: 
+  id: 12
+  sentence:
+  - index: 0
+    content: "\uB098\uB791 \uC7AC\uBBF8\uC788\uB294 \uD034\uC988 \uD480\uB7EC\uBCF4\uC9C0
+      \uC54A\uC744\uB798?"
+    eventCode: 
+  - index: 1
+    content: "\uC694\uC998 \uC720\uD589\uC778\uAC74\uC9C0 \uB2E4\uB4E4 \uD034\uC988\uB97C
+      \uB0B4\uBCF4\uC790\uACE0 \uD558\uB354\uB77C\uACE0"
+    eventCode: 
+  - index: 2
+    content: "\uB098\uB294 \uB0A8\uB4E4\uCC98\uB7FC \uC26C\uC6B4 \uBB38\uC81C\uB97C
+      \uB0B4\uAE30\uB294 \uC2EB\uACE0, \uC880 \uC5B4\uB824\uC6B4 \uBB38\uC81C\uB97C
+      \uB0BC\uAC70\uC57C!"
+    eventCode: 
+  - index: 3
+    content: "\uC7AD, \uC5D8\uB7F0, \uB9AC\uC0AC, \uB808\uC628 4\uBA85\uC758 \uCE5C\uAD6C\uAC00
+      \uC788\uACE0 \uD55C\uBA85\uC758 \uCE5C\uAD6C\uB9CC \uC9C4\uC2E4\uC744 \uB9D0\uD558\uACE0
+      \uC788\uC5B4. \uB204\uAD6C\uC77C\uAE4C?"
+    eventCode: 
+  - index: 4
+    content: "\uC6B0\uC120, \uC7AD\uC740 \uC568\uB7F0\uC774 \uBC2D\uC758 \uC0AC\uACFC\uB97C
+      \uD6D4\uCCE4\uB2E4\uACE0 \uB9D0\uD558\uACE0 \uC788\uC5B4"
+    eventCode: 
+  - index: 5
+    content: "\uC568\uB7F0\uC740 \uB808\uC628\uC774 \uBC2D\uC758 \uC0AC\uACFC\uB97C
+      \uD6D4\uCCE4\uB2E4\uACE0 \uB9D0\uD558\uACE0 \uC788\uACE0,"
+    eventCode: 
+  - index: 6
+    content: "\uB9AC\uC0AC\uB294 \uBC2D\uC758 \uC0AC\uACFC\uB97C \uD6D4\uCE5C\uC801\uC774
+      \uC5C6\uB2E4\uACE0 \uB9D0\uD558\uACE0 \uC788\uC5B4."
+    eventCode: '#quiz-012'
+  - index: 7
+    content: "\uACE0\uB9C8\uC6CC\u2026 \uD558\uC9C0\uB9CC \uADF8 \uCE5C\uAD6C\uB294
+      \uC544\uB2CC \uAC83 \uAC19\uC544."
+    eventCode: '#s-1,#exit'
+  - index: 8
+    content: "\uC815\uB2F5! \uD655\uB960\uC801\uC73C\uB85C \uC0DD\uAC01\uD574\uB3C4
+      \uB808\uC628\uC774\uC9C0? \uD6C4\uC6B0... \uC544, \uCC38! \uB2E4\uB978 \uCE5C\uAD6C\uD55C\uD14C
+      \uB0B4\uAC00 \uBB3C\uC5B4\uBD24\uB2E4\uB294\uAC74 \uB9D0\uD558\uC9C0\uB9C8!
+      \uC120\uBB3C\uC904\uD14C\uB2C8\uAE4C."
+    eventCode: '#s-2,#exit'
+  - index: 9
+    content: "\uBAB0\uB77C? \uBAA8\uB974\uBA74 \uC5B4\uCA54 \uC218 \uC5C6\uC9C0\u2026"
+    eventCode: '#s-3,#exit'
