@@ -6,9 +6,9 @@ using UnityEngine;
 public class WriteElement
 {
     public TextMeshPro textComponent;
-    public string text;
+    public string      text;
 
-    public int charIndex;
+    public int   charIndex;
     public float charPerTime;
     public float typeTimer;
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+
 // ReSharper disable Unity.PerformanceCriticalCodeInvocation
 
 public class DialogueViewer : InteractModule
@@ -7,13 +8,13 @@ public class DialogueViewer : InteractModule
     [SerializeField] private TextBubble textBubble;
     [SerializeField] private GameObject coolDownObject;
 
-    [ReadOnly] [SerializeField] private DialogueData dialogue;
-    [SerializeField] private List<DialogueData.SentenceElement> sentenceData;
-    [ReadOnly] [SerializeField] private int curIndex;
-    [ReadOnly] [SerializeField] private string curEventCode = "";
+    [ReadOnly] [SerializeField] private DialogueData                       dialogue;
+    [SerializeField]            private List<DialogueData.SentenceElement> sentenceData;
+    [ReadOnly] [SerializeField] private int                                curIndex;
+    [ReadOnly] [SerializeField] private string                             curEventCode = "";
 
-    public EventTimer timer;
-    [ReadOnly] public float cooldownTime;
+    public            EventTimer timer;
+    [ReadOnly] public float      cooldownTime;
 
     private void Awake() {
         if (textBubble == null) textBubble = GetComponentInChildren<TextBubble>();
@@ -22,13 +23,14 @@ public class DialogueViewer : InteractModule
     private void Start() {
         InitDialogue();
         textBubble.BubbleEnabled = false;
+        IsInteractable = true;
         EventTimerManager.RegisterTimer(timer);
     }
 
     public override void Interact() {
         if (IsInteractable && enabled) {
             if (timer.isRunning) return;
-        
+
             if (!textBubble.BubbleEnabled) textBubble.BubbleEnabled = true;
             PlayDialogue();
         }
@@ -36,9 +38,9 @@ public class DialogueViewer : InteractModule
 
     public void PlayDialogue() {
         if (textBubble.IsEndWriteLine) {
-            if (curIndex < sentenceData.Count) 
+            if (curIndex < sentenceData.Count)
                 WriteDialogue(curIndex++);
-            else 
+            else
                 EndDialogue();
         }
         else {
@@ -62,7 +64,7 @@ public class DialogueViewer : InteractModule
             enabled = false;
         else
             timer.StartTimer(cooldownTime);
-        
+
         InitDialogue();
         textBubble.BubbleEnabled = false;
     }
@@ -71,15 +73,13 @@ public class DialogueViewer : InteractModule
         curIndex = 0;
         curEventCode = null;
     }
-    
+
     public void SetDialogue(DialogueData data) {
         dialogue = data;
         sentenceData = data.sentence;
     }
 
-    public void SetIndex(int index) {
-        curIndex = index;
-    }
+    public void SetIndex(int index) { curIndex = index; }
 
     public void SetIndex(string eventCode) {
         if (sentenceData.Exists(line => line.eventCode.Contains(eventCode))) {
@@ -90,7 +90,5 @@ public class DialogueViewer : InteractModule
         }
     }
 
-    public void ActiveBubble(bool enable) {
-        textBubble.BubbleEnabled = enable;
-    }
+    public void ActiveBubble(bool enable) { textBubble.BubbleEnabled = enable; }
 }

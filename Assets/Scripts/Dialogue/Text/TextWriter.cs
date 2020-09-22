@@ -17,12 +17,14 @@ public class TextWriter : MonoBehaviour
     private void Update() {
         for (var i = 0; i < _writeTextList.Count; i++) {
             if (!_writeTextList[i].WriteText()) continue; // Check text writing is end
-            _writeTextList.RemoveAt(i--); // Remove write instance
+            _writeTextList.RemoveAt(i--);                 // Remove write instance
         }
     }
 
-    public static WriteElement AddWriteInstance(TextMeshPro textComponent, string text, float charTime,
-        bool removeRedundant) {
+    public static WriteElement AddWriteInstance(TextMeshPro textComponent,
+                                                string      text,
+                                                float       charTime,
+                                                bool        removeRedundant) {
         if (removeRedundant) _instance.RemoveWriter(textComponent);
         return _instance.AddWriter(textComponent, text, charTime);
     }
@@ -33,9 +35,7 @@ public class TextWriter : MonoBehaviour
         return writeInstance;
     }
 
-    public static void RemoveWriteInstance(TextMeshPro textComponent) {
-        _instance.RemoveWriter(textComponent);
-    }
+    public static void RemoveWriteInstance(TextMeshPro textComponent) { _instance.RemoveWriter(textComponent); }
 
     private void RemoveWriter(TextMeshPro textComponent) {
         for (var i = 0; i < _writeTextList.Count; i++)

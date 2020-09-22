@@ -8,7 +8,5 @@ public class SpriteSortingOrder : SortingOrderBase
         if (sortingRenderer == null) sortingRenderer = GetComponent<Renderer>();
     }
 
-    private void Start() {
-        SortingOrderFix(sortingRenderer);
-    }
+    private void Start() { SortingOrderFix(sortingRenderer); }
 }

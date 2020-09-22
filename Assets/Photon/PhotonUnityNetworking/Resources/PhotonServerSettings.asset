@@ -40,6 +40,11 @@ MonoBehaviour:
   - RespawnSpaceship
   - SetSpawned
   - GetFlagAnnounce
+  - StageReadyRPC
+  - StageCancelRPC
+  - DialogueAllocToNPC
+  - FlagAllocToNPC
+  - NPCSetting
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

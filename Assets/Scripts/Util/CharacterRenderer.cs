@@ -14,13 +14,9 @@ public class CharacterRenderer : MonoBehaviour
 
     [ReadOnly] [SerializeField] private List<NPCBase> npcCharacter;
 
-    private void Start() {
-        FindNPC();
-    }
+    private void Start() { FindNPC(); }
 
-    private void Update() {
-        RenderNPCByDistance(renderDistance);
-    }
+    private void Update() { RenderNPCByDistance(renderDistance); }
 
     private void FindNPC() {
         var temp = FindObjectsOfType<NPCBase>();

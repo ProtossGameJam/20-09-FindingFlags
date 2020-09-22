@@ -7,9 +7,7 @@ public class UIRoomCreate : MonoBehaviour
 
     [ReadOnly] [SerializeField] private string roomName;
 
-    public void SetRoomName(string name) {
-        roomName = name;
-    }
+    public void SetRoomName(string name) { roomName = name; }
 
     /// <summary>
     ///     Check if Room's name is Empty

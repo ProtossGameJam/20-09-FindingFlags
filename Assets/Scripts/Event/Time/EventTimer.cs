@@ -3,7 +3,7 @@
 public class EventTimer : MonoBehaviour
 {
     [ReadOnly] [SerializeField] private float coolTime;
-    [ReadOnly] public bool isRunning;
+    [ReadOnly]                  public  bool  isRunning;
 
     public float CoolTime {
         set {

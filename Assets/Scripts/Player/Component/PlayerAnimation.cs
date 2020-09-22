@@ -19,7 +19,5 @@ public class PlayerAnimation : MonoBehaviourPun
         if (photonView.IsMine) WalkAnimation();
     }
 
-    private void WalkAnimation() {
-        animator.SetFloat(velocityParameterName, moveInput.MoveVector.magnitude);
-    }
+    private void WalkAnimation() { animator.SetFloat(velocityParameterName, moveInput.MoveVector.magnitude); }
 }

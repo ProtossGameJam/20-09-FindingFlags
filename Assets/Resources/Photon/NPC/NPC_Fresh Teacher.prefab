@@ -1446,7 +1446,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcType: 2
   npcData: {fileID: 0}
-  interactModule: {fileID: 0}
+  interactModule:
+  - {fileID: 0}
   ownFlag: 0
 --- !u!114 &1522719063477357293
 MonoBehaviour:

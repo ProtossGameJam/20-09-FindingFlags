@@ -12,9 +12,7 @@ public class UINameInputField : MonoBehaviour
         prevName = UserDataManager.GetNickname();
     }
 
-    private void Start() {
-        Initialize();
-    }
+    private void Start() { Initialize(); }
 
     /// <summary>
     ///     Initialize InputField by stored player name
@@ -51,7 +49,7 @@ public class UINameInputField : MonoBehaviour
     #region Private Serialized Variables
 
     [SerializeField] private TMP_InputField nameInputField;
-    [SerializeField] private TMP_Text placeholderText;
+    [SerializeField] private TMP_Text       placeholderText;
 
     private string prevName;
 

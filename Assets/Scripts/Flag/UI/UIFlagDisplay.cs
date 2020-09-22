@@ -14,15 +14,14 @@ public class UIFlagDisplay : MonoBehaviour
 {
     [SerializeField] private FlagColorDictionary flagColorDic;
 
+    [SerializeField]            private float    flagOpacity;
     [ReadOnly] [SerializeField] private UIFlag[] flagComponents;
 
-    private void Awake() {
-        flagComponents = GetComponentsInChildren<UIFlag>();
-    }
+    private void Awake() { flagComponents = GetComponentsInChildren<UIFlag>(); }
 
     public void FlagUIInitialize(FlagColor[] colorArray) {
         for (var i = 0; i < colorArray.Length; i++)
-            flagComponents[i].InitFlag(colorArray[i], flagColorDic[colorArray[i]]);
+            flagComponents[i].InitFlag(colorArray[i], flagOpacity, flagColorDic[colorArray[i]]);
     }
 
     public void ShowFlagUI(FlagColor color) {

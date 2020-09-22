@@ -6,9 +6,9 @@ using UnityEngine;
 [Serializable]
 public class SpawnPoint
 {
-    public int index;
+    public int       index;
     public Transform point;
-    public bool isSpawned;
+    public bool      isSpawned;
 }
 
 public class PlayerSpawner : MonoBehaviourPunCallbacks
@@ -21,12 +21,14 @@ public class PlayerSpawner : MonoBehaviourPunCallbacks
 
     [SerializeField] private List<SpawnPoint> spawnPoint;
 
+    [SerializeField] private Transform playerTransform;
+
     private void Awake() {
         if (pView == null) pView = GetComponent<PhotonView>();
     }
 
     private void Start() {
-        var playerTransform = SpawnPlayer();
+        playerTransform = SpawnPlayer();
         MoveToSpawnPoint(playerTransform);
         CameraAssigner.AssignTarget(playerTransform);
     }
@@ -53,5 +55,9 @@ public class PlayerSpawner : MonoBehaviourPunCallbacks
     private void SetSpawned(int index) {
         print($"[DEBUG] Execute : SetSpawned() - Index : {index}");
         spawnPoint.Find(pt => pt.index == index).isSpawned = true;
+    }
+
+    public void SetInteractable() {
+        playerTransform.GetComponent<InteractManager>().SetEnableInteract(true);
     }
 }

@@ -205,6 +205,7 @@ MonoBehaviour:
   edgeImage:
   - {fileID: 8715270562201143055}
   - {fileID: 3946688390134487055}
+  uiFlagColor: 0
 --- !u!1 &8715270562201143053
 GameObject:
   m_ObjectHideFlags: 0

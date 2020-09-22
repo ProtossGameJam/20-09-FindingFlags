@@ -189,7 +189,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcType: 0
   npcData: {fileID: 0}
-  interactModule: {fileID: 0}
+  interactModule:
+  - {fileID: 0}
   ownFlag: 0
 --- !u!61 &1506922127
 BoxCollider2D:

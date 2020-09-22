@@ -20,16 +20,14 @@ public enum FlagColor
 public class Flag
 {
     public FlagColor color;
-    public bool isTaken;
+    public bool      isTaken;
 
     public Flag(FlagColor color) {
         this.color = color;
         isTaken = false;
     }
 
-    public static implicit operator Flag(FlagColor flag) {
-        return new Flag(flag);
-    }
+    public static implicit operator Flag(FlagColor flag) { return new Flag(flag); }
 }
 
 public class FlagManager : MonoBehaviourPun, IPunObservable
@@ -37,15 +35,11 @@ public class FlagManager : MonoBehaviourPun, IPunObservable
     [SerializeField] private UIFlagDisplay uiFlagDisplay;
 
     [ReadOnly] [SerializeField] private List<Flag> flagList;
-    [SerializeField] private int flagStoreSize;
+    [SerializeField]            private int        flagStoreSize;
 
-    private void Awake() {
-        flagList = new List<Flag>(flagStoreSize);
-    }
+    private void Awake() { flagList = new List<Flag>(flagStoreSize); }
 
-    private void Start() {
-        RandomFlagPick(flagStoreSize);
-    }
+    private void Start() { RandomFlagPick(flagStoreSize); }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) { }
 

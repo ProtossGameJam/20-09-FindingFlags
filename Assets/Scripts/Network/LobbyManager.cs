@@ -15,14 +15,10 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     // Photon이 Master 서버에 연결될 시
     public override void OnConnectedToMaster() {
         print("[DEBUG] Callback : OnConnectedToMaster()");
-        if (!PhotonNetwork.InLobby) {
-            PhotonNetwork.JoinLobby();
-        }
+        if (!PhotonNetwork.InLobby) PhotonNetwork.JoinLobby();
     }
 
-    public override void OnCreatedRoom() {
-        print("[DEBUG] Callback : OnCreatedRoom()");
-    }
+    public override void OnCreatedRoom() { print("[DEBUG] Callback : OnCreatedRoom()"); }
 
     public override void OnCreateRoomFailed(short returnCode, string message) {
         print("[DEBUG] Callback : OnCreateRoomFailed()");

@@ -18,6 +18,7 @@ public class StageManager : MonoBehaviourPunCallbacks
 
     private void Awake() {
         playerMaxNum = PhotonNetwork.CurrentRoom.MaxPlayers;
+        playerMaxNum = 2;
     }
 
     public override void OnLeftRoom() {
@@ -31,8 +32,7 @@ public class StageManager : MonoBehaviourPunCallbacks
             if (!isAllowStart) {
                 isAllowStart = true;
                 if (PhotonNetwork.IsMasterClient) {
-                    print("[DEBUG] Callback : OnPlayerEnteredRoom() - Room is Full. Game Start~!");
-                    stageReadyEvent.Invoke();
+                    photonView.RPC("StageReadyRPC", RpcTarget.AllViaServer);
                 }
             }
         }
@@ -43,12 +43,11 @@ public class StageManager : MonoBehaviourPunCallbacks
 
     public override void OnPlayerLeftRoom(Player otherPlayer) {
         playerLeftCallback.Invoke(otherPlayer);
-        if (playerMaxNum - PhotonNetwork.CurrentRoom.PlayerCount <= 1) {
+        if (PhotonNetwork.CurrentRoom.PlayerCount == playerMaxNum - 1) {
             if (isAllowStart) {
                 isAllowStart = false;
                 if (PhotonNetwork.IsMasterClient) {
-                    print("[DEBUG] Callback : OnPlayerLeftRoom() - Player is Left. Cancel stage.");
-                    stageCancelEvent.Invoke();
+                    photonView.RPC("StageCancelRPC", RpcTarget.AllViaServer);
                 }
             }
         }
@@ -67,5 +66,17 @@ public class StageManager : MonoBehaviourPunCallbacks
         // Call: OnLeftRoom
         print("[DEBUG] Method : LeaveRoom()");
         PhotonNetwork.LeaveRoom();
+    }
+
+    [PunRPC]
+    public void StageReadyRPC() {
+        print("[DEBUG] Callback : OnPlayerEnteredRoom() - Room is Full. Game Start~!");
+        stageReadyEvent.Invoke();
+    }
+    
+    [PunRPC]
+    public void StageCancelRPC() {
+        print("[DEBUG] Callback : OnPlayerLeftRoom() - Player is Left. Cancel stage.");
+        stageReadyEvent.Invoke();
     }
 }

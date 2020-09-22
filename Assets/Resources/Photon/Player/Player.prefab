@@ -336,7 +336,7 @@ MonoBehaviour:
   npcLayer:
     serializedVersion: 2
     m_Bits: 512
-  isInteracting: 0
+  enableInteract: 0
 --- !u!50 &6381974409861020165
 Rigidbody2D:
   serializedVersion: 4

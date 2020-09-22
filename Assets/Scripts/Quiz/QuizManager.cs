@@ -7,11 +7,11 @@ public class QuizManager : MonoSingleton<QuizManager>
 
     [SerializeField] private FlagManager flagManager;
 
-    [SerializeField] private List<QuizData> quizData;
+    [SerializeField]            private List<QuizData> quizData;
+    [ReadOnly] [SerializeField] private int            quizCorrect;
 
     private DialogueViewer callDialogueViewer;
-    [ReadOnly] [SerializeField] private int quizCorrect;
-    private bool inProgress;
+    private bool           inProgress;
 
     protected override void Awake() {
         base.Awake();
@@ -40,7 +40,7 @@ public class QuizManager : MonoSingleton<QuizManager>
             var tempQuiz = quizData.Find(quiz => quiz.code == code);
             quizCorrect = tempQuiz.correct;
             uiBubble.SetQuizUI(tempQuiz);
-            
+
             dialogue.ActiveBubble(false);
             uiBubble.ActiveBubble(true);
         }
@@ -48,12 +48,12 @@ public class QuizManager : MonoSingleton<QuizManager>
 
     public void CancelQuiz() {
         callDialogueViewer.cooldownTime = 5.0f;
-        
+
         uiBubble.ActiveBubble(false);
-        
+
         callDialogueViewer.SetIndex(0);
         callDialogueViewer.EndDialogue();
-        
+
         ResetQuizManager();
     }
 
@@ -70,10 +70,10 @@ public class QuizManager : MonoSingleton<QuizManager>
         }
 
         uiBubble.ActiveBubble(false);
-        
+
         callDialogueViewer.SetIndex($"s-{index + 1}");
         callDialogueViewer.PlayDialogue();
-        
+
         ResetQuizManager();
     }
 }

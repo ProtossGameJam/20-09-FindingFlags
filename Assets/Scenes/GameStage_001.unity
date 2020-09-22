@@ -3264,7 +3264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiBubble: {fileID: 532757824}
-  flagManager: {fileID: 0}
+  flagManager: {fileID: 103911969}
   quizData:
   - {fileID: 11400000, guid: e2d8024716b9efa4cbbd9607a00bec33, type: 2}
   - {fileID: 11400000, guid: a284768415239034da43fbcf4162b521, type: 2}
@@ -6156,7 +6156,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569611015}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d533b9acabfbff4795f54fc7ab16b67, type: 3}
   m_Name: 
@@ -6708,6 +6708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 808888759}
+  - component: {fileID: 808888763}
   - component: {fileID: 808888760}
   - component: {fileID: 808888762}
   - component: {fileID: 808888761}
@@ -6835,9 +6836,9 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1884760053}
-        m_TargetAssemblyTypeName: NPCManager, Assembly-CSharp
-        m_MethodName: EnableNPCInteract
+      - m_Target: {fileID: 1197182108}
+        m_TargetAssemblyTypeName: PlayerSpawner, Assembly-CSharp
+        m_MethodName: SetInteractable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6847,6 +6848,40 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1884760053}
+        m_TargetAssemblyTypeName: NPCManager, Assembly-CSharp
+        m_MethodName: NPCSetting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &808888763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808888758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 300
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &820162663
 GameObject:
   m_ObjectHideFlags: 0
@@ -10074,6 +10109,7 @@ MonoBehaviour:
   - index: 3
     point: {fileID: 1395153694}
     isSpawned: 0
+  playerTransform: {fileID: 0}
 --- !u!114 &1197182109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10872,7 +10908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f8c920872873914ea4d4d320896a584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 1884760053}
   npcCount: 9
   npcPrefabPath: Photon/NPC/
   npcPrefabPrefix: NPC
@@ -10896,25 +10932,6 @@ MonoBehaviour:
   - {fileID: 618350369}
   - {fileID: 2075403050}
   - {fileID: 187761469}
-  dialogues:
-  - {fileID: 11400000, guid: c19de85c5025f4e43b9839b3936be88f, type: 2}
-  - {fileID: 11400000, guid: 1bdaa089e920b3c49b86df1afccd81fb, type: 2}
-  - {fileID: 11400000, guid: 46b588bfcbc5a3b488af0b8c89a4bb34, type: 2}
-  - {fileID: 11400000, guid: 96ac3019ba741de4397d7a6d9ea958d3, type: 2}
-  - {fileID: 11400000, guid: cff6579e425bbea45bce73060c829adf, type: 2}
-  - {fileID: 11400000, guid: 05ffdafabc80f4e48b49104bd206057c, type: 2}
-  - {fileID: 11400000, guid: 9dce035fc83785445b242de9c7483c89, type: 2}
-  - {fileID: 11400000, guid: 52943afe820492e46ad98037a13620e9, type: 2}
-  - {fileID: 11400000, guid: 9d27168024714cc408d5546c9c677c4c, type: 2}
-  - {fileID: 11400000, guid: 197102e9f89372942be6320540f09401, type: 2}
-  - {fileID: 11400000, guid: 2001a8a20f13dcb4cb1464008be13866, type: 2}
-  - {fileID: 11400000, guid: a9686e6e7aeb3a845acfc9a2f94a0d79, type: 2}
-  - {fileID: 11400000, guid: 9c1422a3d41be1f4193c2cb81757472b, type: 2}
-  - {fileID: 11400000, guid: e5c49732ffd653746a8c9b93974dd1d5, type: 2}
-  - {fileID: 11400000, guid: 06e621de568ffc24db242b6059a4e149, type: 2}
-  - {fileID: 11400000, guid: a1c4f09b8ff691c43a50766f41cda812, type: 2}
-  - {fileID: 11400000, guid: 1819c5c18fc31df468019e478c49c8dd, type: 2}
-  flags: 
 --- !u!1 &1847639623
 GameObject:
   m_ObjectHideFlags: 0
@@ -11179,6 +11196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884760052}
   - component: {fileID: 1884760053}
+  - component: {fileID: 1884760054}
   m_Layer: 0
   m_Name: NPC Manager
   m_TagString: Untagged
@@ -11213,6 +11231,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcCollection: []
+  dialogues:
+  - {fileID: 11400000, guid: c19de85c5025f4e43b9839b3936be88f, type: 2}
+  - {fileID: 11400000, guid: 1bdaa089e920b3c49b86df1afccd81fb, type: 2}
+  - {fileID: 11400000, guid: 46b588bfcbc5a3b488af0b8c89a4bb34, type: 2}
+  - {fileID: 11400000, guid: 96ac3019ba741de4397d7a6d9ea958d3, type: 2}
+  - {fileID: 11400000, guid: cff6579e425bbea45bce73060c829adf, type: 2}
+  - {fileID: 11400000, guid: 05ffdafabc80f4e48b49104bd206057c, type: 2}
+  - {fileID: 11400000, guid: 9dce035fc83785445b242de9c7483c89, type: 2}
+  - {fileID: 11400000, guid: 52943afe820492e46ad98037a13620e9, type: 2}
+  - {fileID: 11400000, guid: 9d27168024714cc408d5546c9c677c4c, type: 2}
+  - {fileID: 11400000, guid: 197102e9f89372942be6320540f09401, type: 2}
+  - {fileID: 11400000, guid: 2001a8a20f13dcb4cb1464008be13866, type: 2}
+  - {fileID: 11400000, guid: a9686e6e7aeb3a845acfc9a2f94a0d79, type: 2}
+  - {fileID: 11400000, guid: 9c1422a3d41be1f4193c2cb81757472b, type: 2}
+  - {fileID: 11400000, guid: e5c49732ffd653746a8c9b93974dd1d5, type: 2}
+  - {fileID: 11400000, guid: 06e621de568ffc24db242b6059a4e149, type: 2}
+  - {fileID: 11400000, guid: a1c4f09b8ff691c43a50766f41cda812, type: 2}
+  - {fileID: 11400000, guid: 1819c5c18fc31df468019e478c49c8dd, type: 2}
+--- !u!114 &1884760054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884760051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 310
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1888382353
 GameObject:
   m_ObjectHideFlags: 0
@@ -13955,6 +14013,7 @@ MonoBehaviour:
       edgeColor: {r: 1, g: 1, b: 1, a: 1}
     - flagColor: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 1}
       edgeColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
+  flagOpacity: 0.15
   flagComponents: []
 --- !u!1 &2091348301
 GameObject:

@@ -12,8 +12,8 @@ public class UIDebugRoomList : MonoBehaviour
     [SerializeField] private float deleteInterval;
 
     [ReadOnly] [SerializeField] private Queue<GameObject> playerTextQueue;
-    private WaitUntil waitCondition;
-    private WaitForSeconds waitInterval;
+    private                             WaitUntil         waitCondition;
+    private                             WaitForSeconds    waitInterval;
 
     private void Awake() {
         playerTextQueue = new Queue<GameObject>();
@@ -22,9 +22,7 @@ public class UIDebugRoomList : MonoBehaviour
         waitCondition = new WaitUntil(() => playerTextQueue.Count != 0);
     }
 
-    private void Start() {
-        StartCoroutine(DeleteTextInterval());
-    }
+    private void Start() { StartCoroutine(DeleteTextInterval()); }
 
     public void DebugEnterPlayer(Player player) {
         print("[DEBUG] Execute : DebugEnterPlayer() - UI");

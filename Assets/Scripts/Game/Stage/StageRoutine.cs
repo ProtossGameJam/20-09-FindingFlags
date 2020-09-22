@@ -7,11 +7,7 @@ public class StageRoutine : MonoBehaviour
 
     [SerializeField] private UnityEvent startEvent;
 
-    public void ReadyStage() {
-        uiRoutine.StartCountdown(5, startEvent);
-    }
+    public void ReadyStage() { uiRoutine.StartCountdown(5, startEvent); }
 
-    public void CancelStage() {
-        uiRoutine.StopCountdown();
-    }
+    public void CancelStage() { uiRoutine.StopCountdown(); }
 }

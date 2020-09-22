@@ -7,7 +7,5 @@ public class UIMenu : MonoBehaviour
 
     [SerializeField] private UnityEvent enableEvent;
 
-    private void OnEnable() {
-        enableEvent.Invoke();
-    }
+    private void OnEnable() { enableEvent.Invoke(); }
 }

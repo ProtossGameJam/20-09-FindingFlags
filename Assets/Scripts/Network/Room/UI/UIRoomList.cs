@@ -5,7 +5,7 @@ using UnityEngine;
 public class UIRoomList : MonoBehaviour
 {
     [SerializeField] private GameObject uiPrefab;
-    [SerializeField] private Transform uiContentParent;
+    [SerializeField] private Transform  uiContentParent;
 
     private UIRoom[] _roomObjs;
 

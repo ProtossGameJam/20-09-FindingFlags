@@ -4,7 +4,7 @@ public class SortingOrderBase : MonoBehaviour
 {
     [ReadOnly] [SerializeField] protected int orderFix;
     [ReadOnly] [SerializeField] protected int baseOrder;
-    [SerializeField] protected int orderOffset;
+    [SerializeField]            protected int orderOffset;
 
     protected virtual void Reset() {
         orderFix = 1000;

@@ -15,7 +15,5 @@ public class UserDataManager : MonoSingleton<UserDataManager>
         return Instance.playerData.PlayerName;
     }
 
-    public static void SetNickname(string nick) {
-        Instance.playerData.PlayerName = nick;
-    }
+    public static void SetNickname(string nick) { Instance.playerData.PlayerName = nick; }
 }

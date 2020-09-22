@@ -9,25 +9,15 @@ public class UIMenuHandler : MonoBehaviour
     [Tooltip("시작 시 바로 켜지는 메뉴 오브젝트")] [SerializeField]
     private UIMenu startMenu;
 
-    private void Start() {
-        ActiveMenu(startMenu, true);
-    }
+    private void Start() { ActiveMenu(startMenu, true); }
 
-    public void MenuOpen(string name) {
-        ActiveMenu(name, false);
-    }
+    public void MenuOpen(string name) { ActiveMenu(name, false); }
 
-    public void MenuOpen(UIMenu menu) {
-        ActiveMenu(menu, false);
-    }
+    public void MenuOpen(UIMenu menu) { ActiveMenu(menu, false); }
 
-    public void MenuOpenAlone(string name) {
-        ActiveMenu(name, true);
-    }
+    public void MenuOpenAlone(string name) { ActiveMenu(name, true); }
 
-    public void MenuOpenAlone(UIMenu menu) {
-        ActiveMenu(menu, true);
-    }
+    public void MenuOpenAlone(UIMenu menu) { ActiveMenu(menu, true); }
 
     private void ActiveMenu(string name, bool preventDuplicate) {
         if (preventDuplicate)

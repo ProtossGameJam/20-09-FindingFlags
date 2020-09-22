@@ -12,35 +12,19 @@ public class UnityEventCallbacks : MonoBehaviour
     [SerializeField] private UnityEvent disableCallback;
     [SerializeField] private UnityEvent destroyCallback;
 
-    private void Awake() {
-        awakeCallback.Invoke();
-    }
+    private void Awake() { awakeCallback.Invoke(); }
 
-    private void Start() {
-        startCallback.Invoke();
-    }
+    private void Start() { startCallback.Invoke(); }
 
-    private void Update() {
-        updateCallback.Invoke();
-    }
+    private void Update() { updateCallback.Invoke(); }
 
-    private void LateUpdate() {
-        lateUpdateCallback.Invoke();
-    }
+    private void LateUpdate() { lateUpdateCallback.Invoke(); }
 
-    private void OnEnable() {
-        enableCallback.Invoke();
-    }
+    private void OnEnable() { enableCallback.Invoke(); }
 
-    private void OnDisable() {
-        disableCallback.Invoke();
-    }
+    private void OnDisable() { disableCallback.Invoke(); }
 
-    private void OnDestroy() {
-        destroyCallback.Invoke();
-    }
+    private void OnDestroy() { destroyCallback.Invoke(); }
 
-    private void OnApplicationQuit() {
-        applicationQuitCallback.Invoke();
-    }
+    private void OnApplicationQuit() { applicationQuitCallback.Invoke(); }
 }

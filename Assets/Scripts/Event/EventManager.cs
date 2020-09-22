@@ -70,14 +70,11 @@ public class EventManager : MonoSingleton<EventManager>
     public static string RemoveAnswerEventCode(string eventCode) {
         var stringObj = eventCode.Split(',');
         string returnCode = null;
-        for (var i = 0; i < stringObj.Length; i++) {
+        for (var i = 0; i < stringObj.Length; i++)
             if (!stringObj[i].Contains("#s")) {
                 returnCode += stringObj[i];
-                if (i < stringObj.Length - 1) {
-                    returnCode += ',';
-                }
+                if (i < stringObj.Length - 1) returnCode += ',';
             }
-        }
 
         return returnCode;
     }
