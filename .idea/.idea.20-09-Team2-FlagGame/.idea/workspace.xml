@@ -28,13 +28,13 @@
     <list default="true" id="aa07871c-0fa6-4056-bf57-3d3d42100de1" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/TmoneyRoundWindRegular SDF.asset" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/TmoneyRoundWindRegular SDF.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.20-09-Team2-FlagGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator/Extra/Typewriter Sound - Package.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator/Integrations/PlayMaker - Integration.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Quiz.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Flag.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Flag.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/User Data Manager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/User Data Manager.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_000.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_000.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_001.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_002.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_002.prefab" afterDir="false" />
@@ -42,61 +42,19 @@
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_004.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_004.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_Danmi Child.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_Danmi Child.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_Fresh Teacher.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_Fresh Teacher.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_Principle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_Principle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_Short Child.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_Short Child.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_Tired Teacher.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Photon/NPC/NPC_Tired Teacher.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Photon/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Photon/Player/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameStage_001.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameStage_001.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Bubble/Bubble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Bubble/Bubble.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueViewer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueViewer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Text/TextWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Text/TextWriter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Text/WriteElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Text/WriteElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/EventManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/Time/EventTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/Time/EventTimer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Event/Time/EventTimerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Event/Time/EventTimerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flag/FlagManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Flag/FlagManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flag/UI/UIFlag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Flag/UI/UIFlag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flag/UI/UIFlagDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Flag/UI/UIFlagDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Stage/StageRoutine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Stage/StageRoutine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Stage/UI/UIStageRoutine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Stage/UI/UIStageRoutine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/MasterNPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/MasterNPC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/Module/InteractModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/Module/InteractModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/NPCBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/NPCBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/NPCManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/NPCManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/NPCManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/NPCManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/NPCSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/NPCSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkLauncher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/NetworkLauncher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Room/UI/UIRoomCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Room/UI/UIRoomCreate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Room/UI/UIRoomList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Room/UI/UIRoomList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/StageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/StageManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Component/InteractManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Component/InteractManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerNetworkMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerNetworkMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerReverse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerReverse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/InitializeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/InitializeScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ResultScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ResultScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flag/FlagChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Flag/FlagChecker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/UserDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/UserDataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Quiz/UI/UIQuizBubble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Quiz/UI/UIQuizBubble.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scene/InitializeSceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scene/InitializeSceneManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scene/LoadingSceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scene/LoadingSceneManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugRoomList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugRoomList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIMenuHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIMenuHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UINameInputField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UINameInputField.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/CharacterRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/CharacterRenderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/CharacterRenderer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/CharacterRenderer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/ReadOnly/ReadOnlyAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/ReadOnly/ReadOnlyAttribute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/ShufleUtillity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/ShufleUtillity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/Singleton/MonoSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/Singleton/MonoSingleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/Singleton/PunSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/Singleton/PunSingleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/SortingOrder/PlayerSortingOrder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/SortingOrder/PlayerSortingOrder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/SortingOrder/SortingOrderBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/SortingOrder/SortingOrderBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/SortingOrder/SpriteSortingOrder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/SortingOrder/SpriteSortingOrder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnityEventCallbacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/UnityEventCallbacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,12 +67,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/24/45c6bfc9/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Quiz/QuizManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/ShuffleUtility.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/UIQuizBubble.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueParser.cs" />
@@ -143,7 +99,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneInitializer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UINameInputField.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Event/EventHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizData.cs" />
@@ -155,7 +110,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraAssigner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Stage/UI/UIStageRoutine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/InteractManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Stage/StageRoutine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueViewer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCBase.cs" />
@@ -163,7 +117,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovementController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NPC/MasterNPC.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Flag/FlagManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UINameInputField.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/StageManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerNicknameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Flag/FlagChecker.cs" />
       </list>
     </option>
@@ -227,6 +184,7 @@
       <workItem from="1600734203994" duration="24688000" />
       <workItem from="1600774897371" duration="10087000" />
       <workItem from="1600820304551" duration="21376000" />
+      <workItem from="1600853859299" duration="4334000" />
     </task>
     <servers />
   </component>

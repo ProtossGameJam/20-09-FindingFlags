@@ -44,8 +44,7 @@ public class PlayerSpawner : MonoBehaviourPun {
 
     private void SpawnPlayer() {
         print("[DEBUG] Execute : SpawnPlayer()");
-        var playerTransform =  PhotonNetwork.Instantiate($"{playerPrefabPath}/Player", Vector3.zero, Quaternion.identity).transform;
-        
+        var playerTransform = PhotonNetwork.Instantiate($"{playerPrefabPath}/Player", Vector3.zero, Quaternion.identity).transform;
         MoveToSpawnPoint(playerTransform);
         cameraAssigner.AssignTarget(playerTransform);
     }

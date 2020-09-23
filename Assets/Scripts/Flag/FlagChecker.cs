@@ -1,12 +1,17 @@
 ﻿using Photon.Pun;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FlagChecker : InteractModule {
     [SerializeField] private FlagManager flagManager;
+
+    [SerializeField] private UnityEvent winEvent;
     
     public override void Interact() {
         if (flagManager.IsAllFlagCollected) {
-            PhotonNetwork.LoadLevel(4);
+            // RPC로 UI 출력 - 우승
+            // 움직임 멈추기
+            winEvent.Invoke();
             Debug.Log("필요한 깃발을 모두 모음!");
         }
         else {

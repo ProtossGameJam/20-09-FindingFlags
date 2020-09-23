@@ -10,6 +10,10 @@ public class UINameInputField : MonoBehaviour {
         }
     }
 
+    private void Start() {
+        nameInputField.text = Constants.DEFAULT_PLAYER_NAME;
+    }
+
     /// <summary>
     /// Set network nickname
     /// </summary>

@@ -1667,6 +1667,7 @@
               <e p="PlayerAnimation.cs" t="Include" />
               <e p="PlayerInput.cs" t="Include" />
               <e p="PlayerNetworkMove.cs" t="Include" />
+              <e p="PlayerNicknameManager.cs" t="Include" />
               <e p="PlayerReverse.cs" t="Include" />
             </e>
             <e p="InteractController.cs" t="Include" />
