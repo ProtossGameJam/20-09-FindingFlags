@@ -1,8 +1,7 @@
 ﻿using Photon.Pun;
 using UnityEngine;
 
-public class PlayerNetworkMove : MonoBehaviourPunCallbacks, IPunObservable
-{
+public class PlayerNetworkMove : MonoBehaviourPun, IPunObservable {
     [SerializeField] private Rigidbody2D playerRigidbody;
 
     [SerializeField] private float moveSpeed;
@@ -22,9 +21,9 @@ public class PlayerNetworkMove : MonoBehaviourPunCallbacks, IPunObservable
         if (photonView.IsMine) return;
 
         var position = transform.position;
-        position = (position - networkPosition).sqrMagnitude >= Mathf.Pow(networkPosFixDistance, 2.0f) ?
-                       networkPosition :
-                       Vector3.Lerp(position, networkPosition, Time.deltaTime * networkPosFixDistance);
+        position = (position - networkPosition).sqrMagnitude >= Mathf.Pow(networkPosFixDistance, 2.0f)
+                ? networkPosition
+                : Vector3.Lerp(position, networkPosition, Time.deltaTime * networkPosFixDistance);
         transform.position = position;
     }
 
@@ -33,13 +32,14 @@ public class PlayerNetworkMove : MonoBehaviourPunCallbacks, IPunObservable
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) {
-        if (stream.IsWriting)
+        if (stream.IsWriting) {
             stream.SendNext(transform.position);
-        else
+        }
+        else {
             networkPosition = (Vector3) stream.ReceiveNext();
+        }
     }
 
-    private void RigidMove(Vector2 currentPos, Vector2 vec, float speed) {
-        playerRigidbody.MovePosition(currentPos + vec * speed);
-    }
+    private void RigidMove(Vector2 currentPos, Vector2 vec, float speed) =>
+            playerRigidbody.MovePosition(currentPos + vec * speed);
 }

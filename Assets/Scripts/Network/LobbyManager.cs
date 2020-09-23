@@ -3,14 +3,10 @@ using Photon.Realtime;
 using UnityEditor;
 using UnityEngine;
 
-public class LobbyManager : MonoBehaviourPunCallbacks
-{
+public class LobbyManager : MonoBehaviourPunCallbacks {
     [SerializeField] private UIMenuHandler uiLobbyHandler;
 
-    private void Start() {
-        uiLobbyHandler.MenuOpen("Lobby");
-        PhotonNetwork.NickName = UserDataManager.GetNickname(true);
-    }
+    private void Start() => uiLobbyHandler.MenuOpen("Lobby");
 
     // Photon이 Master 서버에 연결될 시
     public override void OnConnectedToMaster() {
@@ -18,11 +14,10 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         if (!PhotonNetwork.InLobby) PhotonNetwork.JoinLobby();
     }
 
-    public override void OnCreatedRoom() { print("[DEBUG] Callback : OnCreatedRoom()"); }
+    public override void OnCreatedRoom() => print("[DEBUG] Callback : OnCreatedRoom()");
 
-    public override void OnCreateRoomFailed(short returnCode, string message) {
-        print("[DEBUG] Callback : OnCreateRoomFailed()");
-    }
+    public override void OnCreateRoomFailed(short returnCode, string message) =>
+            print("[DEBUG] Callback : OnCreateRoomFailed()");
 
     public override void OnJoinedRoom() {
         print("[DEBUG] Callback : OnJoinedRoom()");
@@ -36,7 +31,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public static void CreateRoom(string name, byte maxUser = Constants.DEFAULT_PLAYER_COUNT) {
         print("[DEBUG] Execute : CreateRoom()");
         // Call: OnCreateRoom, OnJoinedRoom
-        PhotonNetwork.CreateRoom(name, new RoomOptions {MaxPlayers = maxUser});
+        PhotonNetwork.CreateRoom(name, new RoomOptions { MaxPlayers = maxUser });
     }
 
     public static void JoinRoom(string name) {

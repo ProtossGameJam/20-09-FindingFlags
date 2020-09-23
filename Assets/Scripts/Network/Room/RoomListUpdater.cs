@@ -5,8 +5,7 @@ using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class RoomListUpdater : MonoBehaviourPunCallbacks
-{
+public class RoomListUpdater : MonoBehaviourPunCallbacks {
     [SerializeField] private UnityEvent<List<RoomInfo>> roomUpdateCallback;
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList) {

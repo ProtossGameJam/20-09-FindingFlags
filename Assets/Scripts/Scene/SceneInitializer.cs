@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class InitializeSceneManager : MonoBehaviour
-{
+public class SceneInitializer : MonoBehaviour {
     [SerializeField] private UnityEvent startEvent;
 
-    private void Start() { startEvent.Invoke(); }
+    private void Start() => startEvent.Invoke();
 }

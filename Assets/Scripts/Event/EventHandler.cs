@@ -1,25 +1,14 @@
 ﻿using System;
-using RotaryHeart.Lib.SerializableDictionary;
 using UnityEngine;
 
 // ReSharper disable Unity.PerformanceCriticalCodeInvocation
 
-public enum EventCategoryType
-{
-    Quiz
-}
-
-public class EventManager : MonoSingleton<EventManager>
-{
-    public enum EventType
-    {
-        None,
-        Quiz,
-        MoveIndex,
-        ExitDialogue
+public class EventHandler : MonoSingleton<EventHandler> {
+    public enum EventType {
+        None, Quiz, MoveIndex, ExitDialogue
     }
 
-    [SerializeField] private EventCategoryDictionary eventCategoryDic;
+    [SerializeField] private QuizManager quizManager;
 
     public void EventExecute(DialogueViewer dialogue, ref string code) {
         var parseResult = ParseEvent(code);
@@ -27,7 +16,7 @@ public class EventManager : MonoSingleton<EventManager>
         switch (parseResult.type) {
             case EventType.Quiz:
                 Debug.Log("[DEBUG] Execute : LateEventExecute() - Quiz Event");
-                QuizManager.Instance.StartQuiz(dialogue, parseResult.code);
+                quizManager.StartQuiz(dialogue, parseResult.code);
                 break;
             case EventType.MoveIndex:
                 Debug.Log("[DEBUG] Execute : LateEventExecute() - Move Index");
@@ -70,16 +59,13 @@ public class EventManager : MonoSingleton<EventManager>
     public static string RemoveAnswerEventCode(string eventCode) {
         var stringObj = eventCode.Split(',');
         string returnCode = null;
-        for (var i = 0; i < stringObj.Length; i++)
+        for (var i = 0; i < stringObj.Length; i++) {
             if (!stringObj[i].Contains("#s")) {
                 returnCode += stringObj[i];
                 if (i < stringObj.Length - 1) returnCode += ',';
             }
+        }
 
         return returnCode;
     }
-
-    [Serializable]
-    public class EventCategoryDictionary : SerializableDictionaryBase<EventCategoryType, string>
-    { }
 }

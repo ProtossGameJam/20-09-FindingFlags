@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 
-public class EventTimer : MonoBehaviour
-{
-    [ReadOnly] [SerializeField] private float coolTime;
-    [ReadOnly]                  public  bool  isRunning;
+public class EventTimer : MonoBehaviour {
+    [ReadOnly, SerializeField] private float coolTime;
+    [ReadOnly] public bool isRunning;
 
     public float CoolTime {
         set {

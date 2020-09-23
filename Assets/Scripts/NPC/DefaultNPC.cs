@@ -1,5 +1,4 @@
-﻿public class DefaultNPC : NPCBase
-{
+﻿public class DefaultNPC : NPCBase {
     [ReadOnly] public FlagColor ownFlag;
 
     protected override void Awake() {

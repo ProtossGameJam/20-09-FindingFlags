@@ -1606,13 +1606,14 @@
             </e>
           </e>
           <e p="Event" t="Include">
-            <e p="EventManager.cs" t="Include" />
+            <e p="EventHandler.cs" t="Include" />
             <e p="Time" t="Include">
               <e p="EventTimer.cs" t="Include" />
               <e p="EventTimerManager.cs" t="Include" />
             </e>
           </e>
           <e p="Flag" t="Include">
+            <e p="FlagChecker.cs" t="Include" />
             <e p="FlagManager.cs" t="Include" />
             <e p="UI" t="Include">
               <e p="UIFlag.cs" t="Include" />
@@ -1658,7 +1659,6 @@
             </e>
             <e p="NPCBase.cs" t="Include" />
             <e p="NPCDataObject.cs" t="Include" />
-            <e p="NPCManager.cs" t="Include" />
             <e p="NPCSpawner.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
@@ -1669,9 +1669,9 @@
               <e p="PlayerNetworkMove.cs" t="Include" />
               <e p="PlayerReverse.cs" t="Include" />
             </e>
-            <e p="PlayerDataObject.cs" t="Include" />
+            <e p="InteractController.cs" t="Include" />
+            <e p="PlayerMovementController.cs" t="Include" />
             <e p="PlayerSpawner.cs" t="Include" />
-            <e p="UserDataManager.cs" t="Include" />
           </e>
           <e p="Quiz" t="Include">
             <e p="QuizData.cs" t="Include" />
@@ -1681,8 +1681,7 @@
             </e>
           </e>
           <e p="Scene" t="Include">
-            <e p="InitializeSceneManager.cs" t="Include" />
-            <e p="LoadingSceneManager.cs" t="Include" />
+            <e p="SceneInitializer.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="Debug" t="Include">
@@ -1701,17 +1700,15 @@
               <e p="ReadOnlyAttribute.cs" t="Include" />
               <e p="ReadOnlyAttributeDrawer.cs" t="Include" />
             </e>
-            <e p="ShufleUtillity.cs" t="Include" />
+            <e p="ShuffleUtility.cs" t="Include" />
             <e p="Singleton" t="Include">
               <e p="MonoSingleton.cs" t="Include" />
-              <e p="PunSingleton.cs" t="Include" />
             </e>
             <e p="SortingOrder" t="Include">
               <e p="PlayerSortingOrder.cs" t="Include" />
               <e p="SortingOrderBase.cs" t="Include" />
               <e p="SpriteSortingOrder.cs" t="Include" />
             </e>
-            <e p="UnityEventCallbacks.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

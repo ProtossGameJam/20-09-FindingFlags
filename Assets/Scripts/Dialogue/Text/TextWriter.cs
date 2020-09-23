@@ -2,8 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-public class TextWriter : MonoBehaviour
-{
+public class TextWriter : MonoBehaviour {
     private static TextWriter _instance;
 
     private List<WriteElement> _writeTextList;
@@ -21,10 +20,10 @@ public class TextWriter : MonoBehaviour
         }
     }
 
-    public static WriteElement AddWriteInstance(TextMeshPro textComponent,
-                                                string      text,
-                                                float       charTime,
-                                                bool        removeRedundant) {
+    public static WriteElement AddWriteInstance(TextMeshPro textComponent
+                                              , string      text
+                                              , float       charTime
+                                              , bool        removeRedundant) {
         if (removeRedundant) _instance.RemoveWriter(textComponent);
         return _instance.AddWriter(textComponent, text, charTime);
     }
@@ -35,11 +34,13 @@ public class TextWriter : MonoBehaviour
         return writeInstance;
     }
 
-    public static void RemoveWriteInstance(TextMeshPro textComponent) { _instance.RemoveWriter(textComponent); }
+    public static void RemoveWriteInstance(TextMeshPro textComponent) => _instance.RemoveWriter(textComponent);
 
     private void RemoveWriter(TextMeshPro textComponent) {
-        for (var i = 0; i < _writeTextList.Count; i++)
-            if (_writeTextList[i].textComponent.Equals(textComponent))
+        for (var i = 0; i < _writeTextList.Count; i++) {
+            if (_writeTextList[i].textComponent.Equals(textComponent)) {
                 _writeTextList.Remove(_writeTextList[i--]);
+            }
+        }
     }
 }

@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 
 [ExecuteInEditMode]
-public class CharacterVariant : MonoBehaviour
-{
-    [Header("Variant Settings")] [Range(0, 5)]
+public class CharacterVariant : MonoBehaviour {
+    [Header("Variant Settings"), Range(0, 5)]
     public int hairIndex;
 
     [Range(0, 4)] public int faceIndex;

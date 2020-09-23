@@ -1,29 +1,34 @@
-﻿using Cinemachine;
+﻿using System;
+using Cinemachine;
 using Photon.Pun;
 using UnityEngine;
 
-public class CameraAssigner : MonoBehaviour
-{
-    [SerializeField] private CinemachineVirtualCamera virtualCamera;
+public class CameraAssigner : MonoBehaviour {
+    [ReadOnly, SerializeField] private CinemachineVirtualCamera virtualCamera;
 
-    [SerializeField] private Transform localPlayer;
+    [ReadOnly, SerializeField] private Transform playerTarget;
+
+    private void Awake() {
+        if (virtualCamera == null) {
+            virtualCamera = GetComponent<CinemachineVirtualCamera>();
+        }
+    }
 
     public void AssignTarget(Transform player) {
         if (player.GetComponent<PhotonView>().IsMine) {
             virtualCamera.Follow = player;
             virtualCamera.LookAt = player;
-            localPlayer = player;
+            playerTarget = player;
         }
     }
 
-    //아.. 어떻게 정의해서 드리면 좋을까..
-    public void AssignTargetToUI(Transform ui) {
-        virtualCamera.Follow = ui;
-        virtualCamera.LookAt = ui;
+    public void AssignTargetToUI(Transform uiTarget) {
+        virtualCamera.Follow = uiTarget;
+        virtualCamera.LookAt = uiTarget;
     }
 
     public void AssignTargetToPlayer() {
-        virtualCamera.Follow = localPlayer;
-        virtualCamera.LookAt = localPlayer;
+        virtualCamera.Follow = playerTarget;
+        virtualCamera.LookAt = playerTarget;
     }
 }

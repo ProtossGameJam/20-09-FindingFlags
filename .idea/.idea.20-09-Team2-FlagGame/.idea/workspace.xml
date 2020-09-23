@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
@@ -106,61 +109,62 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/24/45c6bfc9/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Quiz/QuizManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Util/ShuffleUtility.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Util/ShufleUtillity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StageManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/StageManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Menu/UIMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoomCreate.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkLauncher.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Room/UIRoomList.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Room/RoomListUpdater.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraAssigner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DIalogueData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizViewer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/EventTimerManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/EventTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/MasterNPC.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/InteractModule.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/UIQuizBubble.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueParser.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/EventParser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NPC/DefaultNPC.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Type/NPCDataObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerDataObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Time/EventTimerManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Flag/FlagManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Flag/UIFlag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Flag/UIFlagDisplay.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Event/EventParser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IInteractable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NPC/Module/InteractModule.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Event/EventManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Stage/StageRoutine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Flag/UI/UIFlagDisplay.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Flag/UI/UIFlag.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/Singleton/MonoSingleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/Singleton/PunSingleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/SortingOrder/PlayerSortingOrder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/SortingOrder/SortingOrderBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/SortingOrder/SpriteSortingOrder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Util/CharacterRenderer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/ShuffleUtillity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/ShufleUtillity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/ShuffleUtility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneInitializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UINameInputField.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Event/EventHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerNetworkMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Flag/UI/UIFlag.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Flag/UI/UIFlagDisplay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Bubble/TextBubble.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraAssigner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Stage/UI/UIStageRoutine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueViewer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/InteractManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Stage/StageRoutine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueViewer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovementController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/MasterNPC.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Flag/FlagManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/StageManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Flag/FlagChecker.cs" />
       </list>
     </option>
   </component>
@@ -177,7 +181,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -222,6 +226,7 @@
       <workItem from="1600649551848" duration="16920000" />
       <workItem from="1600734203994" duration="24688000" />
       <workItem from="1600774897371" duration="10087000" />
+      <workItem from="1600820304551" duration="21338000" />
     </task>
     <servers />
   </component>
@@ -246,26 +251,36 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="706" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1600779068891">
+    <state x="706" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1600835947423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="706" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1040/-1920.133.1920.1160@0.0.1920.1040" timestamp="1600779068891" />
-    <state x="706" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1040@0.0.1920.1040" timestamp="1600750721151" />
+    <state x="706" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1040@0.0.1920.1040" timestamp="1600835947423" />
+    <state x="227" y="213" key="EditorConfigExporter" timestamp="1600848012954">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="227" y="213" key="EditorConfigExporter/0.0.1920.1040@0.0.1920.1040" timestamp="1600848012954" />
+    <state x="630" y="340" key="LayersDialog" timestamp="1600828598467">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="630" y="340" key="LayersDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600828598467" />
     <state x="685" y="220" key="RiderGenerateDialog" timestamp="1600515736193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="685" y="220" key="RiderGenerateDialog/0.0.1920.1040/-1920.133.1920.1160@0.0.1920.1040" timestamp="1600515736193" />
-    <state x="484" y="241" key="SettingsEditor" timestamp="1600779010585">
+    <state x="198" y="199" key="SettingsEditor" timestamp="1600848015036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="484" y="241" key="SettingsEditor/0.0.1920.1040/-1920.133.1920.1160@0.0.1920.1040" timestamp="1600779010585" />
+    <state x="198" y="199" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600848015036" />
     <state x="564" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600535676516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="564" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.133.1920.1160@0.0.1920.1040" timestamp="1600535676516" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600783188414">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600838020402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.133.1920.1160@0.0.1920.1040" timestamp="1600783188414" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600838020402" />
   </component>
 </project>

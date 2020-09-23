@@ -4,8 +4,7 @@ using TMPro;
 using UnityEngine;
 
 [Serializable]
-public class UIRoom : MonoBehaviour
-{
+public class UIRoom : MonoBehaviour {
     [SerializeField] private TMP_Text roomName;
 
     [SerializeField] private TMP_Text roomCurrentCount;

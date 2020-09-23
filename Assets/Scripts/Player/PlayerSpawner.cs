@@ -3,39 +3,51 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 
-[Serializable]
-public class SpawnPoint
-{
-    public int       index;
-    public Transform point;
-    public bool      isSpawned;
-}
+public class PlayerSpawner : MonoBehaviourPun {
+    [Serializable]
+    public class SpawnPoint {
+        public int index;
+        public Transform point;
+        public bool isSpawned;
 
-public class PlayerSpawner : MonoBehaviourPunCallbacks
-{
-    [SerializeField] private PhotonView pView;
-
-    [SerializeField] private CameraAssigner CameraAssigner;
-
+        public SpawnPoint(int index, Transform point) {
+            this.index = index;
+            this.point = point;
+            isSpawned = false;
+        }
+    }
+    
     [SerializeField] private string playerPrefabPath;
-
-    [SerializeField] private List<SpawnPoint> spawnPoint;
-
-    [SerializeField] private Transform playerTransform;
+    [ReadOnly, SerializeField] private List<SpawnPoint> spawnPoint;
+    
+    [SerializeField] private CameraAssigner cameraAssigner;
 
     private void Awake() {
-        if (pView == null) pView = GetComponent<PhotonView>();
+        //InitSpawnPoint();
     }
 
     private void Start() {
-        playerTransform = SpawnPlayer();
-        MoveToSpawnPoint(playerTransform);
-        CameraAssigner.AssignTarget(playerTransform);
+        SpawnPlayer();
     }
 
-    private Transform SpawnPlayer() {
+    private void InitSpawnPoint() {
+        var tempSpawnPoints = GetComponentsInChildren<Transform>();
+        if (spawnPoint == null) {
+            spawnPoint = new List<SpawnPoint>(tempSpawnPoints.Length);
+        }
+        for (var i = 0; i < tempSpawnPoints.Length; i++) {
+            if (spawnPoint[i] == null) {
+                spawnPoint[i] = new SpawnPoint(i, tempSpawnPoints[i]);
+            }
+        }
+    }
+
+    private void SpawnPlayer() {
         print("[DEBUG] Execute : SpawnPlayer()");
-        return PhotonNetwork.Instantiate($"{playerPrefabPath}/Player", Vector3.zero, Quaternion.identity).transform;
+        var playerTransform =  PhotonNetwork.Instantiate($"{playerPrefabPath}/Player", Vector3.zero, Quaternion.identity).transform;
+        
+        MoveToSpawnPoint(playerTransform);
+        cameraAssigner.AssignTarget(playerTransform);
     }
 
     private void MoveToSpawnPoint(Transform player) {
@@ -44,7 +56,7 @@ public class PlayerSpawner : MonoBehaviourPunCallbacks
         if (spawnPoint.Exists(pt => pt.index == spawnIndex)) {
             var tempPoint = spawnPoint.Find(pt => pt.index == spawnIndex);
             player.position = tempPoint.point.position;
-            pView.RPC("SetSpawned", RpcTarget.AllBuffered, tempPoint.index);
+            photonView.RPC("SetSpawned", RpcTarget.AllBuffered, tempPoint.index);
         }
         else {
             print("[ERROR] Execute : GetSpawnPoint() - Not available remain spawn point.");
@@ -55,9 +67,5 @@ public class PlayerSpawner : MonoBehaviourPunCallbacks
     private void SetSpawned(int index) {
         print($"[DEBUG] Execute : SetSpawned() - Index : {index}");
         spawnPoint.Find(pt => pt.index == index).isSpawned = true;
-    }
-
-    public void SetInteractable() {
-        playerTransform.GetComponent<InteractManager>().SetEnableInteract(true);
     }
 }

@@ -2,9 +2,8 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class NetworkLauncher : MonoBehaviourPunCallbacks
-{
-    [SerializeField] private int sendRate          = 60;
+public class NetworkLauncher : MonoBehaviourPunCallbacks {
+    [SerializeField] private int sendRate = 60;
     [SerializeField] private int serializationRate = 30;
 
     [SerializeField] private UnityEvent onConnectedEvent;

@@ -1,20 +1,17 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 // ReSharper disable Unity.PerformanceCriticalCodeInvocation
 
-public class DialogueViewer : InteractModule
-{
-    [SerializeField] private TextBubble textBubble;
+public class DialogueViewer : InteractModule {
+    [ReadOnly] public TextBubble textBubble;
     [SerializeField] private GameObject coolDownObject;
 
-    [ReadOnly] [SerializeField] private DialogueData                       dialogue;
-    [SerializeField]            private List<DialogueData.SentenceElement> sentenceData;
-    [ReadOnly] [SerializeField] private int                                curIndex;
-    [ReadOnly] [SerializeField] private string                             curEventCode = "";
+    [ReadOnly, SerializeField] private DialogueData dialogue;
+    [ReadOnly, SerializeField] private int curIndex;
+    [ReadOnly, SerializeField] private string curEventCode = "";
 
-    public            EventTimer timer;
-    [ReadOnly] public float      cooldownTime;
+    public EventTimer timer;
+    [ReadOnly] public float cooldownTime;
 
     private void Awake() {
         if (textBubble == null) textBubble = GetComponentInChildren<TextBubble>();
@@ -38,10 +35,12 @@ public class DialogueViewer : InteractModule
 
     public void PlayDialogue() {
         if (textBubble.IsEndWriteLine) {
-            if (curIndex < sentenceData.Count)
+            if (curIndex < dialogue.sentence.Count) {
                 WriteDialogue(curIndex++);
-            else
+            }
+            else {
                 EndDialogue();
+            }
         }
         else {
             textBubble.writeElement.WriteAllAndDestroy();
@@ -50,20 +49,22 @@ public class DialogueViewer : InteractModule
 
     private void WriteDialogue(int index) {
         if (!string.IsNullOrEmpty(curEventCode)) {
-            EventManager.Instance.EventExecute(this, ref curEventCode);
+            EventHandler.Instance.EventExecute(this, ref curEventCode);
         }
         else {
-            curEventCode = EventManager.RemoveAnswerEventCode(sentenceData[index].eventCode);
-            textBubble.Write(sentenceData[index].content, Constants.DEFAULT_DIALOGUE_TYPE_SPEED);
+            curEventCode = EventHandler.RemoveAnswerEventCode(dialogue.sentence[index].eventCode);
+            textBubble.Write(dialogue.sentence[index].content, Constants.DEFAULT_DIALOGUE_TYPE_SPEED);
         }
     }
 
     public void EndDialogue() {
         Debug.LogWarning("End Dialogue");
-        if (cooldownTime <= -1.0f)
+        if (cooldownTime <= -1.0f) {
             enabled = false;
-        else
+        }
+        else {
             timer.StartTimer(cooldownTime);
+        }
 
         InitDialogue();
         textBubble.BubbleEnabled = false;
@@ -74,21 +75,18 @@ public class DialogueViewer : InteractModule
         curEventCode = null;
     }
 
-    public void SetDialogue(DialogueData data) {
-        dialogue = data;
-        sentenceData = data.sentence;
-    }
+    public void SetDialogue(DialogueData data) => dialogue = data;
 
-    public void SetIndex(int index) { curIndex = index; }
+    public void SetIndex(int index) => curIndex = index;
 
     public void SetIndex(string eventCode) {
-        if (sentenceData.Exists(line => line.eventCode.Contains(eventCode))) {
-            SetIndex(sentenceData.Find(line => line.eventCode.Contains(eventCode)).index);
+        if (dialogue.sentence.Exists(line => line.eventCode.Contains(eventCode))) {
+            SetIndex(dialogue.sentence.Find(line => line.eventCode.Contains(eventCode)).index);
         }
         else {
             Debug.LogError("[DEBUG] Execute : PrintEventSentence() - The answer event code is invalid.");
         }
     }
 
-    public void ActiveBubble(bool enable) { textBubble.BubbleEnabled = enable; }
+    public void ActiveBubble(bool enable) => textBubble.BubbleEnabled = enable;
 }

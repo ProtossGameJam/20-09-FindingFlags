@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 
-public class PlayerSortingOrder : SortingOrderBase
-{
-    [ReadOnly] [SerializeField] protected Renderer[] sortingRenderers;
-    [ReadOnly] [SerializeField] protected int[]      originOrders;
+public class PlayerSortingOrder : SortingOrderBase {
+    [ReadOnly, SerializeField] protected Renderer[] sortingRenderers;
+    [ReadOnly, SerializeField] protected int[] originOrders;
 
     private void Start() {
         sortingRenderers = transform.GetComponentsInChildren<Renderer>();

@@ -2065,6 +2065,7 @@ GameObject:
   - component: {fileID: 5320236617110822870}
   - component: {fileID: 5320236617110822865}
   - component: {fileID: -7311417423442887480}
+  - component: {fileID: 6453164820251977107}
   - component: {fileID: 2689896733132383078}
   - component: {fileID: -8991492283540879465}
   m_Layer: 9
@@ -2107,7 +2108,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcType: 1
   npcData: {fileID: 0}
-  interactModule: {fileID: 0}
+  dialogueModule: {fileID: 2689896733132383078}
+  cameraAssigner: {fileID: 0}
+  cameraTarget: {fileID: 1393143829}
 --- !u!58 &5320236617110822865
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2146,6 +2149,19 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &6453164820251977107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5320236617110822864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee3f78b4c514b2c95c2b042bcf5756c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flagManager: {fileID: 0}
 --- !u!114 &2689896733132383078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2158,25 +2174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7c211da136268641bbc2c6d24f9eb8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textBubble: {fileID: 0}
+  textBubble: {fileID: 4340490163478079600}
   coolDownObject: {fileID: 0}
-  sentenceData:
-  - index: 0
-    content: "\uC790 \uC9C0\uAE08\uBD80\uD130 \uC6B4\uB3D9\uD68C\uB97C \uC2DC\uC791\uD569\uB2C8\uB2E4!"
-    eventCode: 
-  - index: 1
-    content: "\uAC01\uC790 \uC790\uC2E0\uC774 \uCC3E\uC544\uC640\uC57C \uD560 \uAE43\uBC1C\uC744
-      \uD655\uC778\uD588\uC8E0?\n\uADF8 \uAE43\uBC1C\uC744 \uC5EC\uB7EC \uC0AC\uB78C\uB4E4\uC5D0\uAC8C
-      \uCC3E\uC544\uC624\uC2DC\uBA74 \uB429\uB2C8\uB2E4!"
-    eventCode: 
-  - index: 2
-    content: "\uADF8\uB7FC.. \uC2DC\uC791\uD569\uB2C8\uB2E4!"
-    eventCode: 
-  - index: 1
-    content: "\uAC01\uC790 \uC790\uC2E0\uC774 \uCC3E\uC544\uC640\uC57C \uD560 \uAE43\uBC1C\uC744
-      \uD655\uC778\uD588\uC8E0?\n\uADF8 \uAE43\uBC1C\uC744 \uC5EC\uB7EC \uC0AC\uB78C\uB4E4\uC5D0\uAC8C
-      \uCC3E\uC544\uC624\uC2DC\uBA74 \uB429\uB2C8\uB2E4!"
-    eventCode: 
+  dialogue: {fileID: 11400000, guid: e2f538ff30c5b0c48a11927edd4b140a, type: 2}
   curIndex: 0
   curEventCode: 
   timer: {fileID: -8991492283540879465}
@@ -2931,6 +2931,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7187804276020447404, guid: 0fe0726e40481f94f809e74eabf35d38, type: 3}
   m_PrefabInstance: {fileID: 4340490165404163216}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4340490163478079600 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1926100192, guid: 0fe0726e40481f94f809e74eabf35d38, type: 3}
+  m_PrefabInstance: {fileID: 4340490165404163216}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2518c439d77c64592aa6273f522922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5532962641307398762
 PrefabInstance:
   m_ObjectHideFlags: 0

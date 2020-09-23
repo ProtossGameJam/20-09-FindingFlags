@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 
-public class MainDepthCameraHandler : MonoBehaviour
-{
-    [ReadOnly] [SerializeField] private Vector3 screenSize;
-    [ReadOnly] [SerializeField] private Vector3 originalPosition;
+public class MainDepthCameraHandler : MonoBehaviour {
+    [ReadOnly, SerializeField] private Vector3 screenSize;
+    [ReadOnly, SerializeField] private Vector3 originalPosition;
 
     [SerializeField] private float sensitivity;
 
@@ -17,9 +16,9 @@ public class MainDepthCameraHandler : MonoBehaviour
     private void Update() {
         var fixVec = (Input.mousePosition - screenSize) / (sensitivity * 100.0f);
         transform.position = originalPosition
-                             + new Vector3(
-                                 Mathf.Clamp(fixVec.x, -limitMovement.x, limitMovement.x),
-                                 Mathf.Clamp(fixVec.y, -limitMovement.y, limitMovement.y)
+                           + new Vector3(
+                                     Mathf.Clamp(fixVec.x, -limitMovement.x, limitMovement.x),
+                                     Mathf.Clamp(fixVec.y, -limitMovement.y, limitMovement.y)
                              );
     }
 }

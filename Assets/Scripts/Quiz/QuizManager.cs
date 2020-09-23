@@ -1,46 +1,42 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class QuizManager : MonoSingleton<QuizManager>
-{
+public class QuizManager : MonoBehaviour {
     [SerializeField] private UIQuizBubble uiBubble;
 
     [SerializeField] private FlagManager flagManager;
 
-    [SerializeField]            private List<QuizData> quizData;
-    [ReadOnly] [SerializeField] private int            quizCorrect;
+    [SerializeField] private List<QuizData> quizData;
+    [ReadOnly, SerializeField] private QuizData currentQuiz;
 
     private DialogueViewer callDialogueViewer;
-    private bool           inProgress;
+    private bool inProgress;
 
-    protected override void Awake() {
-        base.Awake();
+    private void Awake() {
         if (flagManager == null) flagManager = FindObjectOfType<FlagManager>();
     }
 
     private void ResetQuizManager() {
         inProgress = false;
-        quizCorrect = -1;
+        currentQuiz = null;
         callDialogueViewer = null;
     }
 
     /// <summary>
-    ///     새로운 퀴즈를 준비하고 시작하는 함수. DialogueManager 에서 Code를 감지하고 실행하게 됨.
+    /// 새로운 퀴즈를 준비하고 시작하는 함수. DialogueManager 에서 Code를 감지하고 실행하게 됨.
     /// </summary>
-    /// <param name="dialogue">호출한 Dialogue 오브젝트</param>
-    /// <param name="pos">Quiz Bubble UI position</param>
-    /// <param name="id">Quiz ID</param>
+    /// <param name="dialogue"> 호출한 Dialogue 오브젝트 </param>
+    /// <param name="pos"> Quiz Bubble UI position </param>
+    /// <param name="id"> Quiz ID </param>
     public void StartQuiz(DialogueViewer dialogue, int code) {
         Debug.Log("[DEBUG] Execute : StartQuiz()");
         if (!inProgress) {
             inProgress = true;
 
             callDialogueViewer = dialogue;
-
             var tempQuiz = quizData.Find(quiz => quiz.code == code);
-            quizCorrect = tempQuiz.correct;
             uiBubble.SetQuizUI(tempQuiz);
-
+            currentQuiz = tempQuiz;
             dialogue.ActiveBubble(false);
             uiBubble.ActiveBubble(true);
         }
@@ -58,10 +54,11 @@ public class QuizManager : MonoSingleton<QuizManager>
     }
 
     public void SelectAnswer(int index) {
-        if (quizCorrect == index) { // 정답
+        if (currentQuiz.correct == index) { // 정답
             callDialogueViewer.cooldownTime = -1.0f;
             Debug.Log(
-                $"[DEBUG] Execute : SelectAnswer() - Get Flag Color : {callDialogueViewer.transform.GetComponent<DefaultNPC>().ownFlag}");
+                    $"[DEBUG] Execute : SelectAnswer() - Get Flag Color : {callDialogueViewer.transform.GetComponent<DefaultNPC>().ownFlag}"
+            );
             flagManager.GetFlag(callDialogueViewer.transform.GetComponent<DefaultNPC>().ownFlag);
             // TODO: 정답이므로 깃발 증정
         }

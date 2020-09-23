@@ -3219,7 +3219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 252052448}
-  localPlayer: {fileID: 0}
+  playerTarget: {fileID: 0}
 --- !u!1 &273457264
 GameObject:
   m_ObjectHideFlags: 0
@@ -3249,7 +3249,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &273457266
 MonoBehaviour:
@@ -3283,7 +3283,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5be5603ae06fbb343a2fa06abcabdc96, type: 2}
   - {fileID: 11400000, guid: 11c8f12bdc6b50c4aaff2f29ac09944b, type: 2}
   - {fileID: 11400000, guid: 9e3aabc95e1be4a4fbecf6891eeefa1c, type: 2}
-  quizCorrect: 0
+  currentQuiz: {fileID: 0}
 --- !u!1 &308054203
 GameObject:
   m_ObjectHideFlags: 0
@@ -5926,7 +5926,7 @@ RectTransform:
   m_Children:
   - {fileID: 1598811292}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6275,10 +6275,6 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1393143828, guid: 61762bb699800bb4d884237b17f4ed80, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3839169580504195485, guid: 61762bb699800bb4d884237b17f4ed80, type: 3}
       propertyPath: viewIdField
       value: 1
@@ -6287,6 +6283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Principle
       objectReference: {fileID: 0}
+    - target: {fileID: 5320236617110822870, guid: 61762bb699800bb4d884237b17f4ed80, type: 3}
+      propertyPath: cameraAssigner
+      value: 
+      objectReference: {fileID: 252052451}
     - target: {fileID: 5320236617110822879, guid: 61762bb699800bb4d884237b17f4ed80, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.11
@@ -6331,8 +6331,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6453164820251977107, guid: 61762bb699800bb4d884237b17f4ed80, type: 3}
+      propertyPath: flagManager
+      value: 
+      objectReference: {fileID: 103911969}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61762bb699800bb4d884237b17f4ed80, type: 3}
+--- !u!114 &624030322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5320236617110822870, guid: 61762bb699800bb4d884237b17f4ed80, type: 3}
+  m_PrefabInstance: {fileID: 624030319}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581dec8bbc11478a850097d97802b126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &628915318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6819,6 +6834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d265932ec64d609354f81d74981fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textObject: {fileID: 250845177}
   countdownText: {fileID: 1888382355}
 --- !u!114 &808888762
 MonoBehaviour:
@@ -6833,12 +6849,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiRoutine: {fileID: 808888761}
+  secondEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 808888761}
+        m_TargetAssemblyTypeName: UIStageRoutine, Assembly-CSharp
+        m_MethodName: WriteTextSecond
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   startEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1197182108}
-        m_TargetAssemblyTypeName: PlayerSpawner, Assembly-CSharp
-        m_MethodName: SetInteractable
+      - m_Target: {fileID: 1197182110}
+        m_TargetAssemblyTypeName: InteractController, Assembly-CSharp
+        m_MethodName: SetInteractMine
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1766547847}
+        m_TargetAssemblyTypeName: NPCSpawner, Assembly-CSharp
+        m_MethodName: NPCDefaultSetting
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6848,9 +6891,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1884760053}
-        m_TargetAssemblyTypeName: NPCManager, Assembly-CSharp
-        m_MethodName: NPCSetting
+      - m_Target: {fileID: 624030322}
+        m_TargetAssemblyTypeName: MasterNPC, Assembly-CSharp
+        m_MethodName: StartDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6860,6 +6903,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1197182111}
+        m_TargetAssemblyTypeName: PlayerMovementController, Assembly-CSharp
+        m_MethodName: SetMovementEntire
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  countdownTime: 5
 --- !u!114 &808888763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9655,7 +9711,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &988533227
 GameObject:
@@ -9800,8 +9856,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1012013931}
-  - component: {fileID: 1012013932}
   - component: {fileID: 1012013933}
+  - component: {fileID: 1012013932}
   m_Layer: 0
   m_Name: Event Manager
   m_TagString: Untagged
@@ -9821,7 +9877,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1012013932
 MonoBehaviour:
@@ -9848,33 +9904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af103cedbb348f88fdd660eff19d11b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventCategoryDic:
-    reorderableList:
-      canAdd: 1
-      canRemove: 1
-      draggable: 1
-      expandable: 1
-      multipleSelection: 1
-      isExpanded: 1
-      label:
-        m_Text: Keys
-        m_Image: {fileID: 0}
-        m_Tooltip: 
-      headerHeight: 18
-      footerHeight: 13
-      slideEasing: 0.15
-      verticalSpacing: 2
-      showDefaultBackground: 1
-      elementDisplayType: 0
-      elementNameProperty: 
-      elementNameOverride: 
-      elementIcon: {fileID: 0}
-    reqReferences: {fileID: 0}
-    isExpanded: 1
-    _keyValues: 00000000
-    _keys: 00000000
-    _values:
-    - q
+  quizManager: {fileID: 273457266}
 --- !u!1 &1014459246
 GameObject:
   m_ObjectHideFlags: 0
@@ -10056,6 +10086,8 @@ GameObject:
   - component: {fileID: 1197182107}
   - component: {fileID: 1197182109}
   - component: {fileID: 1197182108}
+  - component: {fileID: 1197182110}
+  - component: {fileID: 1197182111}
   m_Layer: 0
   m_Name: Player Spawner
   m_TagString: Untagged
@@ -10093,8 +10125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05e3bc35c950f94ba25d13b302daa1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pView: {fileID: 1197182109}
-  CameraAssigner: {fileID: 252052451}
   playerPrefabPath: Photon/Player
   spawnPoint:
   - index: 0
@@ -10109,7 +10139,7 @@ MonoBehaviour:
   - index: 3
     point: {fileID: 1395153694}
     isSpawned: 0
-  playerTransform: {fileID: 0}
+  cameraAssigner: {fileID: 252052451}
 --- !u!114 &1197182109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10132,6 +10162,30 @@ MonoBehaviour:
   viewIdField: 900
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &1197182110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197182106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8aa869b46b9407b9638315492aa873e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1197182111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197182106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5e0c22b47946c0aa034f72df0ab1b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1235453984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10908,7 +10962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f8c920872873914ea4d4d320896a584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884760053}
+  npcCollection: []
   npcCount: 9
   npcPrefabPath: Photon/NPC/
   npcPrefabPrefix: NPC
@@ -10932,6 +10986,24 @@ MonoBehaviour:
   - {fileID: 618350369}
   - {fileID: 2075403050}
   - {fileID: 187761469}
+  dialogues:
+  - {fileID: 11400000, guid: c19de85c5025f4e43b9839b3936be88f, type: 2}
+  - {fileID: 11400000, guid: 1bdaa089e920b3c49b86df1afccd81fb, type: 2}
+  - {fileID: 11400000, guid: 46b588bfcbc5a3b488af0b8c89a4bb34, type: 2}
+  - {fileID: 11400000, guid: 96ac3019ba741de4397d7a6d9ea958d3, type: 2}
+  - {fileID: 11400000, guid: cff6579e425bbea45bce73060c829adf, type: 2}
+  - {fileID: 11400000, guid: 05ffdafabc80f4e48b49104bd206057c, type: 2}
+  - {fileID: 11400000, guid: 9dce035fc83785445b242de9c7483c89, type: 2}
+  - {fileID: 11400000, guid: 52943afe820492e46ad98037a13620e9, type: 2}
+  - {fileID: 11400000, guid: 9d27168024714cc408d5546c9c677c4c, type: 2}
+  - {fileID: 11400000, guid: 197102e9f89372942be6320540f09401, type: 2}
+  - {fileID: 11400000, guid: 2001a8a20f13dcb4cb1464008be13866, type: 2}
+  - {fileID: 11400000, guid: a9686e6e7aeb3a845acfc9a2f94a0d79, type: 2}
+  - {fileID: 11400000, guid: 9c1422a3d41be1f4193c2cb81757472b, type: 2}
+  - {fileID: 11400000, guid: e5c49732ffd653746a8c9b93974dd1d5, type: 2}
+  - {fileID: 11400000, guid: 06e621de568ffc24db242b6059a4e149, type: 2}
+  - {fileID: 11400000, guid: a1c4f09b8ff691c43a50766f41cda812, type: 2}
+  - {fileID: 11400000, guid: 1819c5c18fc31df468019e478c49c8dd, type: 2}
 --- !u!1 &1847639623
 GameObject:
   m_ObjectHideFlags: 0
@@ -11179,98 +11251,13 @@ RectTransform:
   m_Children:
   - {fileID: 250845178}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1884760051
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1884760052}
-  - component: {fileID: 1884760053}
-  - component: {fileID: 1884760054}
-  m_Layer: 0
-  m_Name: NPC Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1884760052
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884760051}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1884760053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884760051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 939616dfa72a43f8bf613403123013cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npcCollection: []
-  dialogues:
-  - {fileID: 11400000, guid: c19de85c5025f4e43b9839b3936be88f, type: 2}
-  - {fileID: 11400000, guid: 1bdaa089e920b3c49b86df1afccd81fb, type: 2}
-  - {fileID: 11400000, guid: 46b588bfcbc5a3b488af0b8c89a4bb34, type: 2}
-  - {fileID: 11400000, guid: 96ac3019ba741de4397d7a6d9ea958d3, type: 2}
-  - {fileID: 11400000, guid: cff6579e425bbea45bce73060c829adf, type: 2}
-  - {fileID: 11400000, guid: 05ffdafabc80f4e48b49104bd206057c, type: 2}
-  - {fileID: 11400000, guid: 9dce035fc83785445b242de9c7483c89, type: 2}
-  - {fileID: 11400000, guid: 52943afe820492e46ad98037a13620e9, type: 2}
-  - {fileID: 11400000, guid: 9d27168024714cc408d5546c9c677c4c, type: 2}
-  - {fileID: 11400000, guid: 197102e9f89372942be6320540f09401, type: 2}
-  - {fileID: 11400000, guid: 2001a8a20f13dcb4cb1464008be13866, type: 2}
-  - {fileID: 11400000, guid: a9686e6e7aeb3a845acfc9a2f94a0d79, type: 2}
-  - {fileID: 11400000, guid: 9c1422a3d41be1f4193c2cb81757472b, type: 2}
-  - {fileID: 11400000, guid: e5c49732ffd653746a8c9b93974dd1d5, type: 2}
-  - {fileID: 11400000, guid: 06e621de568ffc24db242b6059a4e149, type: 2}
-  - {fileID: 11400000, guid: a1c4f09b8ff691c43a50766f41cda812, type: 2}
-  - {fileID: 11400000, guid: 1819c5c18fc31df468019e478c49c8dd, type: 2}
---- !u!114 &1884760054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884760051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  observableSearch: 2
-  Synchronization: 3
-  OwnershipTransfer: 0
-  ObservedComponents: []
-  viewIdField: 310
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &1888382353
 GameObject:
   m_ObjectHideFlags: 0
@@ -13976,7 +13963,7 @@ MonoBehaviour:
       draggable: 1
       expandable: 1
       multipleSelection: 1
-      isExpanded: 1
+      isExpanded: 0
       label:
         m_Text: Keys
         m_Image: {fileID: 0}
@@ -13991,28 +13978,19 @@ MonoBehaviour:
       elementNameOverride: 
       elementIcon: {fileID: 0}
     reqReferences: {fileID: 0}
-    isExpanded: 1
+    isExpanded: 0
     _keyValues: 000000000100000002000000030000000400000005000000060000000700000008000000
     _keys: 000000000100000002000000030000000400000005000000060000000700000008000000
     _values:
-    - flagColor: {r: 1, g: 0, b: 0, a: 1}
-      edgeColor: {r: 1, g: 0.23113209, b: 0.23113209, a: 1}
-    - flagColor: {r: 1, g: 0.58040816, b: 0, a: 1}
-      edgeColor: {r: 1, g: 0.7298562, b: 0.3537736, a: 1}
-    - flagColor: {r: 1, g: 0.976174, b: 0, a: 1}
-      edgeColor: {r: 1, g: 0.9850502, b: 0.3820755, a: 1}
-    - flagColor: {r: 0.13399053, g: 1, b: 0, a: 1}
-      edgeColor: {r: 0.48130465, g: 1, b: 0.4009434, a: 1}
-    - flagColor: {r: 0, g: 0.59772396, b: 1, a: 1}
-      edgeColor: {r: 0.4575472, g: 0.7807586, b: 1, a: 1}
-    - flagColor: {r: 0.092139244, g: 0, b: 1, a: 1}
-      edgeColor: {r: 0.4639794, g: 0.41037738, b: 1, a: 1}
-    - flagColor: {r: 0.5859761, g: 0, b: 1, a: 1}
-      edgeColor: {r: 0.7711688, g: 0.4481132, b: 1, a: 1}
-    - flagColor: {r: 1, g: 1, b: 1, a: 1}
-      edgeColor: {r: 1, g: 1, b: 1, a: 1}
-    - flagColor: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 1}
-      edgeColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
+    - {r: 0.7490196, g: 0.003921569, b: 0.003921569, a: 1}
+    - {r: 1, g: 0.52619624, b: 0, a: 1}
+    - {r: 0.9801799, g: 1, b: 0, a: 1}
+    - {r: 0.0775103, g: 0.745283, b: 0, a: 1}
+    - {r: 0, g: 0.8381572, b: 1, a: 1}
+    - {r: 0, g: 0.3411765, b: 1, a: 1}
+    - {r: 0.47564507, g: 0, b: 1, a: 1}
+    - {r: 1, g: 1, b: 1, a: 1}
+    - {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
   flagOpacity: 0.15
   flagComponents: []
 --- !u!1 &2091348301

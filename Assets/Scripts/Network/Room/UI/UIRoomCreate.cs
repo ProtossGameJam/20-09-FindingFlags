@@ -1,18 +1,15 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class UIRoomCreate : MonoBehaviour
-{
+public class UIRoomCreate : MonoBehaviour {
     [SerializeField] private TMP_InputField inputField;
 
-    [ReadOnly] [SerializeField] private string roomName;
+    [ReadOnly, SerializeField] private string roomName;
 
-    public void SetRoomName(string name) { roomName = name; }
+    public void SetRoomName(string name) => roomName = name;
 
-    /// <summary>
-    ///     Check if Room's name is Empty
-    /// </summary>
-    /// <param name="name">used by room's name</param>
+    /// <summary> Check if Room's name is Empty </summary>
+    /// <param name="name"> used by room's name </param>
     public void CheckNameIsEmpty(string name) {
         if (string.IsNullOrWhiteSpace(name)) {
             print("[DEBUG] No name has typed in field. Use default name or previous name.");
@@ -21,8 +18,7 @@ public class UIRoomCreate : MonoBehaviour
         }
     }
 
-    public void CreateRoom() {
-        // Call: OnCreateRoom, OnJoinedRoom
-        LobbyManager.CreateRoom(roomName);
-    }
+    public void CreateRoom() =>
+            // Call: OnCreateRoom, OnJoinedRoom
+            LobbyManager.CreateRoom(roomName);
 }

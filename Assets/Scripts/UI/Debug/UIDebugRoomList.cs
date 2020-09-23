@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using Photon.Realtime;
 using UnityEngine;
 
-public class UIDebugRoomList : MonoBehaviour
-{
-    [ReadOnly] [SerializeField] private List<UIDebugPlayerText> playerList;
+public class UIDebugRoomList : MonoBehaviour {
+    [ReadOnly, SerializeField] private List<UIDebugPlayerText> playerList;
 
     [SerializeField] private GameObject debugPlayerText;
 
     [SerializeField] private float deleteInterval;
 
-    [ReadOnly] [SerializeField] private Queue<GameObject> playerTextQueue;
-    private                             WaitUntil         waitCondition;
-    private                             WaitForSeconds    waitInterval;
+    [ReadOnly, SerializeField] private Queue<GameObject> playerTextQueue;
+    private WaitUntil waitCondition;
+    private WaitForSeconds waitInterval;
 
     private void Awake() {
         playerTextQueue = new Queue<GameObject>();
@@ -22,7 +21,7 @@ public class UIDebugRoomList : MonoBehaviour
         waitCondition = new WaitUntil(() => playerTextQueue.Count != 0);
     }
 
-    private void Start() { StartCoroutine(DeleteTextInterval()); }
+    private void Start() => StartCoroutine(DeleteTextInterval());
 
     public void DebugEnterPlayer(Player player) {
         print("[DEBUG] Execute : DebugEnterPlayer() - UI");

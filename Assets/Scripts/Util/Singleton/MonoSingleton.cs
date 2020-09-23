@@ -1,17 +1,13 @@
 ﻿using UnityEngine;
 
 /// <summary>
-///     Mono singleton Class. Extend this class to make singleton component.
-///     Example:
-///     <code>
+/// Mono singleton Class. Extend this class to make singleton component. Example:
+/// <code>
 /// public class Foo : MonoSingleton<Foo>
 /// </code>
-///     . To get the instance of Foo class, use <code>Foo.instance</code>
-///     Override <code>Init()</code> method instead of using <code>Awake()</code>
-///     from this class.
+/// . To get the instance of Foo class, use <code>Foo.instance</code> Override <code>Init()</code> method instead of using <code>Awake()</code> from this class.
 /// </summary>
-public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T>
-{
+public abstract class MonoSingleton <T> : MonoBehaviour where T : MonoSingleton<T> {
     private static T _instance;
 
     public static T Instance {
@@ -54,11 +50,8 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
     }
 
     /// Make sure the instance isn't referenced anymore when the user quit, just in case.
-    private void OnApplicationQuit() { _instance = null; }
+    private void OnApplicationQuit() => _instance = null;
 
-    /// <summary>
-    ///     This function is called when the instance is used the first time
-    ///     Put all the initializations you need here, as you would do in Awake
-    /// </summary>
+    /// <summary> This function is called when the instance is used the first time Put all the initializations you need here, as you would do in Awake </summary>
     protected virtual void Initialize() { }
 }
