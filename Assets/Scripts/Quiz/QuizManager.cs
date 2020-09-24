@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class QuizManager : MonoBehaviour {
@@ -60,7 +61,7 @@ public class QuizManager : MonoBehaviour {
                     $"[DEBUG] Execute : SelectAnswer() - Get Flag Color : {callDialogueViewer.transform.GetComponent<DefaultNPC>().ownFlag}"
             );
             flagManager.GetFlag(callDialogueViewer.transform.GetComponent<DefaultNPC>().ownFlag);
-            // TODO: 정답이므로 깃발 증정
+            RunCorrectAnimation();
         }
         else { // 오답
             callDialogueViewer.cooldownTime = 30.0f;
@@ -72,5 +73,9 @@ public class QuizManager : MonoBehaviour {
         callDialogueViewer.PlayDialogue();
 
         ResetQuizManager();
+    }
+
+    private void RunCorrectAnimation() {
+        FindObjectsOfType<PlayerAnimation>().First(player => player.photonView.IsMine).FlagGetAnimation();
     }
 }

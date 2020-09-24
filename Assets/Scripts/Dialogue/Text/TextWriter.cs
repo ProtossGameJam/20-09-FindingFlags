@@ -5,6 +5,8 @@ using UnityEngine;
 public class TextWriter : MonoBehaviour {
     private static TextWriter _instance;
 
+    [SerializeField] private AudioSource typeAudio;
+
     private List<WriteElement> _writeTextList;
 
     private void Awake() {
@@ -15,8 +17,16 @@ public class TextWriter : MonoBehaviour {
 
     private void Update() {
         for (var i = 0; i < _writeTextList.Count; i++) {
+            if (!typeAudio.isPlaying) {
+                typeAudio.Play();
+            }
+
             if (!_writeTextList[i].WriteText()) continue; // Check text writing is end
             _writeTextList.RemoveAt(i--);                 // Remove write instance
+        }
+
+        if (_writeTextList.Count <= 0) {
+            typeAudio.Stop();
         }
     }
 

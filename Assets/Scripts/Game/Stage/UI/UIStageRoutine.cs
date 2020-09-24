@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class UIStageRoutine : MonoBehaviour {
     [SerializeField] private GameObject textObject;
@@ -12,6 +10,7 @@ public class UIStageRoutine : MonoBehaviour {
             if (!textObject.activeSelf) {
                 textObject.SetActive(true);
             }
+
             countdownText.text = $"{sec}초 후에 게임이 시작됩니다!";
         }
         else if (sec == 0) {

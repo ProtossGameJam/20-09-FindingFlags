@@ -45,6 +45,7 @@ MonoBehaviour:
   - DialogueAllocToNPC
   - FlagAllocToNPC
   - NPCSetting
+  - WinnerPresentRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

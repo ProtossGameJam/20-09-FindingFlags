@@ -40,6 +40,7 @@ public class PlayerNetworkMove : MonoBehaviourPun, IPunObservable {
         }
     }
 
-    private void RigidMove(Vector2 currentPos, Vector2 vec, float speed) =>
-            playerRigidbody.MovePosition(currentPos + vec * speed);
+    private void RigidMove(Vector2 currentPos, Vector2 vec, float speed) {
+        playerRigidbody.MovePosition(currentPos + vec * speed);
+    }
 }

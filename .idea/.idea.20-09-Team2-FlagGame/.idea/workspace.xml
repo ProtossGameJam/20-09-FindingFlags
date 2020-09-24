@@ -71,10 +71,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/UIQuizBubble.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueParser.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/EventParser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NPC/DefaultNPC.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Type/NPCDataObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerDataObject.cs" />
@@ -99,7 +95,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/LobbyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneInitializer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Event/EventHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerNetworkMove.cs" />
@@ -113,15 +108,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Stage/StageRoutine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueViewer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NPC/NPCBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovementController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/MasterNPC.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Flag/FlagManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UINameInputField.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/StageManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerNicknameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Flag/FlagChecker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Quiz/QuizManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NPC/MasterNPC.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Component/PlayerAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Text/TextWriter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Stage/WinManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Debug/UIDebugRoomList.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/StageManager.cs" />
       </list>
     </option>
   </component>
@@ -185,6 +185,7 @@
       <workItem from="1600774897371" duration="10087000" />
       <workItem from="1600820304551" duration="21376000" />
       <workItem from="1600853859299" duration="4334000" />
+      <workItem from="1600907376974" duration="9289000" />
     </task>
     <servers />
   </component>
@@ -209,11 +210,11 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="706" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1600835947423">
+    <state x="706" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1600914401548">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="706" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1040/-1920.133.1920.1160@0.0.1920.1040" timestamp="1600779068891" />
-    <state x="706" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1040@0.0.1920.1040" timestamp="1600835947423" />
+    <state x="706" y="362" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1920.1040@0.0.1920.1040" timestamp="1600914401548" />
     <state x="227" y="213" key="EditorConfigExporter" timestamp="1600848012954">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -235,10 +236,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="564" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.133.1920.1160@0.0.1920.1040" timestamp="1600535676516" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600838020402">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600908586342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.133.1920.1160@0.0.1920.1040" timestamp="1600783188414" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600838020402" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600908586342" />
   </component>
 </project>

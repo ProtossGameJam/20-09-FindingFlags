@@ -139,7 +139,7 @@ MonoBehaviour:
     charIndex: 0
     charPerTime: 0
     typeTimer: 0
-  textMaxHorizontalSize: 10
+  textMaxHorizontalSize: 8
 --- !u!1 &7187804276420968450
 GameObject:
   m_ObjectHideFlags: 0

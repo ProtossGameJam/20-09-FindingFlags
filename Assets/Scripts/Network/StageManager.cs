@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
@@ -16,20 +15,28 @@ public class StageManager : MonoBehaviourPunCallbacks {
     [ReadOnly, SerializeField] private int playerMaxNum;
 
     [ReadOnly, SerializeField] private bool isAllowStart;
+    [ReadOnly, SerializeField] private bool isGameStart;
 
     private Coroutine checkRoutine;
 
     private void Awake() {
         playerMaxNum = PhotonNetwork.CurrentRoom.MaxPlayers;
-        playerMaxNum = 2;
     }
 
     private void Start() {
         checkRoutine = StartCoroutine(CheckStartCondition());
     }
 
+    public void StageStart() {
+        StopCoroutine(checkRoutine);
+        StopAllCoroutines();
+        isGameStart = true;
+    }
+
     private IEnumerator CheckStartCondition() {
-        yield return new WaitUntil(() => PhotonNetwork.CurrentRoom.PlayerCount >= playerMaxNum);
+        if (enabled) {
+            yield return new WaitUntil(() => PhotonNetwork.CurrentRoom.PlayerCount >= playerMaxNum);
+        }
         Debug.LogWarning(PhotonNetwork.CurrentRoom.PlayerCount + "-" + playerMaxNum);
         if (!isAllowStart) {
             isAllowStart = true;
@@ -51,7 +58,7 @@ public class StageManager : MonoBehaviourPunCallbacks {
 
     public override void OnPlayerEnteredRoom(Player newPlayer) {
         playerEnterCallback.Invoke(newPlayer);
-        
+
         print($"[DEBUG] Callback : OnPlayerEnteredRoom() - Count : {PhotonNetwork.CurrentRoom.PlayerCount}");
     }
 
@@ -60,18 +67,21 @@ public class StageManager : MonoBehaviourPunCallbacks {
 
         if (isAllowStart) {
             isAllowStart = false;
-            StopCoroutine(checkRoutine);
-            checkRoutine = StartCoroutine(CheckStartCondition());
+            if (!isGameStart) {
+                StopCoroutine(checkRoutine);
+                checkRoutine = StartCoroutine(CheckStartCondition());
+            }
             if (PhotonNetwork.IsMasterClient) {
                 photonView.RPC("StageCancelRPC", RpcTarget.AllViaServer);
             }
         }
-        
+
         print($"[DEBUG] Callback : OnPlayerLeftRoom() - Count : {PhotonNetwork.CurrentRoom.PlayerCount}");
     }
 
-    public override void OnMasterClientSwitched(Player newMasterClient) =>
-            print("[DEBUG] Callback : OnMasterClientSwitched()");
+    public override void OnMasterClientSwitched(Player newMasterClient) {
+        print("[DEBUG] Callback : OnMasterClientSwitched()");
+    }
 
     [PunRPC]
     public void StageReadyRPC() {

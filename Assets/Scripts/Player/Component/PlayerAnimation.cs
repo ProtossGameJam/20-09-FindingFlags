@@ -1,4 +1,5 @@
-﻿using Photon.Pun;
+﻿using System.Collections;
+using Photon.Pun;
 using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviourPun {
@@ -6,7 +7,7 @@ public class PlayerAnimation : MonoBehaviourPun {
 
     [SerializeField] private string velocityParameterName;
 
-    private IMoveInput moveInput;
+    private PlayerInput moveInput;
 
     private void Awake() {
         if (animator == null) animator = GetComponent<Animator>();
@@ -18,5 +19,18 @@ public class PlayerAnimation : MonoBehaviourPun {
         if (photonView.IsMine) WalkAnimation();
     }
 
-    private void WalkAnimation() => animator.SetFloat(velocityParameterName, moveInput.MoveVector.magnitude);
+    private void WalkAnimation() {
+        animator.SetFloat(velocityParameterName, moveInput.MoveVector.magnitude);
+    }
+
+    public void FlagGetAnimation() {
+        StartCoroutine(PlayJumpAnimation());
+    }
+
+    private IEnumerator PlayJumpAnimation() {
+        moveInput.isAllowMoveMine = false;
+        animator.Play(Animator.StringToHash("Jump"));
+        yield return new WaitForSeconds(3.3f);
+        moveInput.isAllowMoveMine = true;
+    }
 }

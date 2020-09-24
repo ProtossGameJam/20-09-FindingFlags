@@ -2066,6 +2066,7 @@ GameObject:
   - component: {fileID: 5320236617110822865}
   - component: {fileID: -7311417423442887480}
   - component: {fileID: 6453164820251977107}
+  - component: {fileID: 2528309139596868367}
   - component: {fileID: 2689896733132383078}
   - component: {fileID: -8991492283540879465}
   m_Layer: 9
@@ -2145,7 +2146,8 @@ MonoBehaviour:
   observableSearch: 2
   Synchronization: 3
   OwnershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 2528309139596868367}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -2189,6 +2191,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2528309139596868367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5320236617110822864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53cac027115846888c25db620dec2c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winnerNickname: 
+  winObject: {fileID: 0}
+  winnerText: {fileID: 0}
 --- !u!114 &2689896733132383078
 MonoBehaviour:
   m_ObjectHideFlags: 0

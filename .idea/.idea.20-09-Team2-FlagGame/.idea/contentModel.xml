@@ -1626,6 +1626,7 @@
               <e p="UI" t="Include">
                 <e p="UIStageRoutine.cs" t="Include" />
               </e>
+              <e p="WinManager.cs" t="Include" />
             </e>
           </e>
           <e p="Graphic" t="Include">

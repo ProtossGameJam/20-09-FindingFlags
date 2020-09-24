@@ -10,5 +10,7 @@ public class UIQuizBubble : MonoBehaviour {
         for (var i = 0; i < answerText.Length; i++) answerText[i].text = data.answer[i];
     }
 
-    public void ActiveBubble(bool isActive) => gameObject.SetActive(isActive);
+    public void ActiveBubble(bool isActive) {
+        gameObject.SetActive(isActive);
+    }
 }

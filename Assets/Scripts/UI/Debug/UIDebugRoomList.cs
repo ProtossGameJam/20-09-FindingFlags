@@ -21,20 +21,22 @@ public class UIDebugRoomList : MonoBehaviour {
         waitCondition = new WaitUntil(() => playerTextQueue.Count != 0);
     }
 
-    private void Start() => StartCoroutine(DeleteTextInterval());
+    private void Start() {
+        //StartCoroutine(DeleteTextInterval());
+    }
 
     public void DebugEnterPlayer(Player player) {
         print("[DEBUG] Execute : DebugEnterPlayer() - UI");
-        var tempTextObj = Instantiate(debugPlayerText, transform);
-        tempTextObj.GetComponent<UIDebugPlayerText>().SetDebugText($"{player.NickName}({player.UserId})", true);
-        playerTextQueue.Enqueue(tempTextObj);
+        //var tempTextObj = Instantiate(debugPlayerText, transform);
+        //tempTextObj.GetComponent<UIDebugPlayerText>().SetDebugText($"{player.NickName}({player.UserId})", true);
+        //playerTextQueue.Enqueue(tempTextObj);
     }
 
     public void DebugLeftPlayer(Player player) {
-        print("[DEBUG] Execute : DebugLeftPlayer() - UI");
-        var tempTextObj = Instantiate(debugPlayerText, transform);
-        tempTextObj.GetComponent<UIDebugPlayerText>().SetDebugText($"{player.NickName}({player.UserId})", false);
-        playerTextQueue.Enqueue(tempTextObj);
+        //print("[DEBUG] Execute : DebugLeftPlayer() - UI");
+        //var tempTextObj = Instantiate(debugPlayerText, transform);
+        //tempTextObj.GetComponent<UIDebugPlayerText>().SetDebugText($"{player.NickName}({player.UserId})", false);
+        //playerTextQueue.Enqueue(tempTextObj);
     }
 
     private IEnumerator DeleteTextInterval() {

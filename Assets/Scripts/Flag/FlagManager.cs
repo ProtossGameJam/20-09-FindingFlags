@@ -17,7 +17,9 @@ public class Flag {
         isTaken = false;
     }
 
-    public static implicit operator Flag(FlagColor flag) => new Flag(flag);
+    public static implicit operator Flag(FlagColor flag) {
+        return new Flag(flag);
+    }
 }
 
 public class FlagManager : MonoBehaviourPun {
@@ -28,9 +30,13 @@ public class FlagManager : MonoBehaviourPun {
 
     public bool IsAllFlagCollected => !flagList.Exists(flag => flag.isTaken == false);
 
-    private void Awake() => flagList = new List<Flag>(flagStoreSize);
+    private void Awake() {
+        flagList = new List<Flag>(flagStoreSize);
+    }
 
-    private void Start() => RandomFlagPick(flagStoreSize);
+    private void Start() {
+        RandomFlagPick(flagStoreSize);
+    }
 
     private void RandomFlagPick(int count) {
         var tempColorArr = ShuffleUtility<FlagColor>.GetShuffledArray((FlagColor[]) Enum.GetValues(typeof(FlagColor)));
@@ -50,6 +56,7 @@ public class FlagManager : MonoBehaviourPun {
     }
 
     [PunRPC]
-    public void GetFlagAnnounce(string nick, FlagColor color) =>
-            print($"[DEBUG] RPC : GetFlagAnnounce() - Nickname : {nick}, Color : {color.ToString()}");
+    public void GetFlagAnnounce(string nick, FlagColor color) {
+        print($"[DEBUG] RPC : GetFlagAnnounce() - Nickname : {nick}, Color : {color.ToString()}");
+    }
 }

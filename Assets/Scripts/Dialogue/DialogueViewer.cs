@@ -75,9 +75,13 @@ public class DialogueViewer : InteractModule {
         curEventCode = null;
     }
 
-    public void SetDialogue(DialogueData data) => dialogue = data;
+    public void SetDialogue(DialogueData data) {
+        dialogue = data;
+    }
 
-    public void SetIndex(int index) => curIndex = index;
+    public void SetIndex(int index) {
+        curIndex = index;
+    }
 
     public void SetIndex(string eventCode) {
         if (dialogue.sentence.Exists(line => line.eventCode.Contains(eventCode))) {
@@ -88,5 +92,7 @@ public class DialogueViewer : InteractModule {
         }
     }
 
-    public void ActiveBubble(bool enable) => textBubble.BubbleEnabled = enable;
+    public void ActiveBubble(bool enable) {
+        textBubble.BubbleEnabled = enable;
+    }
 }

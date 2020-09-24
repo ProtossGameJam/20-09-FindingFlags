@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,7 +9,7 @@ public class StageRoutine : MonoBehaviour {
     [SerializeField] private UnityEvent startEvent;
 
     [SerializeField] private int countdownTime;
-    
+
     private Coroutine countRoutine;
     private WaitForSeconds waitOneSecond;
 
@@ -32,6 +31,7 @@ public class StageRoutine : MonoBehaviour {
             secondEvent.Invoke(i);
             yield return waitOneSecond;
         }
+
         secondEvent.Invoke(-1);
         startEvent.Invoke();
     }

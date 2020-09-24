@@ -20,7 +20,9 @@ public class UIFlag : MonoBehaviour {
         TweenColorFadeIn(flagImage, color, 1.0f, Constants.DEFAULT_FADE_TIME);
     }
 
-    private static void TweenColor(Image image, Color color, float time) => image.DOColor(color, time);
+    private static void TweenColor(Image image, Color color, float time) {
+        image.DOColor(color, time);
+    }
 
     private static void TweenColorFadeIn(Image image, Color color, float transparent, float time) {
         Debug.Log("Tween Flag Color");
